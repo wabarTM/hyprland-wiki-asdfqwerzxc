@@ -24,6 +24,10 @@ into self-contained commits that contain one logical change.
 
 For info about how to squash commits, see [this](https://stackoverflow.com/a/5189600).
 
+## Structure of the wiki
+
+// TODO: well, write how to structure new parameters and what styling to follow. Also link LAYOUT.md
+
 ## Local development
 
 To see your local changes, make sure to have `go` and `hugo` installed. Then, run
