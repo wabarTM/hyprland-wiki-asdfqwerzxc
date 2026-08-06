@@ -231,7 +231,6 @@ If `path` is `screenshot`, a screenshot of your desktop at launch will be used.
 > [!NOTE]
 > Blur options are taken from hyprland.
 > See [blur](../../../40-configuring/10-core/20-config-options#blur).
-<!-- TODO no they are not; lua ~= hyprlang -->
 
 {{% details title="Example background" closed="true" %}}
 

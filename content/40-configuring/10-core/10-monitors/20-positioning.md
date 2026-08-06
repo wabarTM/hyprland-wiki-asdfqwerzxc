@@ -34,7 +34,7 @@ The direction is always from the center out, so you can specify `auto-up`, then 
 but the left monitors will just be left of the origin and above the origin. You can also specify duplicate directions and
 monitors will continue to go in that direction.
 
-## Examples
+{{% details title="Examples" closed="true" %}}
 
 ```lua
 hl.monitor({ output = "DP-1", mode = "1920x1080@120Hz", position = "0x0", scale = 1 })
@@ -72,6 +72,7 @@ hl.monitor({ output = "DP-2", mode = "1920x1080@120Hz", position = "0x1080", sca
 
 will tell Hyprland to put DP-2 _below_.
 
+{{% /details %}}
 
 ## Rotation
 

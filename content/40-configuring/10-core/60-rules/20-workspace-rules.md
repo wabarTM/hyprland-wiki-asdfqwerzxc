@@ -22,31 +22,6 @@ hl.workspace_rule(workspace, rule1, rule2, ...)
   workspace selectors can only match _existing_ workspaces.
 - RULES is one (or more) rule(s) as described here in [rules](#rules).
 
-### Workspace selectors
-
-Workspaces that have already been created can be targeted by workspace
-selectors, e.g. `r[2-4] w[t1]`.
-
-Selectors have props separated by a space. No spaces are allowed inside props
-themselves.
-
-Props:
-
-- `r[A-B]` - ID range from A to B inclusive
-- `s[bool]` - Whether the workspace is special or not
-- `n[bool]`, `n[s:string]`, `n[e:string]` - named actions. `n[bool]` ->
-  whether a workspace is a named workspace, `s` and `e` are starts and ends
-  with respectively
-- `m[monitor]` - Monitor selector
-- `w[(flags)A-B]`, `w[(flags)X]` - Prop for window counts on the workspace.
-  A-B is an inclusive range, X is a specific number. Flags can be omitted.
-  It can be `t` for tiled-only, `f` for floating-only, `g` to count groups
-  instead of windows, `v` to count only visible windows, and `p` to count 
-  only pinned windows.
-- `f[-1]`, `f[0]`, `f[1]`, `f[2]` - fullscreen state of the workspace. `-1`: no
-  fullscreen, `0`: fullscreen, `1`: maximized, `2`, fullscreen without
-  fullscreen state sent to the window. Only matches workspaces with covering FS windows.
-
 ## Rules
 
 | Rule | Description | type |
@@ -80,7 +55,7 @@ Props:
 >>>>>>> 9473901 (Big (huge) restructure):content/40-configuring/10-core/60-rules/20-workspace-rules.md
 | layout_opts | A table of layout-specific options for this workspace. Keys and values depend on the layout. | table |
 
-## Examples
+{{% details title="Examples" closed="true" %}}
 
 ```lua
 hl.workspace_rule({ workspace = "3", no_rounding = true, decorate = false })
@@ -93,6 +68,9 @@ hl.workspace_rule({ workspace = "special:scratchpad", on_created_empty = "foot" 
 hl.workspace_rule({ workspace = "15", animation = "slidevert", default_name = "slider" })
 ```
 
+{{% /details %}}
+
+<!-- TODO move to code snippets -->
 ### Smart gaps
 
 To replicate "smart gaps" / "no gaps when only" from other WMs/Compositors, use this bad boy:

@@ -154,7 +154,7 @@ For example, instead of having `hl.exec_cmd("hyprpaper")` in your config, simply
 
 More autostart-related examples and tricks can be found [here](https://github.com/Vladimir-csp/uwsm/tree/master/example-units).
 
-## Dump of random warnings that may or may not apply, wont even fix the links
+## Dump of random warnings that may or may not apply now
 
 > [!NOTE]
 > [uwsm](../../../Useful-Utilities/Systemd-start) users are advised to export the `AQ_DRM_DEVICES` variable inside `~/.config/uwsm/env-hyprland`, instead. 

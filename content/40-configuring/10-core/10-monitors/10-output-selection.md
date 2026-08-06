@@ -3,27 +3,56 @@ title: Output selection
 weight: 10
 ---
 
-<!-- TODO this is ass, needs rewrite -->
+To select an output `portname` or `description` can be used.
 
-For more specific rules, you can also use the output's description (see
-`hyprctl monitors` for more details). If the output of `hyprctl monitors` looks
-like the following:
+Output of `hyprctl monitors` looks like the following:
 
+```
+Monitor `portname` (ID `ID`)
+        `mode` at `position`
+        description: `description`
+        [...]
+```
+
+Both `portname` and `description` can be used to select an output:
+
+```lua
+hl.monitor({
+    output = "portname",
+    mode = "preferred", position = "auto"
+})
+
+hl.monitor({
+    output = "desc:description",
+    mode = "preferred", position = "auto"
+})
+```
+
+<!-- TODO meh wording, can be better -->
+If description is used, portname is obsolete.
+
+{{% details title="Example" closed="true" %}}
 
 ```
 Monitor eDP-1 (ID 0):
         1920x1080@60.00100 at 0x0
-        description: Chimei Innolux Corporation 0x150C (eDP-1)
-        make: Chimei Innolux Corporation
-        model: 0x150C
+        description: Chimei Innolux Corporation 0x150C
         [...]
 ```
 
-then the `description` value up to, but not including the portname `(eDP-1)` can
-be used as the `output` field with a `desc:` prefix:
+In the example portname is `eDP-1` and description is `Chimei Innolux Corporation 0x150C`, so they can be used as following:
+
 
 ```lua
-hl.monitor({ output = "desc:Chimei Innolux Corporation 0x150C", mode = "preferred", position = "auto", scale = 1.5 })
+hl.monitor({
+    output = "eDP-1",
+    mode = "preferred", position = "auto"
+})
+
+hl.monitor({
+    output = "desc:Chimei Innolux Corporation 0x150C",
+    mode = "preferred", position = "auto"
+})
 ```
 
-Remember to remove the `(portname)`!
+{{% /details %}}

@@ -54,7 +54,7 @@ look like this:
 }
 ```
 
-#### Window title is missing
+##### Window title is missing
 
 The prefix for the window module that provides the title is `hyprland` not `wlr`.
 In your Waybar config, insert this module:
@@ -113,11 +113,13 @@ and [examples](https://aylur.github.io/astal/guide/introduction#supported-langua
 For AGS, see its [Quick start](https://aylur.github.io/ags/guide/quick-start.html) page.
 
 #### Advantages
+
 - Language flexibility: You can use your favorite if it supports
 [Gobject Introspection](https://en.wikipedia.org/wiki/List_of_language_bindings_for_GTK) (although JS(X)/TS are most well-supported by AGS)
 - Provides a large set of libraries, including Network (both Wi-Fi and Ethernet) and Bluetooth
 
 #### Disadvantages
+
 - Does not provide hot reload out of the box
 
 ### Eww
@@ -132,14 +134,16 @@ Install Eww either using your distro's package manager, by searching
 [instructions](https://elkowar.github.io/eww).
 
 #### Advantages
+
 - Its Lisp-like config syntax is simple compared to other config languages
 - Supports styling with SCSS out of the box
 
 #### Disadvantages
+
 - Heavy reliance on external scripts/programs, as it does not provide many libraries
 - Performance
-  - Only supports GTK 3, which does not support GPU acceleration
-  - Overhead from the use of external scripts and unnecessary component recreations on data re-evaluation
+- Only supports GTK 3, which does not support GPU acceleration
+- Overhead from the use of external scripts and unnecessary component recreations on data re-evaluation
 
 #### Configuration
 
@@ -288,10 +292,12 @@ To get started, see the
 and a [guided hello world](https://quickshell.outfoxxed.me/docs/configuration/intro/)
 
 #### Advantages
+
 - Provides advanced Wayland/Hyprland integrations, for example live window previews
 - Automatically reloads config on changes out of the box
 
 #### Disadvantages
+
 - Qt can be less intuitive to work with compared to GTK for its positioning system
 - Does not yet provide a Wi-Fi service at the time of writing
 - It is still in alpha and minor breaking changes are to be expected
@@ -305,4 +311,3 @@ Use the `blur` and `ignore_alpha` [layer rules](../../40-configuring/10-core/60-
 The former enables blur, and the latter makes it ignore insufficiently opaque regions. 
 Ideally, the value used with `ignore_alpha` is higher than the shadow opacity and lower than the bar/menu content's opacity. 
 Additionally, if it has transparent popups, you can use the `blur_popups` rule.
-

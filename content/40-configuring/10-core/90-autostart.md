@@ -13,10 +13,6 @@ hl.on("hyprland.start", function ()
 end)
 ```
 
-`hl.exec_cmd()` will spawn an asynchronous process, so there is no need for `& disown` at the end.
-
 In the same vein, you can spawn processes on exit by listening to `hyprland.shutdown`.
-
 See more about `hl.on` over at [Expanding Functionality](../100-advanced-configuration/10-expanding-functionality)
-
 <!-- and [systemd](../../../Useful-Utilities/Systemd-start#autostart) for autostarting user services. -->

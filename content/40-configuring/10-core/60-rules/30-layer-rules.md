@@ -30,7 +30,7 @@ The syntax is the same as `hl.window_rule()`.
 | above_lock | integer | If non-zero, renders the layer above the lockscreen. `2` = interactive on lockscreen. |
 | no_screen_share | boolean | Hides the layer from screen sharing. |
 
-### Examples
+{{% details title="Examples" closed="true" %}}
 
 ```lua
 -- Enable blur for waybar
@@ -50,6 +50,8 @@ hl.layer_rule({
   ignore_alpha = 0.5,
 })
 ```
+
+{{% /details %}}
 
 Layer rules also return a handle with `set_enabled()` / `is_enabled()`:
 
