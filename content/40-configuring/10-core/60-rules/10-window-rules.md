@@ -78,16 +78,6 @@ Keep in mind that you _have_ to declare at least one field, but not all.
 > `fullscreen` refers to `fullscreen_state_internal` and
 > `fullscreenClient` refers to `fullscreen_state_client`
 
-### RegEx writing
-
-Please note Hyprland uses [Google's RE2](https://github.com/google/re2) for
-parsing RegEx. This means that all operations requiring polynomial time to
-compute will not work. See the [RE2 wiki](https://github.com/google/re2/wiki/Syntax)
-for supported extensions.
-
-If you want to _negate_ a RegEx, as in pass only when the RegEx _fails_, you
-can prefix it with `negative:`, e.g.: `"negative:kitty"`.
-
 ## Effects
 
 ### Static effects

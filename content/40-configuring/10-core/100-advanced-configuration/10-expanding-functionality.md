@@ -100,6 +100,9 @@ Hyprland exposes a bunch of convenience functions:
 
 Use the LSP for the return values (classes and their parameters) of these functions. See [here](../../../10-core#autocompletions) for setting up the LSP for your code editor
 
+### hl.exec_cmd function
+
+`hl.exec_cmd()` will spawn an asynchronous process, so there is no need for `& disown` at the end.
 
 ### Dynamically changing a config option:
 

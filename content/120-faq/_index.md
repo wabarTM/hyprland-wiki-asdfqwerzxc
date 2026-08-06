@@ -188,9 +188,7 @@ in the config.
 ### Waybar workspaces no worky???
 
 Waybar has a set of caveats or settings that you need to be aware of. See
-[Status bars](../Useful-Utilities/Status-Bars) for solutions.
-
-As of 06.08.2026 waybar needs to be built from git because dev is lazy to push new minor version.
+[Status bars](../70-useful-utilities/20-status-bars) for solutions.
 
 ### How do I autostart my favorite apps?
 

@@ -3,6 +3,9 @@ weight: 50
 title: Binds
 ---
 
+> [!TIP]
+> If you are unsure of what your key's name/keysym/keycode is, you can use [`wev`](https://github.com/jwrdegoede/wev) to find out.
+
 ## Basics
 
 ```lua
@@ -17,14 +20,12 @@ hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("firefox"))
 
 will bind opening Firefox to <key>SUPER</key> + <key>SHIFT</key> + <key>Q</key>
 
-will bind opening Firefox to SUPER + SHIFT + Q
-
-<!-- TODO: why on earth key is needed there? wiki parsing? -->
+<!-- TODO: why on earth <key> is needed there? wiki parsing? -->
 
 The dispatcher list can be found in
-[Dispatchers](../dispatchers/#list-of-dispatchers).
+[Dispatchers](../40-dispatchers#list-of-dispatchers).
 
-You can also put a lua function if you prefer as your bind dispatcher:
+You can also put a lua function, if you prefer, as your bind dispatcher:
 
 ```lua
 hl.bind("SUPER + SHIFT + X", function()
@@ -48,20 +49,27 @@ hl.bind("SUPER + code:28", hl.dsp.exec_cmd("amongus"))
 
 This will bind <key>SUPER</key> + <key>t</key> since <key>t</key> is keycode 28.
 
-> [!NOTE]
-> If you are unsure of what your key's name or keycode is, you can use [`wev`](https://github.com/jwrdegoede/wev) to find out.
-
 ## Binding modkeys only
 
-<!-- TODO: this is fixed with one of the newer commits, needs rewrtining https://github.com/hyprwm/Hyprland/pull/15568 -->
+<!-- https://github.com/hyprwm/Hyprland/pull/15568 -->
 
-To only bind modkeys, you need to use the TARGET modmask (with the
-activating mod) and the `release` flag, e.g.:
+To only bind modkeys, you need to use appropriate sym name.
+Usually it is `MOD` key suffixed with `_L` or `_R`
 
 ```lua
--- bind `exec amongus` to SUPER + ALT.
-hl.bind("ALT + ALT_L", hl.dsp.exec_cmd("amongus"), { release = true })
+-- bind `amongus` to left alt
+hl.bind("Alt_L", hl.dsp.exec_cmd("amongus"))
+
+-- bind left super with left ctrl to open kitty
+hl.bind("Super_L + Alt_L", hl.dsp.exec_cmd("kitty"))
+
+-- bind left ctrl and right ctrl
+hl.bind("Ctrl_L + Ctrl_R", hl.dsp.exec_cmd("kitty"))
+
 ```
+
+When binding keysyms, order in which keys are pressed does matter
+because they are not treated as modifiers
 
 ## Multiple binds to one key
 
@@ -90,3 +98,92 @@ hl.bind("SUPER + TAB", hl.focus.workspace("e+1"))
 hl.unbind("SUPER + Tab") -- this will NOT unbind
 hl.unbind("SUPER + TAB") -- this will unbind
 ```
+
+## XKB Remapping mod keys
+
+You can customize the behavior of some modifier keys using `kb_options`.
+
+To view all available options, run:
+
+```sh
+cat /usr/share/X11/xkb/rules/base.lst
+```
+
+{{% details title="Examples" closed="true" %}}
+
+To remap Caps lock to Ctrl:
+
+```lua
+hl.config({
+    input = {
+        kb_options = "ctrl:nocaps"
+    }
+})
+```
+
+To swap Caps Lock and Escape:
+
+```lua
+hl.config({
+    input =  {
+        kb_options = "caps:swapescape"
+    }
+})
+```
+
+{{% /details %}}
+
+
+## Binding quirks
+
+<!-- TODO maybe there is a better place for this thing, but i couldnt see it -->
+
+### Conditional binds resolution at "bind" time
+
+When trying to create a bind with condition inside you almost always want to warp it in a function.
+
+For example, this bind:
+
+```lua
+hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", {float = not (hl.get_active_window().title == "foot") }) )
+```
+
+will be resolved to:
+
+```lua
+hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", {float = false }) )
+-- or, depending on your focus when config was realoaded
+hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", {float = false }) )
+```
+And it will stay like that until next config reload. 
+To change this behecaiour, dispatcher can be wrapped in a function:
+
+```lua
+hl.bind("SUPER + L", function()
+    local is_foot = hl.get_active_window().title == "foot"
+    hl.dispatch( hl.dsp.exec_cmd("foot", {float = not is_foot }) )
+end)
+```
+
+Now the condition will be evaluated on each call of the bind.
+
+### Autoconsuming bind and return { ok = false }
+
+Hyprland exposes `ok` value to check result of a dispatcher. When combined with `auto_consumint` flag
+it can be used to pass keys that are otherwise consumed by the bind.
+
+For example:
+
+```lua
+hl.bind("p", function()
+    local window = hl.get_active_window()
+    if window and window.title == "some cool app" then
+        hl.dispatch(hl.dsp.exec_cmd("another cool app"))
+    else
+        return { ok = false }
+    end
+end, {auto_consumint = true})
+```
+
+This bind will spawn `"another cool app"` if active window is `"some cool app"` and if
+active window is not `"some cool app"` it will pas `p` to that window.

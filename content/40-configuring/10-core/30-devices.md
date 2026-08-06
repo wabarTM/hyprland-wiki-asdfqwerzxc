@@ -6,7 +6,7 @@ title: Devices
 For global device configs, check the [Config options page](../../10-core/20-config-options) page. This page
 will focus on per-device configs.
 
-A basic per-device config is done via the `hl.device()` fn:
+A basic per-device config is done via the `hl.device()` function:
 
 ```lua
 hl.device({
@@ -17,8 +17,7 @@ hl.device({
 
 The `name` can be easily obtained by checking the output of `hyprctl devices`.
 
-Inside of it, put your config options. All options from the `input` category
-(and all subcategories, e.g. `input.touchpad`) can be put inside, **EXCEPT**:
+Inside of it, put your config options. All options from the `input` path can be put inside, **EXCEPT**:
 
 - `force_no_accel`
 - Options that configure window management, such as: `follow_mouse`,

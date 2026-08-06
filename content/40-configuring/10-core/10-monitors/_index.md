@@ -53,7 +53,9 @@ hyprctl monitors all
 ```
 
 <!-- TODO: example output with descriptions that describe what means what: -->
-Example output:
+
+{{% details title="Example output" closed="true" %}}
+
 ```
 Monitor DP-3 (ID 0):
     2560x1440@165.00000 at 0x0
@@ -86,7 +88,10 @@ Monitor DP-3 (ID 0):
     sdrMinLuminance: 0.2
     sdrMaxLuminance: 80
     hardwareCursorsInUse: true
-```
+ ```
+
+{{% /details %}}
+
 
 ### Disabling a monitor
 
