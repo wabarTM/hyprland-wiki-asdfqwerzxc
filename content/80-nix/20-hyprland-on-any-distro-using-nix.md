@@ -1,11 +1,11 @@
 ---
-title: Hyprland on Other Distros
+title: Using the Nix package manager to enjoy Hyprland on any distro.
 weight: 20
 ---
 
-Using hyprland via Nix on distros that aren't NixOS is very simple.
+Using Hyprland via the Nix package manager on distros that aren't NixOS is very simple.
 
-First, install nix with your package manager, be that `apt`, `pacman`, `dnf`, etc. The package
+First, install Nix with your distro native package manager, be that `apt`, `pacman`, `dnf`, etc. The package
 is almost always called `nix`.
 
 For example:
