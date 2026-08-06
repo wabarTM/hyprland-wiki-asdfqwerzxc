@@ -26,7 +26,7 @@ For info about how to squash commits, see [this](https://stackoverflow.com/a/518
 
 ## Structure of the wiki
 
-// TODO: well, write how to structure new parameters and what styling to follow. Also link LAYOUT.md
+TODO: well, write how to structure new parameters and what styling to follow. Also link TODO.md
 
 ## Local development
 
