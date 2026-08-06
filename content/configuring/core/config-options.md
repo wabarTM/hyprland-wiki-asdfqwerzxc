@@ -386,14 +386,14 @@ Path: `group`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| auto_group | Whether new windows will be automatically grouped into the focused unlocked group. Note: if you want to disable auto_group only for specific windows, use [the "group barred" window rule](../rules/window-rules/#group-window-rule-options) instead | bool | `true` |   |
+| auto_group | Whether new windows will be automatically grouped into the focused unlocked group. *Note: if you want to disable auto_group only for specific windows, use [the "group barred" window rule](../rules/window-rules/#group-window-rule-options) instead* | bool | `true` |   |
 | drag_into_group | Whether dragging a window into a unlocked group will merge them. `0` - disabled, `1` - enabled, `2` - only when dragging into a groupbar | int | `1` | [0 - 2] |
 | focus_removed_window | Whether Hyprland should focus on the window that has just been moved out of the group | bool | `true` |   |
 | group_on_movetoworkspace | Whether using hl.dsp.window.move({ workspace }) will merge the window into the workspace's solitary unlocked group | bool | `false` |   |
 | insert_after_current | Whether new windows in a group spawn after current or at group tail | bool | `true` |   |
 | merge_floated_into_tiled_on_groupbar | Whether dragging a floating window into a tiled window groupbar will merge them | bool | `false` |   |
 | merge_groups_on_drag | Whether window groups can be dragged into other groups | bool | `true` |   |
-| merge_groups_on_groupbar | Whether one group will be merged with another when dragged into its groupbar | bool | `true` |   |
+| merge_groups_on_groupbar | Whether one group will be merged with another when dragged into its groupbar. *Note: enabling this option only works when combined with `drag_into_group = 2` and `merge_groups_on_drag = true`* | bool | `true` |   |
 
 #### Group colors
 
