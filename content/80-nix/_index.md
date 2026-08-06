@@ -3,58 +3,53 @@ weight: 80
 title: Nix
 ---
 
-To install Hyprland on NixOS, we provide a NixOS and a Home Manager module.
+## Installing Hyprland on Nixos
 
-> [!WARNING]
-> **Required:**
-> - **NixOS Module:** enables critical components needed to run Hyprland properly.  
->   Without this, you may have issues with missing session files in your
->     Display Manager.
-> 
-> **Optional**:
-> - **Home Manager module:** lets you configure Hyprland declaratively through Home Manager.  
-> - Configures Hyprland and adds it to your user's `$PATH`, but
->     does not make certain system-level changes such as adding a desktop session
->     file for your display manager.  
->     This is handled by the NixOS module, once you enable it.
+See [Hyprland on NixOS](./10-installing-hyprland-on-nixos).  
 
-## NixOS module
+## Using Hyprland on any distro with the nix package manager
 
-```nix {filename="configuration.nix"}
-{
-  programs.hyprland.enable = true;
-  # Optional, hint electron apps to use wayland:
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-}
-```
+See [this page](./20-hyprland-on-any-distro-using-nix).
 
-For other NixOS options, see [Hyprland on NixOS](./10-hyprland-on-nixos).  
-For additional options, see
-[module options](https://search.nixos.org/options?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=hyprland).
+## Configuring Hyprland in NixOS
 
-## Home Manager module
+You need to choose one of the three ways for configuring hyprland in nix: hjem, home manager, or the upstream module.
 
-Read [Hyprland on Home Manager](./30-hyprland-with-home-manager).
+### Hjem
+
+Read [Configuring Hyprland with Hjem](./30-configuring-hyprland-with-hjem).
+
+### Home Manager
+
+Read [Configuring Hyprland with Home Manager](./40-configuring-hyprland-with-home-manager).
 
 For the adventurous, [@spikespaz](https://github.com/spikespaz) has made a
 Hyprland module that can be used in Home Manager and NixOS. It can be found
 [here](https://github.com/hyprland-community/hyprnix).
 
-## Options and overrides
+### The upstream module
 
-Read [Options and overrides](./50-options-and-overrides).
+The [upstream module](https://github.com/hyprwm/Hyprland/blob/main/nix/module.nix)
+provides options similar to the ones in the Home Manager module.
 
-## Overlays
+To use it, simply add
 
-### default
+```nix
+{inputs, ...}: {
+  imports = [inputs.hyprland.nixosModules.default];
 
-The `default` Hyprland overlay only contains the Hyprland package along with xdg-desktop-portal-hyprland, and Hyprland's internal dependencies (udis86-hyprland and glaze-hyprland).
+  programs.hyprland = {
+    # usual Nixpkgs module options
+    plugins = [
+      #...
+    ];
+    settings = {
+      # ...
+    };
+  };
+}
+```
 
-This means you need to import all the overlays for the hypr* dependencies yourself if you want them up to date. Otherwise Hyprland will build with the versions available in Nixpkgs.
+## Advanced
 
-### hyprland-packages
-
-If you instead want an overlay with all dependencies, import both `hyprland-packages` and `hyprland-extras` overlays.
-
-> [!NOTE]
-> The dependencies can sometimes be out of date and impact other hypr* apps. E.g. <https://github.com/hyprwm/Hyprland/discussions/13396>. In such cases, either ping the maintainers to update the lockfiles, or use the `default` overlay.
+The section [Advanced](./60-advanced) contains tweaks as options, overrides, overlays, building plugins with nix, ...

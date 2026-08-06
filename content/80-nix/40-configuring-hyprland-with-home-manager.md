@@ -1,6 +1,6 @@
 ---
-title: Hyprland with Home Manager
-weight: 30
+title: Configuring Hyprland with Home Manager
+weight: 40
 ---
 
 For a list of available options, check the
@@ -21,7 +21,7 @@ For a list of available options, check the
 
 ## Installation
 
-{{< tabs items="Home Manager,Flakes,Nix stable (with flake-compat)" >}}
+{{< tabs items="Home Manager,The Hyprland flake" >}}
 
 {{< tab "Home Manager" >}}
 
@@ -37,7 +37,7 @@ For a list of available options, check the
 
 {{< /tab >}}
 
-{{< tab "Flakes" >}}
+{{< tab "The Hyprland flake" >}}
 
 The following snippet of code tries to show how to bring the Hyprland flake from
 the flake input and use its packages with Home Manager. Feel free to make any
@@ -80,36 +80,6 @@ Don't forget to replace `user@hostname` with your username and hostname!
 
 {{< /tab >}}
 
-{{< tab "Nix stable (with flake-compat)" >}}
-
-> [!WARNING]
-> The flake module is merely an extension to the Home Manager downstream module.
-> It is mainly used as a staging area for new options, so unless you're a tester
-> you should use the downstream Home Manager module.
-
-The following snippet of code tries to show how to bring the Hyprland flake from
-the flake input and use the package in the Home Manager option. Feel free to
-make any adjustment for your setup.
-
-```nix {filename="home.nix"}
-{pkgs, ...}: let
-  flake-compat = builtins.fetchTarball "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
-
-  hyprland = (import flake-compat {
-    src = builtins.fetchTarball "https://github.com/hyprwm/Hyprland/archive/main.tar.gz";
-  }).defaultNix;
-in {
-  wayland.windowManager.hyprland = {
-    enable = true;
-    # set the flake package
-    package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  }
-}
-```
-
-{{< /tab >}}
-
 {{< /tabs >}}
 
 ## Usage
@@ -117,6 +87,7 @@ in {
 Once the module is enabled, you can use it to declaratively configure Hyprland.
 Here is an example config:
 
+<!-- TODO this is outdated, needs rewrite -->
 ```nix {filename="home.nix"}
 {
   wayland.windowManager.hyprland.settings = {
@@ -144,19 +115,72 @@ Here is an example config:
 
 ## Plugins
 
-Hyprland plugins can be added through the `plugins` option:
+Hyprland plugins are managed differently on Nix than on other distros.  
+The most notable change is that `hyprpm` is unsupported, but we have our own way of
+building and managing plugins.
+
+> [!WARNING]
+> Using plugins using the syntax below requires you to be using Hyprland through
+> the [Home Manager module](../Hyprland-on-Home-Manager) or the
+> [upstream NixOS module](../Hyprland-on-NixOS#upstream-module).
+
+## Using plugins from Nixpkgs
+
+In Nixpkgs, there are Hyprland plugins packaged for the Hyprland version in
+Nixpkgs. You can use them like this:
 
 ```nix {filename="home.nix"}
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland.plugins = [
-    inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-    "/absolute/path/to/plugin.so"
+    pkgs.hyprlandPlugins.<plugin>
   ];
 }
 ```
 
-For examples on how to build Hyprland plugins using Nix, see the
-[Nix/Plugins](../60-plugins) page.
+You can find which plugins are included using
+`nix search nixpkgs#hyprlandPlugins ^`.
+
+## hyprland-plugins
+
+Official plugins made/maintained by vaxry.
+
+To use these plugins, it is recommended to be already using the Hyprland
+flake, and **not** the Nixpkgs version.
+
+First, add the flake to your flake inputs:
+
+```nix {filename="flake.nix"}
+{
+  inputs = {
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    # ...
+  }
+}
+```
+
+The `inputs.hyprland.follows` line makes hyprland-plugins use the exact Hyprland
+revision you have locked.  
+This means there aren't any version mismatches, as long as you update both inputs at once.
+
+The next step is adding the plugins to Hyprland:
+
+```nix {filename="home.nix"}
+{inputs, pkgs, ...}: {
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.<plugin>
+    ];
+  };
+}
+```
 
 ## FAQ
 
@@ -237,8 +261,6 @@ To fix it, add to your config:
 ```
 
 This setting will produce the following entry in the Hyprland config:
-
-<!-- TODO idfk nix, replace with hjem? -->
 
 ```lua {filename="hyprland.lua"}
 hl.on("hyprland.start", function()

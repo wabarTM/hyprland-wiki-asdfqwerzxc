@@ -57,24 +57,10 @@ The rest of the process is the same as
 
 ## Manual building
 
-Nix works differently than other build systems, so it has its own abstractions
-over popular build systems such as Meson, CMake and Ninja.
+You can build hyprland using cmake instead of using `nix build`. The advantage is being able to do incremental builds (just building whatever little change you made instead of the entire repo).
 
-In order to manually build Hyprland, you can run the following commands, while
-in the `nix develop` shell.
-
-For CMake:
-
-```bash
-cmakeConfigurePhase # to run the CMake configure phase
-buildPhase     # to run the build phase
-installPhase   # to run the install phase
-```
-
-For Meson:
-
-```bash
-mesonConfigurePhase # to run the Meson configure phase
-ninjaBuildPhase     # to run the Ninja build phase
-mesonInstallPhase   # to run the Meson install phase
-```
+1. Clone the hyprland repo including its submodules.
+2. Enter in the directory and execute `nix develop` in your shell.
+3. Run `make debug` (check the Makefile for other options).
+4. For doing an incremental build (only building any small change you made after the first full build), run the following command (included in the Makefile):
+cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getconf NPROCESSORS_CONF`
