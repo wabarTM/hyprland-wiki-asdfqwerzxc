@@ -46,7 +46,7 @@ _Starting method:_ Automatic on systemd, manual otherwise.
 XDG Desktop Portal handles a lot of stuff for your desktop, like file pickers,
 screensharing, etc.
 
-See the [Hyprland Desktop Portal Page.](../../hypr-ecosystem/10-user/xdg-desktop-portal-hyprland)
+See the [Hyprland Desktop Portal Page.](../../hypr-ecosystem/user/xdg-desktop-portal-hyprland)
 
 ### Authentication Agent
 
@@ -55,7 +55,7 @@ _Starting method:_ manual (autostart in config)
 Authentication agents are the things that pop up a window asking you for a
 password whenever an app wants to elevate its privileges.
 
-See [hyprpolkitagent](../../hypr-ecosystem/10-user/hyprpolkitagent)
+See [hyprpolkitagent](../../hypr-ecosystem/user/hyprpolkitagent)
 
 ### Qt Wayland Support
 

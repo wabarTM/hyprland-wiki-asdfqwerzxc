@@ -8,7 +8,7 @@ Screensharing is done through PipeWire on Wayland.
 ## Prerequisites
 
 Make sure you have `pipewire`, `wireplumber` and
-[`xdg-desktop-portal-hyprland`](../../hypr-ecosystem/10-user/xdg-desktop-portal-hyprland)
+[`xdg-desktop-portal-hyprland`](../../hypr-ecosystem/user/xdg-desktop-portal-hyprland)
 installed, enabled and running if you don't have them yet.
 
 Ensure that the `bitdepth` set in your configuration
