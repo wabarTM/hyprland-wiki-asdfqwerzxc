@@ -66,5 +66,7 @@ You can build hyprland using cmake instead of using `nix build`. The advantage i
 1. Clone the hyprland repo including its submodules.
 2. Enter in the directory and execute `nix develop` in your shell.
 3. Run `make debug` (check the Makefile for other options).
-4. For doing an incremental build (only building any small change you made after the first full build), run the following command (included in the Makefile):
+4. For doing an incremental build (only building any small change you made after the first full build), run the following command (included in the Makefile):  
+```bash
 cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getconf NPROCESSORS_CONF`
+```

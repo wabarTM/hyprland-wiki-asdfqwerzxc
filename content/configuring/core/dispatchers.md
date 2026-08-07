@@ -87,37 +87,6 @@ On the other hand, [hl.exec_cmd](../advanced-configuration/lua-utilities#hlexec_
 | --- | --- |
 | `close({ window? })` | Send a graceful request to close the window. |
 | `kill({ window? })` | Kill the process owning the window with a `SIGKILL`. |
-<<<<<<< HEAD
-| `signal({ signal, window? })` | Send a POSIX signal to the process owning the window. |
-| `float({ action?, window? })` | set a window's floating state. |
-| `fullscreen({ mode?, action?, layout_aware?, window? })` | set a window's fullscreen state. `mode` can be "maximized" and "fullscreen". `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behaviour. |
-| `fullscreen_state({ internal, client, action?, layout_aware? , window? })` | set a window's fullscreen state with more precision. `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behaviour.  See [Fullscreenstate](#fullscreenstate), [Fullscreen Handlers](#fullscreen-handlers) |
-| `pseudo({ action?, window? })` | set a window's pseudotiling state. |
-| `move({ direction, group_aware?, window? })` | move a window in a direction. `group_aware = true` will put windows in/out of groups alongside the given direction. |
-| `move({ workspace, follow?, window? })` | move a window to a workspace |
-| `move({ monitor, follow?, window? })` | move a window to a monitor |
-| `move({ x, y, relative?, window? })` | move a window by / to a coord |
-| `move({ into_group = direction, window? })` | move a window into a group in a direction |
-| `move({ into_or_create_group = direction, window? })` | move a window into a group in a direction, or create a group if no group exists in that direction |
-| `move({ out_of_group, window? })` | move a window out of a group. `true` for directionless, direction for a direction |
-| `swap({ direction })` | swap the current window with another one in a given direction | 
-| `swap({ target })` | swap the current window with another one | 
-| `swap({ next })` | swap the current window with the next one | 
-| `swap({ prev })` | swap the current window with the previous one | 
-| `center({ window? })` | center the current window on screen |
-| `cycle_next({ next?, tiled?, floating?, window? })` | focus the next window |
-| `tag({ tag, window? })` | tag a window |
-| `clear_tags({ window? })` | clear all tags from a window |
-| `toggle_swallow()` | toggle all swallowed windows visible |
-| `pin({ window?, action? })` | pin a window |
-| `alter_zorder({ mode, window? })` | mode can be "top" or "bottom" |
-| `set_prop({ prop, value, window? })` | set a window property |
-| `deny_from_group({ action? })` | deny a window from entering a group |
-| `drag()` | begin an interactive drag. To be used with mouse binds. |
-| `resize()` | begin an interactive resize. To be used with mouse binds. |
-| `resize({ keep_aspect_ratio })` | begin an interactive resize. To be used with mouse binds. Overrides window's `keep_aspect_ratio` prop. |
-| `resize({ x, y, relative?, window? })` | resize a window |
-=======
 | `signal({ window?, signal })` | Send a POSIX signal to the process owning the window. |
 | `float({ window?, action? })` | Set a window's floating state. |
 | `fullscreen({ window?, action?, mode?, layout_aware? })` | Set a window's fullscreen state. `mode` can be "maximized" and "fullscreen". `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behaviour. |
@@ -144,9 +113,8 @@ On the other hand, [hl.exec_cmd](../advanced-configuration/lua-utilities#hlexec_
 | `set_prop({ window?, prop, value })` | Set a window property |
 | `deny_from_group({ action? })` | Deny a window from entering a group |
 | `drag()` | Begin an interactive drag. To be used with mouse binds. |
-| `resize()` | Begin an interactive resize. To be used with mouse binds. |
+| `resize({ keep_aspect_ratio? })` | begin an interactive resize. To be used with mouse binds. Overrides window's `keep_aspect_ratio` prop. |
 | `resize({ window?, x, y, relative? })` | Resize a window |
->>>>>>> 7a1dc8a (Some fixes, added limits to config optiosm, mentioned naming in configuring, simplified configuring/lua)
 
 ### Workspace
 
@@ -154,18 +122,11 @@ On the other hand, [hl.exec_cmd](../advanced-configuration/lua-utilities#hlexec_
 
 | method | description |
 | --- | --- |
-<<<<<<< HEAD
-| `rename({ workspace, name? })` | rename a workspace |
 | `change_id({ workspace, id })` | change a workspace's ID. Cannot be an ID already in use. Must be > 0. |
-| `move({ workspace?, monitor })` | move a workspace to a monitor |
-| `swap_monitors({ monitor1, monitor2 })` | swap current workspaces of two monitors |
-| `toggle_special(special_name)` | toggle a special workspace by name |
-=======
 | `rename({ workspace, name? })` | Rename a workspace |
 | `move({ workspace?, monitor })` | Move a workspace to a monitor |
 | `swap_monitors({ monitor1, monitor2 })` | Swap current workspaces of two monitors |
 | `toggle_special( special_name )` | Toggle a special workspace by name |
->>>>>>> 7a1dc8a (Some fixes, added limits to config optiosm, mentioned naming in configuring, simplified configuring/lua)
 
 ### Group
 
