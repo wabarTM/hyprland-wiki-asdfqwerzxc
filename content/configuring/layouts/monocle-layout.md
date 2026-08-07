@@ -5,7 +5,7 @@ title: Monocle layout
 
 Monocle is a layout where windows are always taking up the entire available space.
 
-<video width="1024" height="566" autoplay muted>
+<video width="1024" height="566" autoplay muted loop>
   <source src="https://dl.hypr.land/wiki/demo_monocle.mp4" type="video/mp4">
 </video>
 

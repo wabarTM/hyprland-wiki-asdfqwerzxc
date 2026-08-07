@@ -5,7 +5,7 @@ title: Scrolling layout
 
 Scrolling is a layout where windows get positioned on an infinitely growing tape.
 
-<video width="1024" height="566" autoplay muted>
+<video width="1024" height="566" autoplay muted loop>
   <source src="https://dl.hypr.land/wiki/demo_scrolling.mp4" type="video/mp4">
 </video>
 

@@ -8,7 +8,7 @@ default) the left part of the screen, and tiles the rest on the right. You can
 change the orientation on a per-workspace basis if you want to use anything other
 than the default left/right split.
 
-<video width="1024" height="566" autoplay muted>
+<video width="1024" height="566" autoplay muted loop>
   <source src="https://dl.hypr.land/wiki/demo_master.mp4" type="video/mp4">
 </video>
 

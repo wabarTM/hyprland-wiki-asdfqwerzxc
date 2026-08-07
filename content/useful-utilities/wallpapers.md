@@ -8,7 +8,7 @@ Launch your wallpaper utility with hyprland config's autostarts.
 ## hyprpaper
 
 Straight from our oven, `hyprpaper` is a wallpaper utility from the Hypr
-Development team. See its usage and config [here](../../hypr-ecosystem/10-user/hyprpaper).
+Development team. See its usage and config [here](../../hypr-ecosystem/user/hyprpaper).
 
 ## swaybg
 

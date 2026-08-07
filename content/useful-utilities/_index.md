@@ -20,7 +20,7 @@ Hyprland working.
 - **[Phone connect](./phone-connect)**
 - **[Color Pickers](./color-pickers)**
 - **[Clipboard Managers](./clipboard-managers)**
-- **[Hyprland Desktop Portal](../hypr-ecosystem/10-user/xdg-desktop-portal-hyprland)**
+- **[Hyprland Desktop Portal](../hypr-ecosystem/user/xdg-desktop-portal-hyprland)**
 - **[File Managers](./file-managers)**
 - **[Other](./other)**
 - **[Hypr Ecosystem](./hypr-ecosystem)**

@@ -159,7 +159,7 @@ Be aware that they will not prevent tty-changing using Ctrl-Alt-F1...F7.
 
 ### How do I change me mouse cursor?
 
-See [hyprcursor](../hypr-ecosystem/20-dev/hyprcursor)
+See [hyprcursor](../hypr-ecosystem/dev/hyprcursor)
 
 1. Set the GTK cursor using [nwg-look](https://github.com/nwg-piotr/nwg-look).
 2. Add `hyprctl setcursor [THEME] [SIZE]` to your autoexecs in your config and restart Hyprland.
@@ -259,7 +259,7 @@ Setting `misc.middle_click_paste` to `false` disables the feature altogether wit
 
 ### My apps take a long time to start / can't screenshare
 
-See [The XDPH Page](../hypr-ecosystem/10-user/xdg-desktop-portal-hyprland#debugging).
+See [The XDPH Page](../hypr-ecosystem/user/xdg-desktop-portal-hyprland#debugging).
 
 You most likely have multiple portal impls / an impl is failing to launch.
 
