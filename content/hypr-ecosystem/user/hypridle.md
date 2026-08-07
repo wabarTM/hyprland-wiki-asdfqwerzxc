@@ -47,8 +47,9 @@ Every listener has a _timeout_ (in seconds). After idling for _timeout_ seconds,
 `on-timeout` will fire.  
 When action is resumed after idle, `on-resume` will fire.
 
-Example listener:
+You can define as many listeners as you want.
 
+{{% details title="Example listener" closed="true" %}}
 ```ini
 listener {
     timeout = 500                            # in seconds.
@@ -56,8 +57,8 @@ listener {
     on-resume = notify-send "Welcome back!"  # command to run when activity is detected after timeout has fired.
 }
 ```
+{{% /details %}}
 
-You can define as many listeners as you want.
 
 Variables in the `listener` category:
 
@@ -86,14 +87,16 @@ resets the listener and cancels a pending retry.
 > holds up idle handling. Retry timing is checked on hypridle's ~5s event-loop tick, so very small
 > `condition_retry` values are effectively rounded up to that granularity.
 
-Example — don't suspend while an SSH session is connected:
+{{% details title="Examples" closed="true" %}}
+
+Don't suspend while an SSH session is connected:
 
 ```ini
 listener {
     timeout = 900                                          # 15min.
-    on-timeout = systemctl suspend                         # suspend pc.
-    condition_cmd = ~/.config/hypr/scripts/can-suspend.sh  # exit 0 = suspend, non-zero = stay awake.
-    condition_retry = 30                                   # re-check every 30s while still idle.
+        on-timeout = systemctl suspend                         # suspend pc.
+        condition_cmd = ~/.config/hypr/scripts/can-suspend.sh  # exit 0 = suspend, non-zero = stay awake.
+        condition_retry = 30                                   # re-check every 30s while still idle.
 }
 ```
 
@@ -103,8 +106,6 @@ listener {
 ss -tn state established '( sport = :ssh )' | grep -q . && exit 1
 exit 0
 ```
-
-### Examples
 
 Full hypridle example with hyprlock:
 
@@ -145,8 +146,6 @@ listener {
 }
 ```
 
-### Recipes
-
 #### Fading the keyboard backlight
 
 `brightnessctl` sets brightness instantly, so a plain `on-timeout`/`on-resume` pair turns the
@@ -160,3 +159,5 @@ playback (not just fullscreen), which pauses **every** listener, not just screen
 you want the keyboard backlight to keep responding to real input while a video plays, set
 `ignore_inhibit = true` on that listener specifically, rather than on `general:ignore_wayland_inhibit`
 which would disable inhibit-awareness for every listener.
+
+{{% /details %}}

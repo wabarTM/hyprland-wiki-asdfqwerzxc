@@ -176,6 +176,7 @@ Dynamic effects are re-evaluated every time a property changes.
 | no_screen_share | boolean | Hides the window and its popups from screen sharing by drawing black rectangles in their place. |
 | no_vrr | boolean | Disables VRR for the window. Only works when `misc.vrr` is set to `2` or `3`. |
 | no_wobble | boolean | Disables wobble for the window. |
+| no_xdg_drags | boolean | If true, will disable XDG-driven drags for the window (e.g. dragging a CSD top bar) |
 | opaque | boolean | Forces the window to be opaque. |
 | force_rgbx | boolean | Forces Hyprland to ignore the alpha channel entirely. |
 | sync_fullscreen | boolean | Whether the fullscreen mode should always be the same as the one sent to the window. |
@@ -185,7 +186,6 @@ Dynamic effects are re-evaluated every time a property changes.
 | render_unfocused | boolean | Forces the window to think it's being rendered when it's not visible. |
 | scroll_mouse | number | Forces the window to override `input.scroll_factor`. |
 | scroll_touchpad | number | Forces the window to override `input.touchpad.scroll_factor`. |
-| no_xdg_drags | boolean | If true, will disable XDG-driven drags for the window (e.g. dragging a CSD top bar) |
 | confine_pointer | boolean | Locks the mouse cursor to the window. Mostly useful for keeping your mouse cursor locked to one monitor during gaming.|
 
 All dynamic effects can be set with `set_prop`.
