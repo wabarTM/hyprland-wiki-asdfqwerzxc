@@ -29,6 +29,3 @@ hyprctl notify [ICON] [TIME_MS] [COLOR] [MESSAGE]
 See more in [Using hyprctl](../using-hyprctl#notify)
 
 <!-- TODO add info on icons and colors -->
-
-Icon can be one of the 
-
