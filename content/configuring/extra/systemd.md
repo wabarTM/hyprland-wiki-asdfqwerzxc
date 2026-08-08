@@ -43,6 +43,10 @@ hl.on("hyprland.shutdown", function()
 end)
 ```
 
+### NixOS
+
+If you want to start up `graphical-session.target`, check it in the [configuring with hjem page](../../nix/configuring-hyprland-with-hjem)
+
 ## UWSM
 
 If you are interested in using advanced systemd functionalities, you could check out [UWSM](../../useful-utilities/uwsm).

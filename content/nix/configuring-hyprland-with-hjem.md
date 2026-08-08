@@ -45,7 +45,7 @@ In NixOS, we can achieve this making a custom user unit using Hjem:
 
 ```toml {filename="hyprland.nix"}
 {
-    hjem.users.youruser.files.".config/systemd/user/compositor.target".text = /* toml */ ''
+    hjem.users.youruser.files.".config/systemd/user/hyprland-session.target".text = /* toml */ ''
       [Unit]
       Description=Custom unit for starting systemd's graphical-session.target
       BindsTo=graphical-session.target
@@ -62,11 +62,11 @@ We need to start this unit at hyprland start, and finish it at hyrpland shutdown
 {
     hjem.users.youruser.files.".config/hypr/hyprland.lua".text = /* lua */ ''
       hl.on("hyprland.start", function () 
-        hl.exec_cmd("systemctl --user start compositor.target")
+        hl.exec_cmd("systemctl --user start hyprland-session.target")
       end)
 
       hl.on("hyprland.shutdown", function()
-        os.execute("systemctl --user stop compositor.target && sleep 0.1")
+        os.execute("systemctl --user stop hyprland-session.target && sleep 0.1")
         -- uses a blocking exec function and sleeps a bit to give things time to close
         -- you might also want to kill troublesome/crashing non-systemd background services here:
         -- os.execute("pkill wallpaperthing; systemctl --user stop hyprland-session.target && sleep 0.1")
