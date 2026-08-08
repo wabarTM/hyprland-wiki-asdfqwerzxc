@@ -15,14 +15,14 @@ A debug build is already provided through
 
 Most hyprwm apps also provide their own `-debug` versions. For those that don't,
 one can build the debug version from the CLI by using
-[overrideAttrs](../Options-Overrides/#using-nix-repl) with
+[overrideAttrs](../advanced/#using-nix-repl) with
 `cmakeBuildType = "Debug";` or `mesonBuildType = "debug";`, depending on the
 program.
 
 ## Bisecting an issue
 
 Follow the
-[Bisecting an issue](https://wiki.hypr.land/Crashes-and-Bugs/#bisecting-an-issue)
+[Bisecting an issue](../../crashes-and-bugs/#bisecting-an-issue)
 guide. To build, run `nix build`.
 
 > [!WARNING]
@@ -40,7 +40,7 @@ If you enable [Cachix](../cachix), you can call `nix run github:hyprwm/Hyprland/
 ## Building the Wayland stack with ASan
 
 Run `nix develop` first, then follow the
-[Building with ASan](https://wiki.hypr.land/Crashes-and-Bugs/#building-the-wayland-stack-with-asan)
+[Building with ASan](../../crashes-and-bugs/#building-the-wayland-stack-with-asan)
 guide.
 
 ## Getting a debug stacktrace
@@ -57,14 +57,14 @@ coredumpctl debug <PID> # using the PID found in the previous step
 ```
 
 The rest of the process is the same as
-[here](../../Crashes-and-Bugs#obtaining-a-debug-stacktrace), from step 3 onwards.
+[here](../../crashes-and-bugs#obtaining-a-debug-stacktrace), from step 3 onwards.
 
 ## Manual building
 
 You can build hyprland using cmake instead of using `nix build`. The advantage is being able to do incremental builds (just building whatever little change you made instead of the entire repo).
 
 1. Clone the hyprland repo including its submodules.
-2. Enter in the directory and execute `nix develop` in your shell.
+2. Enter the directory and execute `nix develop` in your shell.
 3. Run `make debug` (check the Makefile for other options).
 4. For doing an incremental build (only building any small change you made after the first full build), run the following command (included in the Makefile):  
 ```bash

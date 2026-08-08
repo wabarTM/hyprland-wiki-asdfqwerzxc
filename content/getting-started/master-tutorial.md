@@ -103,7 +103,7 @@ crucial things to make Wayland / Hyprland / other apps work correctly.
 
 ## Apps / X11 replacements
 
-See the [Useful Utilities page](../../useful-utilities)
+See the [Useful utilities page](../../useful-utilities)
 about that. You can also visit the
 [Awesome-Hyprland](https://github.com/hyprland-community/awesome-hyprland)
 repository for a more comprehensive list.
@@ -137,4 +137,4 @@ for qt6 apps.
 ## Cursors
 
 Cursors are a notorious pain to set up when you don't know how. See
-[this FAQ entry on changing your mouse cursor](../../faq#how-do-i-change-me-mouse-cursor)
+[this FAQ entry on changing your mouse cursor](../../faq#how-do-i-change-my-mouse-cursor)

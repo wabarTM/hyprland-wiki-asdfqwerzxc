@@ -146,9 +146,6 @@ those binds will obviously not load.
 To alleviate this, Hyprland will give you a few emergency keybinds (SUPER+Q, +R and +M for terminal, run, and exit respectively)
 and mention this in the error popup.
 
-#### Testing with REPL
-The API and Lua state can be easily explored with the built in [Lua REPL in hyprctl](./advanced-configuration/using-hyprctl/#repl).
-
 #### Infinite loops, reentrant events
 
 Hyprland has protections in place to avoid scripts that would run forever from taking down
@@ -161,4 +158,4 @@ arbitrary code on your machine, make sure you trust your config source.
 
 #### Testing with REPL
 
-The API and Lua state can be easily explored with the built in [Lua REPL in hyprctl](../Advanced-and-Cool/Using-hyprctl/#repl).
+The API and Lua state can be easily explored with the built in [Lua REPL in hyprctl](./advanced-configuration/using-hyprctl/#repl)).

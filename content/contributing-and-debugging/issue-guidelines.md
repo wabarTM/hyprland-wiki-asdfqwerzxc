@@ -36,7 +36,7 @@ For bugs:
 - If a discussion is reproducible, a member of Hyprland promotes the discussion to an issue by opening an issue with the key information and links the original discussion.
 
 > [!NOTE]
-> To get logs for your bug please see [Crashes and Bugs](https://wiki.hypr.land/Crashes-and-Bugs/)
+> To get logs for your bug please see [Crashes and Bugs](../../crashes-and-bugs)
 
 For feature requests:
 - If a discussion describes a feature that is already possible (via scripts, features, or official tools), invalid, or not applicable, it gets closed.

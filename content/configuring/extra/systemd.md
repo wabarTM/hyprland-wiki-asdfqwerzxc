@@ -45,4 +45,4 @@ end)
 
 ## UWSM
 
-If you are interested in using advanced systemd functionalities, you could check out [UWSM](../../useful-utilities/uwsm).
+If you are interested in using advanced systemd functionalities, you could check out [UWSM](../../../useful-utilities/uwsm).

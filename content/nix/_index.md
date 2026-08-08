@@ -52,7 +52,7 @@ To use it, simply add
 
 ## Advanced
 
-The section [Advanced](./advanced) contains tweaks as options, overrides, overlays, building plugins with nix, ...
+The section [Advanced](./advanced) contains tweaks such as options, overrides, overlays, building plugins with nix, ...
 
 ## Contributing and debugging Hyprland
 

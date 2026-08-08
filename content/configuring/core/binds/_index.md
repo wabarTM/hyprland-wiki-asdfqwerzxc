@@ -23,7 +23,7 @@ will bind opening Firefox to <key>SUPER</key> + <key>SHIFT</key> + <key>Q</key>
 <!-- TODO: why on earth <key> is needed there? wiki parsing? -->
 
 The dispatcher list can be found in
-[Dispatchers](../dispatchers#list-of-dispatchers).
+[Dispatchers](../dispatchers).
 
 You can also put a lua function, if you prefer, as your bind dispatcher:
 
@@ -152,11 +152,11 @@ will be resolved to:
 
 ```lua
 hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", {float = false }) )
--- or, depending on your focus when config was realoaded
+-- or, depending on your focus when config was reloaded
 hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", {float = false }) )
 ```
 And it will stay like that until next config reload. 
-To change this behecaiour, dispatcher can be wrapped in a function:
+To change this behavior, dispatcher can be wrapped in a function:
 
 ```lua
 hl.bind("SUPER + L", function()
@@ -169,7 +169,7 @@ Now the condition will be evaluated on each call of the bind.
 
 ### Autoconsuming bind and return { ok = false }
 
-Hyprland exposes `ok` value to check result of a dispatcher. When combined with `auto_consumint` flag
+Hyprland exposes `ok` value to check result of a dispatcher. When combined with `auto_consuming` flag
 it can be used to pass keys that are otherwise consumed by the bind.
 
 For example:
@@ -182,8 +182,8 @@ hl.bind("p", function()
     else
         return { ok = false }
     end
-end, {auto_consumint = true})
+end, {auto_consuming = true})
 ```
 
 This bind will spawn `"another cool app"` if active window is `"some cool app"` and if
-active window is not `"some cool app"` it will pas `p` to that window.
+active window is not `"some cool app"` it will pass `p` to that window.

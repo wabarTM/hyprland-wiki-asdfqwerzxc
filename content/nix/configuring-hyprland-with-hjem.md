@@ -3,7 +3,7 @@ title: Configuring Hyprland with Hjem
 weight: 30
 ---
 
-Hjem ("home" in Danish) is a module system that implements a simple and streamlined way to manage files in your $HOME, such as but not limited to files in your ~/.config. Hjem aims to approach as an alternative, easy-to-grasp utility for managing your $HOME purely and safely.
+Hjem ("home" in Danish) is a module system that implements a simple and streamlined way to manage files in your $HOME, such as but not limited to files in your ~/.config. Hjem aims to serve as an alternative and easy-to-grasp utility for managing your $HOME purely and safely.
 
 You can read the wonderful [Hjem documentation](https://hjem.feel-co.org/) to learn how to install and use it.
 

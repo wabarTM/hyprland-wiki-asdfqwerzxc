@@ -60,7 +60,7 @@ Typically, they have to be manually mounted, often using root and `umount` to do
 
 Many popular DEs automatically handle this by using `udisks2` wrappers.
 
-`udiskie` is a udisks2 front-end that allows to manage removable media such as
+`udiskie` is a udisks2 front-end that allows you to manage removable media such as
 CDs or flash drives from userspace.
 
 Install `udiskie` via your package manager, or

@@ -121,8 +121,8 @@ building and managing plugins.
 
 > [!WARNING]
 > Using plugins using the syntax below requires you to be using Hyprland through
-> the [Home Manager module](../Hyprland-on-Home-Manager) or the
-> [upstream NixOS module](../Hyprland-on-NixOS#upstream-module).
+> the [Home Manager module](../configuring-hyprland-with-home-manager) or the
+> [upstream NixOS module](../installing-hyprland-on-nixos).
 
 ## Using plugins from Nixpkgs
 

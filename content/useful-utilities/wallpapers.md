@@ -35,12 +35,12 @@ means you can change wallpapers without even needing to restart.
 
 ## waypaper
 
-GUI wallpaper manager that allows to visually choose the static or animated
+GUI wallpaper manager that allows you to visually choose the static or animated
 wallpapers, and supports `swaybg` and `awww` as backends on Wayland.
 [GitHub](https://github.com/anufrievroman/waypaper)
 
 ## wallrizz
 
-TUI wallpaper manager that allows to visually choose and apply the desktop wallpaper. 
-It supports `awww`, `hyprpaper` and more as backend on Wayland.
+TUI wallpaper manager that allows you to visually choose and apply the desktop wallpaper.
+It supports `awww`, `hyprpaper` and others as backends on Wayland.
 [Github](https://github.com/5hubham5ingh/WallRizz)

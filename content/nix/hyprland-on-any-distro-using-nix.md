@@ -20,7 +20,7 @@ Then enable the daemon:
 sudo systemctl enable --now nix-daemon
 ```
 
-Advanced users might want to use [Home Manager](../30-hyprland-with-home-manager). If you don't know what
+Advanced users might want to use [Home Manager](../configuring-hyprland-with-home-manager). If you don't know what
 this is, just don't.
 
 Before you do anything, [enable flakes](https://nixos.wiki/wiki/Flakes#Enable_flakes), by adding this to `/etc/nix/nix.conf` or `~/.config/nix/nix.conf`:
@@ -29,7 +29,7 @@ Before you do anything, [enable flakes](https://nixos.wiki/wiki/Flakes#Enable_fl
 experimental-features = nix-command flakes
 ```
 
-once that is done, install Hyprland through `nix profile`:
+Once that is done, install Hyprland through `nix profile`:
 
 {{< tabs items="From hyprnix (Recommended),From Nixpkgs,From the Flake" >}}
 
@@ -57,7 +57,7 @@ sudo nix profile install --profile /nix/var/nix/profiles/default nixpkgs#hyprlan
 {{< tab "From the Flake" >}}
 
 > [!NOTE]
-> Make sure to enable [Cachix](../40-cachix) first.
+> Make sure to enable [Cachix](../cachix) first.
 
 > [!WARNING]
 > This builds the latest, unstable git branch.

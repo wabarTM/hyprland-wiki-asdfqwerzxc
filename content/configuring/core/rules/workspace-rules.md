@@ -7,32 +7,33 @@ You can set workspace rules to achieve workspace-specific behaviors. For
 instance, you can define a workspace where all windows are drawn without borders
 or gaps.
 
-For layout-specific rules, see the specific layout page. For example:
-[Master Layout->Workspace Rules](../../Layouts/Master-Layout#workspace-rules).
+Some layouts have their own specific rules, they can be found on the corresponding layout page
 
 ## Syntax
 
 ```lua
-hl.workspace_rule(workspace, rule1, rule2, ...)
+hl.workspace_rule(workspace = SELECTOR, RULE1, RULE2, ...)
 ```
 
-- WORKSPACE is a valid workspace identifier (see
-  [Dispatchers->Workspaces](../Dispatchers#workspace)). This field is
+- SELECTOR is a valid workspace selector (see
+  [Naming conventions](../../../../naming-conventions#workspace-selectors)). This field is
   mandatory. This _can be_ a workspace selector, but please note
   workspace selectors can only match _existing_ workspaces.
-- RULES is one (or more) rule(s) as described here in [rules](#rules).
+- RULE is one of the rules described [below](#rules).
 
 ## Rules
 
-| Rule | Description | type |
+<!-- limits there for future, if someone decides to add something -->
+
+| Rule | Description | Type |
 | --- | --- | --- |
 | animation | The animation style to use for this workspace. | string |
-| monitor | Binds a workspace to a monitor. See [syntax](#syntax) and [Monitors](../Monitors). | string |
+| monitor | Binds a workspace to a monitor. See [syntax](#syntax) and [Monitors](../../monitors). | string |
 | default | Whether this workspace should be the default workspace for the given monitor | bool |
-| float_gaps | Set the gaps for floating windows (equivalent to [General->float_gaps](../Variables#general)) | css_gaps | `0` |
-| gaps_in | Set the gaps between windows (equivalent to [General->gaps_in](../Variables#general)) | css_gaps |
-| gaps_out | Set the gaps between windows and monitor edges (equivalent to [General->gaps_out](../Variables#general)) | css_gaps |
-| border_size | Set the border size around windows (equivalent to [General->border_size](../Variables#general)) | int |
+| float_gaps | Set the gaps for floating windows | css_gaps |
+| gaps_in | Set the gaps between windows | css_gaps |
+| gaps_out | Set the gaps between windows and monitor edges | css_gaps |
+| border_size | Set the border size around windows | int |
 | no_border | Whether to disable borders | bool |
 | no_shadow | Whether to disable shadows | bool |
 | no_wobble | Whether to disable wobble | bool |
@@ -40,7 +41,7 @@ hl.workspace_rule(workspace, rule1, rule2, ...)
 | no_wobble | Whether to disable wobble | bool |
 | decorate | Whether to draw window decorations or not | bool |
 | persistent | Keep this workspace alive even if empty and inactive | bool |
-| on_created_empty | A command to be executed once a workspace is created empty (i.e. not created by moving a window to it). See the [command syntax](../Dispatchers#executing-with-rules) | string |
+| on_created_empty | A command to be executed once a workspace is created empty (i.e. not created by moving a window to it). See the [command syntax](../../dispatchers#executing-with-rules) | string |
 | default_name | A default name for the workspace. | string |
 | layout | The layout to use for this workspace. | string |
 | layout_opts | A table of layout-specific options for this workspace. Keys and values depend on the layout. | table |

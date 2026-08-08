@@ -169,7 +169,7 @@ For further info, please refer to the program's GitHub repository linked above.
 
 Start by adding the following to your autostart: `clipse -listen`
 
-You can bind the TUI to a something nice like this:
+You can bind the TUI to something nice like this:
 
 ```lua
 hl.bind("SUPER + V", hl.dsp.exec_cmd("kitty --class clipse -e clipse", { float = true, size = {622, 652}, stay_focused = true }))

@@ -6,7 +6,7 @@ weight: 20
 ## Syntax
 
 > [!INFO]
-> For the ease of understanding wiki introduces a special syntax for some elements.
+> For the ease of understanding, this wiki introduces a special syntax for some elements.
 
 ### Optional parameters
 
@@ -26,7 +26,7 @@ If the question mark is followed by `= data_type`/`= value`, this means that the
 {{% details title="Examples" closed="true" %}}
 
 `[0.25 - 5.0]` means all floating numbers from 0.25 to 5.0 are allowed.  
-`[0 - ...]` means all int values from 0 to your's machine int limit are allowed.
+`[0 - ...]` means all int values from 0 to your machine's int limit are allowed.
 
 {{% /details %}}
 
@@ -48,7 +48,7 @@ Coordinates are in inverse Y cartesian system, so from top-left corner of the mo
 | gradient | A gradient, will accept a color, or `{ colors = { color, color }, angle? = float }` structure |
 | font_weight | An integer between 100 and 1000, or one of the following presets: `thin` (100) `ultralight` (200) `light` (300) `semilight` (350) `book` (380) `normal` (400) `medium` (500) `semibold` (600) `bold` (700) `ultrabold` (800) `heavy` (900) `ultraheavy` (1000) |
 
-There are implicit conversions between certain types, however, this may lead to undefined behaviour later. Lsp with lua stub can be used to warn about the use of wrong type. More on that can be read [here](../configuring/core#autocompletions)
+There are implicit conversions between certain types, however, this may lead to undefined behaviour later. Lsp with lua stub can be used to warn about the use of wrong types. More on that can be read [here](../configuring/core#autocompletions)
 
 ### Colors
 
@@ -130,8 +130,8 @@ Props separated by a space. No spaces are allowed inside props themselves.
 - `r[A-B]` - ID range from A to B inclusive
 - `s[bool]` - Whether the workspace is special or not
 - `n[bool]`, `n[s:string]`, `n[e:string]` - named actions. `n[bool]` ->
-  whether a workspace is a named workspace, `s` and `e` are starts and ends
-  with respectively
+  whether a workspace is a named workspace. `s` and `e` are starts with and ends
+  with, respectively
 - `m[monitor]` - Monitor selector
 - `w[(flags)A-B]`, `w[(flags)X]` - Prop for window counts on the workspace.
   A-B is an inclusive range, X is a specific number. Flags can be omitted.
@@ -144,7 +144,7 @@ Props separated by a space. No spaces are allowed inside props themselves.
 
 #### Workspace search
 
-Workspace search is performed by suffixing search selector with workspace ID. To use aboslute ID, `~` is put between selector and ID.
+Workspace search is performed by suffixing search selector with workspace ID. To use absolute ID, `~` is put between selector and ID.
 
 `m` - Search for workspace on current monitor  
 `r` - Search for workspace on current monitor including empty workspaces  

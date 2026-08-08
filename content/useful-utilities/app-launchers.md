@@ -9,7 +9,7 @@ See its usage and config [here](../../hypr-ecosystem/user/hyprlauncher).
 
 ## Rofi
 
-Rofi, a window switcher, application launcher and `dmenu` replacement. supports Wayland since 2025. [GitHub](https://github.com/davatorium/rofi).
+Rofi is a window switcher, application launcher and `dmenu` replacement. It supports Wayland since 2025. [GitHub](https://github.com/davatorium/rofi).
 
 ## Wofi
 

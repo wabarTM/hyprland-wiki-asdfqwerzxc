@@ -34,7 +34,7 @@ The above option generates a new desktop entry, `hyprland-uwsm.desktop`, which w
 For more info, read the [option](https://search.nixos.org/options?channel=unstable&show=programs.uwsm.enable&from=0&size=50&sort=relevance&type=packages&query=uwsm).
 
 > [!WARNING]
-> If you use the [Home Manager module](../../Nix/Hyprland-on-Home-Manager), make sure to disable the systemd integration, as it conflicts with uwsm.
+> If you use the [Home Manager module](../../nix/configuring-hyprland-with-home-manager), make sure to disable the systemd integration, as it conflicts with uwsm.
 > 
 > ```nix
 > {
@@ -50,7 +50,7 @@ For more info, read the [option](https://search.nixos.org/options?channel=unstab
 ### Launching Hyprland with uwsm
 
 > [!NOTE]
-> Pay attention to the warnings in [Environment variables](../../Configuring/Advanced-and-Cool/Environment-variables), [Multi-GPU](../../Configuring/Advanced-and-Cool/Multi-GPU) and [Dispatchers](../../Configuring/Basics/Dispatchers) sections.
+> Pay attention to the warnings in [Environment variables](../../configuring/core/environment-variables), [Multi-GPU](../../configuring/extra/multi-gpu) and [Dispatchers](../../configuring/core/dispatchers) sections.
 
 #### In tty
 
@@ -85,7 +85,7 @@ if uwsm check may-start && uwsm select; then
 fi
 ```
 
-This will bring uwsm compositor selection menu after you log in tty1. Choose `Hyprland` entry and you're good to go.
+This will bring up the uwsm compositor selection menu after you log into tty1. Choose `Hyprland` entry and you're good to go.
 
 If you want to bypass compositor selection menu and launch Hyprland directly, use this code in your shell profile, instead.
 

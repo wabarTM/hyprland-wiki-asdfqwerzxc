@@ -14,7 +14,7 @@ device integration, file access, screen mirroring, and quick local file sharing.
 It can share files and clipboard contents, show phone notifications, ring or
 find a device, and expose remote input features.
 
-Install [hypr-kdeconnect-fix](https://github.com/gfhdhytghd/hypr-kdeconnect-fix) to make the remote input funtion of kde connect work. Fully vibecoded.
+Install [hypr-kdeconnect-fix](https://github.com/gfhdhytghd/hypr-kdeconnect-fix) to make the remote input function of kde connect work. Fully vibecoded.
 
 ## Device access
 
