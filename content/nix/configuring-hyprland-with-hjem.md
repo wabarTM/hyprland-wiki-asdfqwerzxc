@@ -13,7 +13,7 @@ Here follows an example of how to write your hyprland.lua contents directly insi
 
 ```lua {filename="hyprland.nix"}
 {
-    hjem.users.youruser.files.".config/hypr/hyprland.lua".text = ''
+    hjem.users.youruser.files.".config/hypr/hyprland.lua".text = /* lua */ ''
       # Your hyprland.lua content goes here.
       # You can use string interpolation for nix to evaluate variables at build time.
       # A snippet of a hyprland.lua config using string interpolation for some variables to be interpreted by nix:
@@ -36,3 +36,41 @@ Instead of writing your hyprland.lua contents directly inside your nix config, y
 The hyprland.lua file is most likely a highly changing file. What if you want to try a new change in your hyprland config without having to build switch your nixos config? After hyprland.lua is deployed by hjem, it will write a link into `~/.config/hyprland.lua` from the nix store. This file is read-only by default, but we can easily get to rewrite it by using a tool called [`hjem-impure`](https://github.com/Rexcrazy804/hjem-impure).
 
 Executing `hjem-impure` replaces every hjem symlink with writable normal files and directories. So after that, you can write into your `~/.config/hyprland.lua` file deployed by hjem. **This enables experimentation.** What this mean is that after a nixos build switch or after a system reboot, the changes that you made in `~/.config/hyprland.lua` **will be gone**. So after you are happy with some changes, write them into your nix config for them to be persisted.
+
+## Systemd graphical-session.target
+
+Systemd is designed to expect `graphical-session.target` to be run when a Wayland compositor such as Hyprland is executed. This is needed for some programs that depend on `graphical-session.target` to start their services. The most notable example being the `xdg-desktop-portal.service`, which is needed for screen-sharing, for GTK apps to be able to switch their color scheme, etc. Other example being the `waybar service`.
+
+In NixOS, we can achieve this making a custom user unit using Hjem:
+
+```toml {filename="hyprland.nix"}
+{
+    hjem.users.youruser.files.".config/systemd/user/compositor.target".text = /* toml */ ''
+      [Unit]
+      Description=Custom unit for starting systemd's graphical-session.target
+      BindsTo=graphical-session.target
+      Wants=graphical-session-pre.target
+      After=graphical-session-pre.target
+      PropagatesStopTo=graphical-session.target
+    ''
+}
+```
+
+We need to start this unit at hyprland start, and finish it at hyrpland shutdown:
+
+```lua {filename="hyprland.nix"}
+{
+    hjem.users.youruser.files.".config/hypr/hyprland.lua".text = /* lua */ ''
+      hl.on("hyprland.start", function () 
+        hl.exec_cmd("systemctl --user start compositor.target")
+      end)
+
+      hl.on("hyprland.shutdown", function()
+        os.execute("systemctl --user stop compositor.target && sleep 0.1")
+        -- uses a blocking exec function and sleeps a bit to give things time to close
+        -- you might also want to kill troublesome/crashing non-systemd background services here:
+        -- os.execute("pkill wallpaperthing; systemctl --user stop hyprland-session.target && sleep 0.1")
+      end)
+    ''
+}
+```
