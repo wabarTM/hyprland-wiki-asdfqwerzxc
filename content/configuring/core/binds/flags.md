@@ -29,13 +29,13 @@ Available flags:
 | `repeating` | Will repeat when held. |
 | `non_consuming` | Key/mouse events will be passed to the active window in addition to triggering the dispatcher. |
 | `auto_consuming` | Key/mouse events will be passed to the active window if the dispatcher doesn't succeed. |
-| `mouse`| See the dedicated [Mouse Binds](#mouse-binds) section. |
+| `mouse`| See the dedicated [Mouse binds](../devices/mouse) section. |
 | `transparent` | Cannot be shadowed by other binds. |
 | `ignore_mods` | Will ignore modifiers. |
 | `description` | Will allow you to write a description for your bind. |
 | `dont_inhibit` | Bypasses the app's requests to inhibit keybinds. |
 | `submap_universal` | Will be active no matter the submap. |
-| `device` | Allow binds to be set per device. See [Per-Device Binds](#per-device-binds) |
+| `device` | Allow binds to be set per device. See [Per-Device binds](../devices/per-device) |
 | `allow_input_capture` | When input is captured by a client, this bind will still be processed. |
 
 {{% details title="Examples" closed="true" %}}
@@ -85,4 +85,4 @@ hl.bind("SUPER + Q", hl.dsp.exec_cmd("kitty"), { description = "Open my favourit
 ```
 
 If you want to access your description you can use `hyprctl binds`.  
-For more information have a look at [Using Hyprctl](../../Advanced-and-Cool/Using-hyprctl).
+For more information have a look at [Using hyprctl](../../advanced-configuration/using-hyprctl)).

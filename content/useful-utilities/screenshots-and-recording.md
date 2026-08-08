@@ -35,7 +35,7 @@ annotation tool inspired by [`swappy`](https://github.com/jtheoof/swappy) and
 improvements over existing screenshot tools and is an almost drop-in replacement for swappy.
 
 For example, to take a screenshot and open it with `satty`, 
-Ctrl-C to copy to clipboard and Ctrl-S saves it to `~/Pictures/Screenshots/`:
+Ctrl-C to copy to clipboard and Ctrl-S to save it to `~/Pictures/Screenshots/`:
 
 ```lua
 hl.bind("Print", hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
@@ -63,7 +63,7 @@ window.
 Use the `pass` dispatcher to forward <key>Alt</key> + <key>A</key> to WeChat:
 
 ```lua
-hl.bind("ALT + A", hl.dsp.pass({class = "^(wechat)$"}))
+hl.bind("ALT + A", hl.dsp.pass({class = "wechat"}))
 ```
 
 The `pass` dispatcher sends both the press and release events to the matched
@@ -93,8 +93,8 @@ integrated with Hyprland instead of wiring several smaller tools together.
 
 [OBS Studio](https://obsproject.com/) can record the screen through PipeWire and
 the desktop portal. Make sure `pipewire`, `wireplumber`,
-[`xdg-desktop-portal-hyprland`](../../Hypr-Ecosystem/xdg-desktop-portal-hyprland)
-and `qt6-wayland` are installed. See [Screen sharing](../Screen-Sharing) for
+[`xdg-desktop-portal-hyprland`](../../hypr-ecosystem/user/xdg-desktop-portal-hyprland)
+and `qt6-wayland` are installed. See [Screen sharing](../screen-sharing) for
 portal setup notes.
 
 ### wf-recorder

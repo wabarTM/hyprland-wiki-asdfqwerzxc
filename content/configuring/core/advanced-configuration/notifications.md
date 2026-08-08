@@ -26,7 +26,7 @@ From hyprctl, you can create a notification with the `hyprctl notify` command:
 hyprctl notify [ICON] [TIME_MS] [COLOR] [MESSAGE]
 ```
 
-See more in [Using hyprctl](../20-using-hyprctl#notify)
+See more in [Using hyprctl](../using-hyprctl#notify)
 
 <!-- TODO add info on icons and colors -->
 

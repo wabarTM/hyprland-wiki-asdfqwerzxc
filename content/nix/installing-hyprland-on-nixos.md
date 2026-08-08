@@ -24,7 +24,7 @@ This will use the Hyprland version included in the Nixpkgs release you're using.
 {{< tab "The Hyprland flake" >}}
 
 > [!NOTE]
-> If you don't want to compile Hyprland yourself, make sure to enable [Cachix](../Cachix).
+> If you don't want to compile Hyprland yourself, make sure to enable [Cachix](../cachix).
 
 In case you want to use the _development_ version of Hyprland, you can add it like
 this:

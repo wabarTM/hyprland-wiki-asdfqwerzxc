@@ -42,7 +42,7 @@ yay -S xdg-desktop-portal-hyprland-git
 {{< tab "NixOS" >}}
 
 On NixOS, XDPH is already enabled by the
-[NixOS module for Hyprland](../../../nix/10-hyprland-on-nixos), through
+[NixOS module for Hyprland](../../../nix/installing-hyprland-on-nixos), through
 `programs.hyprland.enable = true;`.
 
 {{< /tab >}}

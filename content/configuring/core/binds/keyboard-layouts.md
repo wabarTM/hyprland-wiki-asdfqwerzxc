@@ -39,7 +39,7 @@ Variants are set per layout.
 ### Hyprctl
 
 You can also bind a key to execute `hyprctl switchxkblayout` for more keybind
-freedom. See [Using hyprctl](../../Advanced-and-Cool/Using-hyprctl).
+freedom. See [Using hyprctl](../../advanced-configuration/using-hyprctl).
 
 To find the valid layouts and `kb_options`, you can check out the
 `/usr/share/X11/xkb/rules/base.lst`. For example:
@@ -66,7 +66,7 @@ Keys used for keybinds need to be accessible without any modifiers in your layou
 For instance, the [French AZERTY](https://en.wikipedia.org/wiki/AZERTY) layout uses <key>SHIFT</key> + _`unmodified key`_ to write `0-9` numbers. As such, the workspace keybinds for this layout need to use the names of the _`unmodified keys`_ , and will not work when using the `0-9` numbers.
 
 > [!NOTE]
-> To get the correct name for an `unmodified_key`, refer to [the section on uncommon syms](#uncommon-syms--binding-with-a-keycode)
+> To get the correct name for an `unmodified_key`, refer to [the section on uncommon syms](..#uncommon-syms--binding-with-a-keycode)
 
 ```lua
 -- On a French layout, instead of:

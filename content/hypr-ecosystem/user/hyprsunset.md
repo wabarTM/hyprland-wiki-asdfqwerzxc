@@ -78,8 +78,9 @@ profile {
 
 ## Usage
 
-To autostart hyprsunset, add: `hyprsunset` to your `hyprland.lua`'s autostart.
-If Hyprland is started with [uwsm](../../Useful-Utilities/Systemd-start), you can use `systemctl --user enable --now hyprsunset.service`.
+To autostart hyprsunset, add: `hyprsunset` to your `hyprland.lua`'s autostart section.
+
+<!-- If Hyprland is started with [uwsm](../../Useful-Utilities/Systemd-start), you can use `systemctl --user enable --now hyprsunset.service`. -->
 
 Hyprsunset can also be controlled by supplying arguments to the command.  
 By specifying `hyprsunset --temperature 5000` you will override the current active config's temperature setting.  This however, will be overridden once a new profile is activated.
@@ -113,7 +114,7 @@ hyprctl hyprsunset reset identity
 hyprctl hyprsunset profile
 ```
 
-This can be used by other software to change the temperature throughout the day, or to adjust perceieved
+This can be used by other software to change the temperature throughout the day, or to adjust perceived
 monitor brightness, such as with the following Hyprland keybinds:
 ```ini
 bindel = ,XF86MonBrightnessDown, exec, hyprctl hyprsunset gamma -10

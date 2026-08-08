@@ -131,7 +131,7 @@ lower one. A good way to list all modes is to get `wlr-randr` and do a
 ### My monitor has flickering brightness when I turn on VRR
 
 Change the VRR option to `2` (fullscreen), so that it is only used in games.
-This happens because the brightness on some monitors can depends on the refresh
+This happens because the brightness on some monitors can depend on the refresh
 rate, and rapidly changing refresh rates (for example, when the screen
 momentarily updates after pressing a key) will cause rapid changes in
 brightness.
@@ -157,7 +157,7 @@ update the package. Paru has been problematic with updating before, use Yay.
 Use a Wayland-compatible locking utility using WLR protocols, e.g. `swaylock`.
 Be aware that they will not prevent tty-changing using Ctrl-Alt-F1...F7.
 
-### How do I change me mouse cursor?
+### How do I change my mouse cursor?
 
 See [hyprcursor](../hypr-ecosystem/dev/hyprcursor)
 

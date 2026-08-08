@@ -90,8 +90,8 @@ which will be found when matching on `title` and `class`, respectively.
 > It is not possible to `float` (or any other static rule) a window based on a
 > change in the `title` after the window has been created. This applies to all
 > static effects listed here.  
-> Instead, use a [dispatch](../Dispatchers#window-1) triggered by an
-> [event](../../Advanced-and-Cool/Expanding-functionality#events) listener to
+> Instead, use a [dispatch](../../dispatchers) triggered by an
+> [event](../../advanced-configuration/events) listener to
 > apply the effect after the window has been created:
 > ```lua
 > hl.on("window.title", function(w)

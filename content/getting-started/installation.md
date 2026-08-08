@@ -69,7 +69,7 @@ yay -S hyprland-meta-git
 ```
 
 > [!WARNING]
-> With `-git` everytime a direct dependency like `hyprutils` has an ABI breaking update you need to recompile Hyprland and all other dependent tools.
+> With `-git`, every time a direct dependency like `hyprutils` has an ABI breaking update, you need to recompile Hyprland and all other dependent tools.
 > Otherwise you get a ".so not found" error.
 
 
@@ -106,7 +106,7 @@ sudo zypper in hyprland
 
 or install the "hyprland" package via YaST2 Software.
 
-For `hyprpm` to recognize it's dependencies, you'll also need to install `hyprland-devel`:
+For `hyprpm` to recognize its dependencies, you'll also need to install `hyprland-devel`:
 
 ```sh
 sudo zypper in hyprland-devel
@@ -309,7 +309,7 @@ Dependencies:
 
 > [!NOTE]
 > Please note that Hyprland uses the C++26 standard, so both your compiler and your
-> C++ standard library has to support that (`gcc>=15` or `clang>=19`).
+> C++ standard library have to support that (`gcc>=15` or `clang>=19`).
 
 {{% details title="Arch" closed="true" %}}
 

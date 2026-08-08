@@ -17,7 +17,7 @@ To open hyprlauncher, just bind `hyprlauncher` to a key.
 
 ### Theming
 
-Theme follows your [hyprtoolkit](../../dev/10-hyprtoolkit) theme.
+Theme follows your [hyprtoolkit](../../dev/hyprtoolkit) theme.
 
 ### Config
 

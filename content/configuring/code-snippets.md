@@ -94,7 +94,7 @@ hl.window_rule({ match = { float = false, workspace = "f[1]s[false]" }, rounding
 ### Float browser's extension windows
 
 All known browsers have the annoying "feature" of setting title to their own name when opening
-extensions' window. This functiion listens to opened windows and floats the matches
+extensions' window. This function listens to opened windows and floats the matches
 
 ```lua
 hl.on("window.open", function(w)

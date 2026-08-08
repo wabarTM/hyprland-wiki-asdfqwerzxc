@@ -1,6 +1,6 @@
 ---
 weight: 10
-title: Must have
+title: Must-have
 ---
 
 This page documents software that is **strongly** recommended to have running

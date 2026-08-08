@@ -30,7 +30,7 @@ Check out the wiki pages for each app, or their GitHub repo.
 
 ### Dev Libraries and Toolkits
 
-- [hyprtoolkit](./dev/10-hyprtoolkit) | [GitHub](https://github.com/hyprwm/hyprtoolkit)
+- [hyprtoolkit](./dev/hyprtoolkit) | [GitHub](https://github.com/hyprwm/hyprtoolkit)
 - [hyprcursor](./dev/hyprcursor) | [GitHub](https://github.com/hyprwm/hyprcursor)
 - [hyprutils](./dev/hyprutils) | [GitHub](https://github.com/hyprwm/hyprutils)
 - [hyprlang](./dev/hyprlang) | [GitHub](https://github.com/hyprwm/hyprlang)

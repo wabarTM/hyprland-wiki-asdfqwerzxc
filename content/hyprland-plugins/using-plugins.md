@@ -3,10 +3,6 @@ weight: 10
 title: Using plugins
 ---
 
-> [!NOTE]
-> Looking for the old hyprlang syntax? Check the [0.54 wiki pages](https://wiki.hypr.land/0.54.0/).
-> Since Hyprland 0.55, hyprlang is deprecated in favor of lua.
-
 This page will tell you how to use plugins.
 
 ## Disclaimers
@@ -34,7 +30,7 @@ manual instructions, see [here](#manual).
 ### hyprpm
 
 > [!NOTE]
-> If you are using [permission management](../../Configuring/Advanced-and-Cool/Permissions),
+> If you are using [permission management](../../configuring/core/advanced-configuration/permissions),
 > you should allow hyprpm to load plugins by adding this to your config:
 > 
 > ```lua
@@ -124,7 +120,7 @@ Oh no. Oopsie. Usually means a plugin is broken. `hyprpm disable` it.
 
 ### How do I make my own plugin?
 
-See [here](../Development/Getting-Started).
+See [here](../development/getting-started).
 
 ### Where do I find plugins?
 
