@@ -1,6 +1,6 @@
 ---
-title: Using the Nix package manager to enjoy Hyprland on any distro.
-weight: 20
+title: Hyprland on any distro using nix
+weight: 10
 ---
 
 Using Hyprland via the Nix package manager on distros that aren't NixOS is very simple.

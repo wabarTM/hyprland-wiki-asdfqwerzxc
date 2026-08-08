@@ -1,7 +1,9 @@
 ---
 title: Hyprland on NixOS
-weight: 10
+weight: 11
 ---
+
+## Installing Hyprland on NixOS
 
 You can install Hyprland from:
 + The nixpkgs repository if you want a proper released version from Hyprland.
@@ -85,3 +87,42 @@ For more details, see
 {{< /tab >}}
 
 {{< /tabs >}}
+
+## Configuring Hyprland on NixOS
+
+You need to choose one of the three ways for configuring hyprland in nix: hjem, home manager, or the upstream module.
+
+### Hjem
+
+Read [Configuring Hyprland with Hjem](./configuring-hyprland-with-hjem).
+
+### Home Manager
+
+Read [Configuring Hyprland with Home Manager](./configuring-hyprland-with-home-manager).
+
+For the adventurous, [@spikespaz](https://github.com/spikespaz) has made a
+Hyprland module that can be used in Home Manager and NixOS. It can be found
+[here](https://github.com/hyprland-community/hyprnix).
+
+### The upstream module
+
+The [upstream module](https://github.com/hyprwm/Hyprland/blob/main/nix/module.nix)
+provides options similar to the ones in the Home Manager module.
+
+To use it, simply add
+
+```nix
+{inputs, ...}: {
+  imports = [inputs.hyprland.nixosModules.default];
+
+  programs.hyprland = {
+    # usual Nixpkgs module options
+    plugins = [
+      #...
+    ];
+    settings = {
+      # ...
+    };
+  };
+}
+```
