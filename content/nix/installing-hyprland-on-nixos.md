@@ -8,14 +8,15 @@ weight: 11
 You can install Hyprland from:
 + The nixpkgs repository if you want a proper released version from Hyprland.
 + The hyprland flake if you want the latest git commit available at the moment.
++ Flake-compat: in case you want to use the hyprland flake but you don't want to enable the use of flakes in your NixOS system.
 
-{{< tabs items="Nixpkgs repository,The Hyprland flake" >}}
+{{< tabs items="Nixpkgs repository,The Hyprland flake,flake-compat" >}}
 
 {{< tab "Nixpkgs repository" >}}
 
 ```nix {filename="configuration.nix"}
 {
-  programs.hyprland.enable = true; # enable Hyprland
+  programs.hyprland.enable = true;
 }
 ```
 
@@ -83,6 +84,33 @@ in {
 
 For more details, see
 [issue #5148](https://github.com/hyprwm/Hyprland/issues/5148).
+
+{{< /tab >}}
+
+{{< tab "flake-compat" >}}
+
+This section is for using the hyprland flake in a NixOS system without support for nix flakes.
+
+> [!NOTE]
+> If you don't want to compile Hyprland yourself, make sure to enable [Cachix](../Cachix).
+
+```nix {filename="configuration.nix"}
+{pkgs, ...}: let
+  flake-compat = builtins.fetchTarball "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
+
+  hyprland = (import flake-compat {
+    src = builtins.fetchTarball "https://github.com/hyprwm/Hyprland/archive/main.tar.gz";
+  }).defaultNix;
+in {
+  programs.hyprland = {
+    enable = true;
+    # set the flake package
+    package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # make sure to also set the portal package, so that they are in sync
+    portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
+}
+```
 
 {{< /tab >}}
 

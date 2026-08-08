@@ -21,17 +21,13 @@ For a list of available options, check the
 
 ## Installation
 
-{{< tabs items="Home Manager,The Hyprland flake" >}}
+{{< tabs items="Home Manager,The Hyprland flake,flake-compat" >}}
 
 {{< tab "Home Manager" >}}
 
 ```nix {filename="home.nix"}
 {
-  programs.kitty.enable = true; # required for the default Hyprland config
-  wayland.windowManager.hyprland.enable = true; # enable Hyprland
-
-  # Optional, hint Electron apps to use Wayland:
-  # home.sessionVariables.NIXOS_OZONE_WL = "1";
+  wayland.windowManager.hyprland.enable = true;
 }
 ```
 
@@ -75,6 +71,38 @@ Don't forget to replace `user@hostname` with your username and hostname!
       ];
     };
   };
+}
+```
+
+{{< /tab >}}
+
+{{< tab "flake-compat" >}}
+
+This section is for using the hyprland flake in a NixOS system without support for nix flakes.
+
+> [!WARNING]
+> The flake module is merely an extension to the Home Manager downstream module.
+> It is mainly used as a staging area for new options, so unless you're a tester
+> you should use the downstream Home Manager module.
+
+The following snippet of code tries to show how to bring the Hyprland flake from
+the flake input and use the package in the Home Manager option. Feel free to
+make any adjustment for your setup.
+
+```nix {filename="home.nix"}
+{pkgs, ...}: let
+  flake-compat = builtins.fetchTarball "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
+
+  hyprland = (import flake-compat {
+    src = builtins.fetchTarball "https://github.com/hyprwm/Hyprland/archive/main.tar.gz";
+  }).defaultNix;
+in {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    # set the flake package
+    package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  }
 }
 ```
 
