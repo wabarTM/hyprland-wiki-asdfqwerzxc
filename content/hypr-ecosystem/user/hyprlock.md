@@ -57,7 +57,7 @@ Variables in the `general` category:
 | `immediate_render` | Makes hyprlock immediately start to draw widgets. <br> Backgrounds will render `background:color` until their `background:path` resource is available. | bool | `false` |
 | `text_trim` | Sets if the text should be trimmed, useful to avoid trailing newlines in commands' output. | bool | `true` |
 | `fractional_scaling` | Whether to use fractional scaling. <br> `0`: disabled <br> `1`: enabled <br> `2`: auto | int | `2` |
-| `screencopy_mode` | Selects screencopy mode: <br> `0`: gpu accelerated <br> `1`: cpu based (slow) | int | `0` |
+| `screencopy_mode` | Selects screencopy mode: <br> `0`: gpu accelerated <br> `1`: CPU-based (slow) | int | `0` |
 | `fail_timeout` | Milliseconds until the ui resets after a failed auth attempt | int | `2000` |
 
 ### Authentication
