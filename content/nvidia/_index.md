@@ -36,7 +36,7 @@ architectures Turing and Ampere. In short, this includes the 16xx and 20xx
 series of consumer cards and later. Your mileage may vary, so please try both of
 them if your card is supported by both.
 
-If either of the proprietary Nvidia driver setups do not work properly on your
+If neither of the proprietary Nvidia driver setups work properly on your
 computer, the Nouveau driver might work fine. This will likely be the case for
 [older cards](https://wiki.archlinux.org/title/NVIDIA#Unsupported_drivers).
 
