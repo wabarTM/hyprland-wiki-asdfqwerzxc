@@ -133,7 +133,7 @@ Error behavior is described further below.
 
 #### Error behavior
 
-Hyprland attempts as much as we can to make errors as non-destructive as possible. However,
+Hyprland attempts as much as it can to make errors as non-destructive as possible. However,
 it's not always possible:
  - Fundamental lua syntax errors will make Hyprland refuse to reload your config and pop an error
  - Runtime lua syntax errors will abort execution of the current lua file and pop an error (e.g. calling a `nil`)
@@ -158,4 +158,4 @@ arbitrary code on your machine, make sure you trust your config source.
 
 #### Testing with REPL
 
-The API and Lua state can be easily explored with the built in [Lua REPL in hyprctl](./advanced-configuration/using-hyprctl/#repl)).
+The API and Lua state can be easily explored with the built in [Lua REPL in hyprctl](./advanced-configuration/using-hyprctl/#repl).
