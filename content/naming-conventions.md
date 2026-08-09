@@ -130,8 +130,8 @@ Props separated by a space. No spaces are allowed inside props themselves.
 - `r[A-B]` - ID range from A to B inclusive
 - `s[bool]` - Whether the workspace is special or not
 - `n[bool]`, `n[s:string]`, `n[e:string]` - named actions. `n[bool]` ->
-  whether a workspace is a named workspace. `s` and `e` are starts with and ends
-  with, respectively
+  whether a workspace is a named workspace. `s` and `e` are 'starts with' and 'ends
+  with', respectively
 - `m[monitor]` - Monitor selector
 - `w[(flags)A-B]`, `w[(flags)X]` - Prop for window counts on the workspace.
   A-B is an inclusive range, X is a specific number. Flags can be omitted.
@@ -139,8 +139,8 @@ Props separated by a space. No spaces are allowed inside props themselves.
   instead of windows, `v` to count only visible windows, and `p` to count 
   only pinned windows.
 - `f[-1]`, `f[0]`, `f[1]`, `f[2]` - fullscreen state of the workspace. `-1`: no
-  fullscreen, `0`: fullscreen, `1`: maximized, `2`, fullscreen without
-  fullscreen state sent to the window. Only matches workspaces with covering FS windows.
+  fullscreen, `0`: fullscreen, `1`: maximized, `2`: fullscreen without
+  sending fullscreen state to the window. Only matches workspaces with covering FS windows.
 
 #### Workspace search
 
