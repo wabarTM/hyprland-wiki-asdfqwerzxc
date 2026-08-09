@@ -11,7 +11,7 @@ Example:
 ```lua
 hl.animation({ leaf = str, enabled = bool, speed = float, curve = str[, style? = str] })
 ```
-`leaf` is scope of the animation. See [Animation tree](#animation-tree)
+`leaf` is the scope of the animation. See [Animation tree](#animation-tree)
 
 `enabled` use `true` to enable, `false` to disable. _Note:_ if it's `false`, you
 can omit further args.
