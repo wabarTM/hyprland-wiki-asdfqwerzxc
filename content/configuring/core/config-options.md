@@ -47,7 +47,7 @@ Options are described using tables:
 
 If literal `None` is specified in the limit field, it means that there is no limit set for that option.
 
-If value of an option exceeds its limits Hyprland will throw a config error.
+If the value of an option exceeds its limits Hyprland will throw a config error.
 
 ## Sections
 
@@ -80,8 +80,8 @@ Path: `general.col`
 | --- | --- | --- | --- | --- |
 | active_border | Border color for the active window | gradient | `0xffffffff` |
 | inactive_border | Border color for inactive windows | gradient | `0xff444444` |
-| nogroup_border | Inactive border color for window that cannot be added to a group (see `hl.dsp.window.deny_from_group` dispatcher) | gradient | `0xffffaaff` |
-| nogroup_border_active | Active border color for window that cannot be added to a group | gradient | `0xffff00ff` |
+| nogroup_border_active | Border color for the active window that cannot be added to a group (see `hl.dsp.window.deny_from_group` dispatcher) | gradient | `0xffff00ff` |
+| nogroup_border | Border color for inactive windows that cannot be added to a group | gradient | `0xffffaaff` |
 
 #### Snap
 
@@ -91,7 +91,7 @@ Path: `general.snap`
 | --- | --- | --- | --- | --- |
 | enabled | Enable snapping for floating windows | bool | `false` |   |
 | border_overlap | If enabled, windows snap such that only one border's worth of space is between them | bool | `false` |   |
-| respect_gaps | If enabled, snapping will respect gaps between windows(set in general:gaps_in) | bool | `false` |   |
+| respect_gaps | If enabled, snapping will respect gaps between windows (set in general:gaps_in) | bool | `false` |   |
 | monitor_gap | Minimum gap in pixels between window and monitor edges before snapping | int | `10` | [0 - 100] |
 | window_gap | Minimum gap in pixels between windows before snapping | int | `10` | [0 - 100] |
 
@@ -125,12 +125,12 @@ Path: `decoration.blur`
 | contrast | Contrast modulation for blur | float | `0.8916` | [0.0 - 2.0] |
 | ignore_opacity | Make the blur layer ignore the opacity of the window | bool | `true` |   |
 | input_methods | Whether to blur input methods, e.g. `fcitx5` | bool | `false` |   |
-| input_methods_ignorealpha | Works like ignore_alpha in layer rules. If pixel opacity is below set value, will not blur | float | `0.2` | [0.0 - 1.0] |
+| input_methods_ignorealpha | Works like ignore_alpha in layer rules. If pixel opacity is below the set value, will not blur | float | `0.2` | [0.0 - 1.0] |
 | new_optimizations | Whether to enable further optimizations to the blur. Recommended to leave on, as it will massively improve performance | bool | `true` |   |
 | noise | How much noise to apply | float | `0.0117` | [0.0 - 1.0] |
 | passes | The amount of passes to perform | int | `1` | [0 - 10] |
 | popups | Whether to blur popups, e.g. `right-click menus` | bool | `false` |   |
-| popups_ignorealpha | Works like ignore_alpha in layer rules. If pixel opacity is below set value, will not blur | float | `0.2` | [0.0 - 1.0] |
+| popups_ignorealpha | Works like ignore_alpha in layer rules. If pixel opacity is below the set value, will not blur | float | `0.2` | [0.0 - 1.0] |
 | size | Blur size (distance) | int | `8` |   |
 | special | Whether to blur behind the special workspace (note: expensive) | bool | `false` |   |
 | vibrancy | Increase saturation of blurred colors | float | `0.1696` |[0.0 - 1.0] |
@@ -344,8 +344,8 @@ Path: `input.tablettool`
 | --- | --- | --- | --- | --- |
 | eraser_button_mode | Change the eraser button behavior on the tool. When set to `0`, use the default hardware behavior of the tool. When set to `1`, the eraser button on the tool sends a button event instead | int | 0 | [0 - 6] |
 | eraser_button_override | Set a button to be button event when eraser_button_mode is set to `1`. Must be a valid button (e.g. BTN_STYLUS) excluding fake buttons (e.g. BTN_TOOL_\*) and keys (KEY_\*). Check `wev` for the ID. `0` means default | int | 0 | [0 - ...] |
-| pressure_range_min | Set the minimum pressure range for the tool. Negative value means it will use device default's. Usually it is `0.0` | float | -1.0 | [-1.0 - 1.0] |
-| pressure_range_max | Set the maximum pressure range for the tool. Negative value means it will use device default's. Usually it is `1.0` | float | -1.0 | [-1.0 - 1.0] |
+| pressure_range_min | Set the minimum pressure range for the tool. Negative values mean it will use device defaults. Usually it is `0.0` | float | -1.0 | [-1.0 - 1.0] |
+| pressure_range_max | Set the maximum pressure range for the tool. Negative values mean it will use device defaults. Usually it is `1.0` | float | -1.0 | [-1.0 - 1.0] |
 ### Per-device input config
 
 Described [here](../devices).
@@ -387,7 +387,7 @@ Path: `group`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | auto_group | Whether new windows will be automatically grouped into the focused unlocked group. *Note: if you want to disable auto_group only for specific windows, use [the "group barred" window rule](../rules/window-rules/#group-window-rule-options) instead* | bool | `true` |   |
-| drag_into_group | Whether dragging a window into a unlocked group will merge them. `0` - disabled, `1` - enabled, `2` - only when dragging into a groupbar | int | `1` | [0 - 2] |
+| drag_into_group | Whether dragging a window into an unlocked group will merge them. `0` - disabled, `1` - enabled, `2` - only when dragging into a groupbar | int | `1` | [0 - 2] |
 | focus_removed_window | Whether Hyprland should focus on the window that has just been moved out of the group | bool | `true` |   |
 | group_on_movetoworkspace | Whether using hl.dsp.window.move({ workspace }) will merge the window into the workspace's solitary unlocked group | bool | `false` |   |
 | insert_after_current | Whether new windows in a group spawn after current or at group tail | bool | `true` |   |
@@ -461,12 +461,12 @@ Path: `misc`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | allow_session_lock_restore | If true, will allow you to restart a lockscreen app in case it crashes | bool | `false` |   |
-| always_follow_on_dnd | Will make mouse focus follow the mouse when drag and dropping. Recommended to leave it enabled, especially for people using focus follows mouse at 0 | bool | `true` |   |
+| always_follow_on_dnd | Will make mouse focus follow the mouse when dragging and dropping. Recommended to leave it enabled, especially for people using focus follows mouse at 0 | bool | `true` |   |
 | animate_manual_resizes | If true, will animate manual window resizes/moves | bool | `false` |   |
 | animate_mouse_windowdragging | If true, will animate windows being dragged by mouse, note that this can cause weird behavior on some curves | bool | `false` |   |
 | anr_missed_pings | Number of missed pings before showing the ANR dialog | int | `5` | [1 - 20] |
 | background_color | Change the background color (requires enabled `disable_hyprland_logo`) | color | `0x111111` |   |
-| bell_sound | path to custom wav/ogg system bell. "none" or an empty string mute it. "default" uses the system's current one | string | `"default"` |   |
+| bell_sound | Path to custom wav/ogg system bell. "none" or an empty string mutes it. "default" uses the system's current one | string | `"default"` |   |
 | close_special_on_empty | Close the special workspace if the last window is removed | bool | `true` |   |
 | splash_font_family | Changes the font used to render the splash text, selected from system fonts (requires a monitor reload to take effect) | string | \[\[Empty\]\] |   |
 | disable_autoreload | If true, the config will not reload automatically on save, and instead needs to be reloaded with `hyprctl reload`. Might save on battery | bool | `false` |   |
@@ -485,7 +485,7 @@ Path: `misc`
 | focus_on_activate | Whether Hyprland should focus an app that requests to be focused (an `activate` request) | bool | `false` |   |
 | float_force_onscreen | whether/how existing floating windows should be constrained to stay on-screen. 0 - no constraints, 1 - must be partially onscreen, 2 - must be fully onscreen | int | `0` | [0 - 2] |
 | new_float_force_onscreen | same as `float_force_onscreen`, but specifically for newly-spawned floating windows | int | `2` | [0 - 2] |
-| font_family | Set the global default font to render the text including debug fps/notification, config error messages and etc., selected from system fonts | string | `"Sans"` |   |
+| font_family | Set the global default font to render the text including debug fps/notification, config error messages, etc.; selected from system fonts | string | `"Sans"` |   |
 | force_default_wallpaper | Enforce any of the 3 default wallpapers. 0 - disables the anime background, 1 - disables the anime background, 2 - enables anime background, -1 - random | int | `-1` | [-1 - 2] |
 | initial_workspace_tracking | If enabled, windows will open on the workspace they were invoked on. 0 - disabled, 1 - single-shot, 2 - persistent (all children too) | int | `1` |   |
 | initial_workspace_token_timeout | the time in seconds a window has to open on its invoked workspace before the tracking token expires. | int | `10` | [1 - 3600] |
@@ -529,11 +529,11 @@ Path: `binds`
 | allow_workspace_cycles | If enabled, workspaces don't forget their previous workspace, so cycles can be created by switching to the first workspace in a sequence, then endlessly going to the previous workspace | bool | `false` |   |
 | disable_keybind_grabbing | If enabled, apps that request keybinds to be disabled, e.g. `VMs`, will not be able to do so | bool | `false` |   |
 | drag_threshold | Movement threshold in pixels for window dragging and `click`/`drag` bind flags. `0` means disabled | int | `0` | [0 - ...] |
-| focus_preferred_method | Sets the preferred focus finding method when using `hl.dsp.focus({ direction })`/`hl.dsp.window.move({ direction })`/etc. `0` - most recent active window have priority, `1` - longer shared edges have priority) | int | `0` | [0 - 1] |
+| focus_preferred_method | Sets the preferred focus finding method when using `hl.dsp.focus({ direction })`/`hl.dsp.window.move({ direction })`/etc. `0` - most recent active window has priority, `1` - longer shared edges have priority) | int | `0` | [0 - 1] |
 | hide_special_on_workspace_change | If enabled, changing the active workspace (including to itself) will hide the special workspace on the monitor where the newly active workspace resides | bool | `false` |   |
 | ignore_group_lock | If enabled, dispatchers like `hl.dsp.window.move({ into_group })` and `hl.dsp.window.move({ out_of_group })` will ignore lock per group | bool | `false` |   |
 | movefocus_cycles_fullscreen | If enabled, when on a fullscreen window, `hl.dsp.focus({ direction })` will cycle fullscreen, else, it will move the focus in a direction | bool | `false` |   |
-| movefocus_cycles_groupfirst | If enabled, when in a grouped window, `hl.dsp.focus({ direction })` will cycle windows in the groups first, then at each ends of tabs, it'll move on to other windows/groups | bool | `false` |   |
+| movefocus_cycles_groupfirst | If enabled, when in a grouped window, `hl.dsp.focus({ direction })` will cycle windows in the groups first, then at each ends of the tabs, it'll move on to other windows/groups | bool | `false` |   |
 | pass_mouse_when_bound | If enabled, will pass the mouse events to apps / dragging windows around if a keybind has been triggered | bool | `false` |   |
 | scroll_event_delay | In ms, how many ms to wait after a scroll event to allow passing another one for the binds | int | `300` | [0 - 2000] |
 | window_direction_monitor_fallback | If enabled, moving a window or focus over the edge of a monitor with a direction will move it to the next monitor in that direction | bool | `true` |   |
@@ -585,7 +585,7 @@ Path: `render`
 | xp_mode | Disables back buffer and bottom layer rendering | bool | `false` |   |
 
 
-`cm_auto_hdr` requires `--target-colorspace-hint-mode=source` mpv option to work with mpv versions greater than v0.40.0
+`cm_auto_hdr` requires the `--target-colorspace-hint-mode=source` mpv option to work with mpv versions greater than v0.40.0
 
 ### Cursor
 
@@ -606,10 +606,10 @@ Path: `cursor`
 | no_hardware_cursors | Disables hardware cursors. `0` - use hw cursors if possible, `1` - don't use hw cursors, `2` - auto (disable when tearing) | int | `2` | [0 - 2] |
 | no_warps | If true, will not warp the cursor in many cases (focusing, keybinds, etc) | bool | `false` |   |
 | persistent_warps | When a window is refocused, the cursor returns to its last position relative to that window, rather than to the centre | bool | `false` |   |
-| warp_back_after_non_mouse_input | Warp the cursor back to where it was after using a non-mouse input to move it, and then returning back to mouse | bool | `false` |   |
+| warp_back_after_non_mouse_input | Warp the cursor back to where it was after using a non-mouse input to move it, and then returning back to the mouse | bool | `false` |   |
 | warp_on_change_workspace | Move the cursor to the last focused window after changing the workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |
 | warp_on_toggle_special | Move the cursor to the last focused window when toggling a special workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |
-| sync_gsettings_theme | Sync xcursor theme with gsettings, it applies cursor-theme and cursor-size on theme load to gsettings making most CSD gtk based clients use same xcursor theme and size | bool | `true` |   |
+| sync_gsettings_theme | Sync xcursor theme with gsettings. It applies cursor-theme and cursor-size on theme load to gsettings making most CSD gtk based clients use the same xcursor theme and size | bool | `true` |   |
 | use_cpu_buffer | Makes HW cursors use a CPU buffer. Required on Nvidia to have HW cursors. `0` - disabled, `1` - enabled, `2` - auto (enabled with nvidia) | int | `2` | [0 - 2] |
 | zoom_detached_camera | Detach the camera from the mouse when zoomed in, only ever moving the camera to keep the mouse in view when it goes past the screen edges | bool | `true` |   |
 | zoom_disable_aa | Disable antialiasing when zooming, which means things will be pixelated instead of blurry | bool | `false` |   |
@@ -636,7 +636,7 @@ Path: `quirks`
 | prefer_hdr | Report HDR mode as preferred. `0` - disabled, `1` - always, `2` - gamescope only | int | `0` | [0 - 1] |
 | skip_non_kms_dmabuf_formats | do not report dmabuf formats which cannot be imported into KMS | bool | `false` |   |
 
-Some clients expect monitor to be in HDR mode prior to the client start. This breaks auto HDR activation and can cause whitescreen and flickering. Use `prefer_hdr` to fix it.
+Some clients expect the monitor to be in HDR mode prior to the client start. This breaks auto HDR activation and can cause whitescreen and flickering. Use `prefer_hdr` to fix it.
 
 ### Input Capture
 
