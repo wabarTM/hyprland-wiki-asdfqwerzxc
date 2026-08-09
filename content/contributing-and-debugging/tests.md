@@ -84,7 +84,7 @@ First, run _both_ ctest and hyprtester. Then, run (from the repo root):
 gcovr -r . build --html --html-details -o build/coverage.html --gcov-ignore-parse-errors="negative_hits.warn" && xdg-open ./build/coverage.html
 ```
 
-this will run for a while, then open a report in your browser. You can see which files have been tested in
+This will run for a while, then open a report in your browser. You can see which files have been tested in
 what amount, and click on the files to see a line-by-line breakdown.
 
 If there are paths untested, we'd be very happy to receive tests for them.

@@ -56,7 +56,7 @@ Some stuff clang-tidy / clang-format won't catch:
 - prefer guards rather than nesting. `if(!valid) return;` is much better than `if (valid) { /* a billion things */ }`
 
 ### Naming conventions
-Although we've used hungarian notation in the past, we are moving away from it.
+Although we've used Hungarian notation in the past, we are moving away from it.
 The current, and new code, should use `camelCase` with an `m_` prefix if the variable is a member of a class. (not a struct)
 
 Additionally:

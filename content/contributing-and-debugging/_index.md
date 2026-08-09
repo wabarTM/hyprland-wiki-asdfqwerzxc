@@ -27,7 +27,7 @@ See [manual build](../getting-started/installation#manual-build) for deps.
 Install the VSCode C/C++ and CMake Tools extensions and use that.
 
 I've attached a
-[example/launch.json](https://github.com/hyprwm/Hyprland/blob/main/example/launch.json)
+[launch.json](https://github.com/hyprwm/Hyprland/blob/main/example/launch.json) file
 that you can copy to your .vscode/ folder in the repo root.
 
 With that, you can build in debug, go to the debugging tab and hit
@@ -70,8 +70,8 @@ Launch the output `Hyprland` binary in `./build/` _when logged into a Hyprland
 session_.
 
 A new window should open with Hyprland running inside of it. You can now test stuff
-in the nested session without worrying about nuking your actual
-session, and also being able to debug it easily. I'd also recommend to launch Hyprland
+in this nested session without worrying about nuking your actual
+session, and also being able to debug it easily. I'd also recommend launching Hyprland
 with some sort of a debugger, like `gdb`. Your IDE (if you use one) can likely do it
 for you, otherwise `gdb ./build/Hyprland` should suffice. This will help you debug
 crashes.
