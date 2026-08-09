@@ -57,7 +57,7 @@ Report an issue on GitHub or on the Discord server.
 1. Build Hyprland in debug (`make debug`).
 2. Start Hyprland and get it to crash.
 3. In a tty or terminal, do `coredumpctl debug Hyprland`.
-   - If gdb asks you for symbols, say `y`.
+   - If GDB asks you for symbols, say `y`.
    - If it asks about paging, say `c`.
 4. Once you get to `(gdb)`, start file logging with `set logging enabled`.
    - For a specific file, use `set logging file output.log`.
