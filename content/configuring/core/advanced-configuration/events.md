@@ -30,7 +30,7 @@ Event list:
 | Event | Description | Parameters |
 | --- | --- | --- |
 | hyprland.start | Emitted once on start | None |
-| hyprland.shutdown | Emitted once before Hyprland exiting | None |
+| hyprland.shutdown | Emitted once before Hyprland exits | None |
 | window.bell | Emitted when a window rings the system bell, even if it's muted. | Window |
 | window.open | Emitted when a window is fully initialized with window rules applied. | Window |
 | window.open_early | Emitted when a window is created and mapped, but **before** window rules are applied. | Window |
@@ -57,7 +57,7 @@ Event list:
 | workspace.removed | Emitted when a workspace is removed. | Workspace |
 | workspace.move_to_monitor | Emitted when a workspace is moved to a different monitor. | Workspace, Monitor |
 | config.reloaded | Emitted when the config has been reloaded **and applied**. | None |
-| config.props_refreshed | Emitted when a prop refresh event is executed. | Bool: Is prop refresh event executed as scheduled (`false` if executed prematurely with helper function) |
+| config.props_refreshed | Emitted when a prop refresh event is executed. | Bool: Is the prop refresh event executed as scheduled (`false` if executed prematurely with helper function) |
 | keybinds.submap | Emitted when the active submap changes. An empty string means the default submap was restored. | String: Submap Name|
 | screenshare.state | Emitted when a screenshare session starts or stops. | Bool: Active, Integer: Type, String: Name |
 | input.keyboard.key | Emitted when a key is pressed or released. | Integer: XKB keycode, Integer: Unix timestamp that the event occurred, Integer: Can be released (0), pressed (1), or repeated (2) |

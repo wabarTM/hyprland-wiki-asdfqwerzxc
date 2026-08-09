@@ -166,7 +166,7 @@ hyprctl switchxkblayout at-translated-set-2-keyboard next
 > [!NOTE]
 > If you want a single variant i.e. pl/dvorak on one layout but us/qwerty on the
 > other, xkb parameters can still be blank, however the amount of comma-separated
-> parameters have to match. Alternatively, a single parameter can be specified for
+> parameters has to match. Alternatively, a single parameter can be specified for
 > it to apply to all three.
 > 
 > ```lua
