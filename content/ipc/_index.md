@@ -17,7 +17,7 @@ echo $HYPRLAND_INSTANCE_SIGNATURE
 Used for hyprctl-like requests. See the
 [Hyprctl page](../configuring/core/advanced-configuration/using-hyprctl) for commands.
 
-basically, write `[flag(s)]/command args`.
+Basically, write `[flag(s)]/command args`.
 
 > [!NOTE]
 > Hyprland evaluates connections to this socket completely synchronously,
