@@ -9,9 +9,9 @@ title: Systemd
 
 Systemd is designed to expect `graphical-session.target` to be run when a Wayland compositor such as Hyprland is executed. This is needed for some programs that depend on `graphical-session.target` to start their services. The most notable example being the `xdg-desktop-portal` service, which is needed for screen-sharing, for GTK apps to be able to switch their color scheme, etc.
 
-Archlinux have a custom patch in their `xdg-desktop-portal` package to by-pass its dependency upon `graphical-session.target`. However, others distros such as NixOS, doesn't, and the user needs to start the target manually.
+Arch Linux has a custom patch in their `xdg-desktop-portal` package to by-pass its dependency upon `graphical-session.target`. However, other distros such as NixOS, don't, and the user needs to start the target manually.
 
-The section bellow explains how to achieve starting `graphical-session.target` with hyprland. 
+The section below explains how to start `graphical-session.target` with Hyprland. 
 
 ## hyprland-session.target
 
