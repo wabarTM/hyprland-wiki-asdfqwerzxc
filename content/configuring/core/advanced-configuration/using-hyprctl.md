@@ -17,7 +17,7 @@ or a script. It should automatically be installed along with Hyprland.
 
 ### eval
 
-Issue a lua string to execute dynamically, returns "ok" or any error raised.
+Issue a Lua string to execute dynamically, returns "ok" or any error raised.
 
 ```sh
 hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = "3" }))'
@@ -25,7 +25,7 @@ hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = "3" }))'
 
 ### repl
 
-Start an interactive Lua REPL session or issue a lua string and print the result through tostring.
+Start an interactive Lua REPL session or issue a Lua string and print the result through tostring.
 Similar to `lua` interactive mode. Exit with Ctrl+D.
 
 Usage:
@@ -63,7 +63,7 @@ See [Dispatchers](../../dispatchers) for a list of dispatchers.
 ### reload
 
 Issue a `reload` to force reload the config. `reload full-reset` will recreate the entire config context,
-allowing switching to/from lua/hyprlang. `full-reset` should not be used unless really necessary.
+allowing switching to/from Lua/hyprlang. `full-reset` should not be used unless really necessary.
 
 ### kill
 

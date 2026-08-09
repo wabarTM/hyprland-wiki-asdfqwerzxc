@@ -34,7 +34,7 @@ will bind opening Firefox to <key>SUPER</key> + <key>SHIFT</key> + <key>Q</key>
 The dispatcher list can be found in
 [Dispatchers](../dispatchers).
 
-You can also put a lua function, if you prefer, as your bind dispatcher:
+You can also put a Lua function, if you prefer, as your bind dispatcher:
 
 ```lua
 hl.bind("SUPER + SHIFT + X", function()
@@ -85,7 +85,7 @@ because they are not treated as modifiers
 > [!WARNING]
 > The keybinds will be executed top to bottom, in the order they were written in.
 
-You can trigger multiple actions with the same keybind by using a lua lambda function, with different `disapatcher`s and `param`s:
+You can trigger multiple actions with the same keybind by using a Lua lambda function, with different `disapatcher`s and `param`s:
 
 ```lua
 -- To switch between windows in a floating workspace:

@@ -3,7 +3,7 @@ weight: 50
 title: Custom layouts
 ---
 
-ou can create custom layouts in the lua config directly. For this,
+ou can create custom layouts in the Lua config directly. For this,
 define your layout with `hl.layout.register(name, { recalculate, layout_msg? })` then use it as `lua:name`.
 
 A simple example layout:
