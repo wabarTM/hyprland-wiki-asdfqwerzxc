@@ -277,7 +277,7 @@ If you set the Home Manager Hyprland module package to `null`, you should also s
 
 This problem is related to systemd not importing the environment by default. It
 will not have knowledge of `PATH`, so it cannot run the commands in the
-services. This is the most common with user-configured services such as
+services. This most commonly affects user-configured services such as
 `hypridle` or `swayidle`.
 
 To fix it, add to your config:
