@@ -150,8 +150,8 @@ Zip all of them up and attach to your issue.
 
 ## Debugging DRM issues
 
-DRM (Direct Rendering Manager) is the underlying kernel architecture to take a gpu buffer (something
-we can render to) and put it on your screen (via the gpu) instead of a window.
+DRM (Direct Rendering Manager) is the underlying kernel architecture to take a GPU buffer (something
+we can render to) and put it on your screen (via the GPU) instead of a window.
 
 Freezes, glitches, and others, can be caused by issues with Hyprland's communication with DRM, the driver
 or kernel. In those cases, a DRM log is helpful.
