@@ -8,7 +8,7 @@ weight: 30
 Monitor mode is a combination of resolution and refresh rate.
 To see available modes, run `hyprctl monitors` and find `availableModes` field.
 Modes are sorted by resolution in  descending order.
-Some modes may be duplicated or may have skewed refresh rate.
+Some modes may be duplicated or may have a skewed refresh rate.
 Select 
 
 ### Modes
@@ -46,7 +46,7 @@ will occur on aspect ratios that differ (e.g 16:9 and 16:10).
 
 ## VRR
 
-VRR can be enabled globally and on per-display basis
+VRR can be enabled globally and on a per-display basis
 
 Per-display VRR can be configured with the `vrr` field in `hl.monitor()` call, global config can be found in
 [config options](../../config-options).

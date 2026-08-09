@@ -11,10 +11,10 @@ All fields beyond `output` are optional and fall back to sensible defaults.
 | --- | --- | --- | --- |
 | output | Output name or `desc:...` description prefix | str | [[Required]] |
 | disabled | Removes the monitor from the layout | boolean | `false` |
-| mode | Resolution and refresh rate, e.g. `"1920x1080@144"`. See the [note](./modes#modes) for predefined positions. Options: `mode`/`"preferred"`/`"highres"`/`"highrr"`/`"maxwidth"` | str | `"preferred"` |
+| mode | Resolution and refresh rate, e.g. `"1920x1080@144"`. See the [note](./modes#modes) for predefined modes. Options: `mode`/`"preferred"`/`"highres"`/`"highrr"`/`"maxwidth"` | str | `"preferred"` |
 | scale | Scale factor, e.g. `1.5`. `"auto"` = use monitor's PPI to decide the scale. Options: `scale`/`"auto"` |  float / str | `"auto"` |
 | transform | Rotation/flip transform (0–7) | int | 0 |
-| position | Position in the virtual layout, e.g. `"1920x0"` See the [note](./positioning#positions) for predefined modes | str | `"auto"` |
+| position | Position in the virtual layout, e.g. `"1920x0"` See the [note](./positioning#positions) for predefined positions | str | `"auto"` |
 | mirror | Output name to mirror | str | [[Empty]] |
 | bitdepth | Bit depth. Options: `8`/`10` | int | `8` |
 | cm | Color management preset | str | `"srgb"` |

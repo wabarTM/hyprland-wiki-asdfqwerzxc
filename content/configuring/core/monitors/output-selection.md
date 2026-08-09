@@ -40,7 +40,7 @@ Monitor eDP-1 (ID 0):
         [...]
 ```
 
-In the example portname is `eDP-1` and description is `Chimei Innolux Corporation 0x150C`, so they can be used as following:
+In the example, portname is `eDP-1` and description is `Chimei Innolux Corporation 0x150C`, so they can be used as follows:
 
 
 ```lua

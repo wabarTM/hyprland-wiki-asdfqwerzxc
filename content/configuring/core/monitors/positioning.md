@@ -27,7 +27,7 @@ also based on each monitor's top left corner as the root.
 `auto-center-right/left/up/down` - place the monitor to the right/left, above or below other monitors,
 but calculate placement from each monitor's center rather than its top left corner.
 
-If direction in special position is specified for the first output in monitor layout it will be ignored
+If direction in special position is specified for the first output in the monitor layout it will be ignored
  and monitor will be placed at (0,0).
 
 The direction is always from the center out, so you can specify `auto-up`, then `auto-left`,
@@ -41,7 +41,7 @@ hl.monitor({ output = "DP-1", mode = "1920x1080@120Hz", position = "0x0", scale 
 hl.monitor({ output = "DP-2", mode = "1920x1080@120Hz", position = "1920x0", scale = 1 })
 ```
 
-will tell Hyprland to put DP-2 on the _right__ of DP-1, while
+will tell Hyprland to put DP-2 on the _right_ of DP-1, while
 
 ```lua
 hl.monitor({ output = "DP-1", mode = "1920x1080@120Hz", position = "1920x0", scale = 1 })
