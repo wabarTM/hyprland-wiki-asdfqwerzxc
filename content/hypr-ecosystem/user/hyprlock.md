@@ -55,7 +55,7 @@ Variables in the `general` category:
 | `hide_cursor` | Hides the cursor instead of making it visible. | bool | `false` |
 | `ignore_empty_input` | Skips validation when no password is provided. | bool | `false` |
 | `immediate_render` | Makes hyprlock immediately start to draw widgets. <br> Backgrounds will render `background:color` until their `background:path` resource is available. | bool | `false` |
-| `text_trim` | Sets if the text should be trimmed, useful to avoid trailing newline in commands output. | bool | `true` |
+| `text_trim` | Sets if the text should be trimmed, useful to avoid trailing newlines in commands' output. | bool | `true` |
 | `fractional_scaling` | Whether to use fractional scaling. <br> `0`: disabled <br> `1`: enabled <br> `2`: auto | int | `2` |
 | `screencopy_mode` | Selects screencopy mode: <br> `0`: gpu accelerated <br> `1`: cpu based (slow) | int | `0` |
 | `fail_timeout` | Milliseconds until the ui resets after a failed auth attempt | int | `2000` |
@@ -116,7 +116,7 @@ global
 ### System Configuration
 
 On Arch Linux, by default, hyprlock integrates with [pambase](https://archlinux.org/packages/?name=pambase) through `pam_faillock.so`, which forces a 10 minute timeout after 3 failed unlocks.  
-If you would like to change this, refer to the [arch linux wiki](https://wiki.archlinux.org/title/Security#Lock_out_user_after_three_failed_login_attempts) and update the file `/etc/security/faillock.conf` file with parameters `unlock_time`, `fail_interval`, and `deny` as needed.
+If you would like to change this, refer to the [arch linux wiki](https://wiki.archlinux.org/title/Security#Lock_out_user_after_three_failed_login_attempts) and update the `/etc/security/faillock.conf` file with parameters `unlock_time`, `fail_interval`, and `deny` as needed.
 
 ## Keyboard Shortcuts and Actions
 
@@ -207,7 +207,7 @@ You can launch arbitrary commands when clicking on them by configuring the follo
 ### Background
 
 Draws a background image or fills with color.  
-If `path` is empty or missing, will use `color`, otherwise, the image will be used.
+If `path` is empty or missing, it will use `color`; otherwise, the image will be used.
 
 If `path` is `screenshot`, a screenshot of your desktop at launch will be used.
 
@@ -371,7 +371,7 @@ Draws a password input field.
 
 > [!NOTE] **Colors information**
 >
-> When `outline_thickness` set to `0`, the color of the inner box will be changed instead of the outer.   
+> When `outline_thickness` is set to `0`, the color of the inner box will be changed instead of the outer.   
 > Behaviour of `swap_font_color` is as follows:  
 > - `outline_thickness` is `0`: if set, font color will be swapped with inner one on color change events (e.g. Caps-lock on or password check).
 > - `outline_thickness` is not `0`: if set, font and inner colors will be swapped on password check and authentication failure.
@@ -443,7 +443,7 @@ You can use settings from `hyprland.lua`, e.g. `$LAYOUT[en,ru,de]`.
 Also, a single `!` character will hide layout. E.g. `$LAYOUT[!]` will hide default (0 indexed) and show others.
 > - `$TIME` and `$TIME12` will use timezone from the TZ environment variable.  
 If it's not set, the system timezone will be used, falling back to UTC in case of errors.
-> - Variables seen above are parsed _before_ the command is ran.
+> - Variables seen above are parsed _before_ the command is run.
 > - **Do not** run commands that never exit. This will hang the `AsyncResourceGatherer` and you won't have a good time.
 
 {{% details title="Example label" closed="true" %}}
@@ -467,5 +467,5 @@ label {
 
 ## User Signals
 
-- `SIGUSR1`: Unlocks hyprlock. For example, you can switch to a another tty and run `pkill -USR1 hyprlock`.
+- `SIGUSR1`: Unlocks hyprlock. For example, you can switch to another tty and run `pkill -USR1 hyprlock`.
 - `SIGUSR2`: Updates labels and images. See above.

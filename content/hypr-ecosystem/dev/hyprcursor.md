@@ -66,8 +66,8 @@ If the app is a flatpak, run:
 flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --user
 ``` 
 
-and put your themes in both `/usr/share/themes` and `~/.themes`, 
-also put your icons and XCursors in both `/usr/share/icons` and `~/.icons`.
+and put your themes in both `/usr/share/themes` and `~/.themes`.
+Also put your icons and XCursors in both `/usr/share/icons` and `~/.icons`.
 
 ## I Don't Want to Use hyprcursor
 
