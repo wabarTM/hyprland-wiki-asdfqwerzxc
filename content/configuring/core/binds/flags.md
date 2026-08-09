@@ -85,4 +85,4 @@ hl.bind("SUPER + Q", hl.dsp.exec_cmd("kitty"), { description = "Open my favourit
 ```
 
 If you want to access your description you can use `hyprctl binds`.  
-For more information have a look at [Using hyprctl](../../advanced-configuration/using-hyprctl)).
+For more information, have a look at [Using hyprctl](../../advanced-configuration/using-hyprctl).

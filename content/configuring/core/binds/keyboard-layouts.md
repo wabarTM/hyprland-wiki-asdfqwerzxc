@@ -16,7 +16,7 @@ title: Keyboard layouts
 > `resolve_binds_by_sym = 1`. In that case, binds will activate when the symbol
 > typed matches the symbol specified in the bind.
 > 
-> For example: if your layouts are `us,fr` and have a bind for `"SUPER + A"` you'd
+> For example: if your layouts are `us,fr` and you have a bind for `"SUPER + A"` you'd
 > need to press the first letter on the second row while the `us` layout is active
 > and the first letter on the first row while the `fr` layout is active.
 

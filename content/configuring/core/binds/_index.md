@@ -100,7 +100,7 @@ end)
 ## Unbind
 
 To unbind a key use `hl.unbind("key")` method.
-Key in `hl.unbind` is case-sensitive and must exactly match the case of the `hl.bind` you are unbinding.
+The key in `hl.unbind` is case-sensitive and must exactly match the case of the `hl.bind` you are unbinding.
 
 ```lua
 hl.bind("SUPER + TAB", hl.focus.workspace("e+1"))
@@ -194,5 +194,4 @@ hl.bind("p", function()
 end, {auto_consuming = true})
 ```
 
-This bind will spawn `"another cool app"` if active window is `"some cool app"` and if
-active window is not `"some cool app"` it will pass `p` to that window.
+This bind will spawn `"another cool app"` if the active window's title is `"some cool app"`; otherwise it will pass `p` to the active window.
