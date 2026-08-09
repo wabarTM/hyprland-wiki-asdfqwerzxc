@@ -3,7 +3,7 @@ weight: 30
 title: Devices
 ---
 
-For global device configs, check the [Config options page](../../core/config-options) page. This page
+For global device configs, check the [Config options page](../../core/config-options). This page
 will focus on per-device configs.
 
 A basic per-device config is done via the `hl.device()` function:
