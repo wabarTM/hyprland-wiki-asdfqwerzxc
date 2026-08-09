@@ -364,7 +364,7 @@ The issue is likely the default monitor for X11 is not your desired primary moni
 
 Add `xrandr --output [MONITOR_ID] --primary` to your autostarts in the config, replacing [MONITOR_ID] with your main monitor's ID (e.g. DP-3). You can find your monitor ID by running `hyprctl monitors`.
 
-By adding this to your hyprland config, it will set the default monitor for X11 applications to your main monitor.
+By adding this to your hyprland config, you will set your main monitor as the default for X11 applications.
 
 ### My mouse cursor keeps escaping the game window!
 
