@@ -28,8 +28,8 @@ will have **major** issues running Hyprland. Rolling release distros like openSU
 Installing Hyprland is very easy. Simply install it with your package manager.
 
 > [!WARNING]
-> It is **heavily** recommended you use **what the distro packages for you**, and **not** compiling manually
-> or using `-git` packages.
+> It is **heavily** recommended you use **what the distro packages for you**, **not** compiling manually
+> nor using `-git` packages.
 > Hyprland's ecosystem and dependencies are vast and intertwined, and compiling manually will only potentially expose you to outdated,
 > or incompatible versions of these dependencies.
 >
@@ -366,7 +366,7 @@ for more information.
 {{% /details %}}
 
 > [!WARNING]
-> Additionally to those, you will also need a few hypr\* dependencies which may or may not be
+> In addition to those, you will also need a few hypr\* dependencies which may or may not be
 > packaged for your distro of choice:
 >
 > - aquamarine
@@ -485,8 +485,8 @@ virt-install \
   --import
 ```
 
-Connect with `virt-viewer`, this will open a `virt-viewer` graphical session on
-the tty. The default login is 'arch' for user and 'arch' for password.
+Connect with `virt-viewer`, which will open a graphical session on
+the tty. The default login is 'arch' for both the user and its password.
 
 > [!WARNING]
 > Make sure the --attach flag is used, enabling virgl makes it so that
