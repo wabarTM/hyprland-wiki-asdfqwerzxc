@@ -85,7 +85,7 @@ if uwsm check may-start && uwsm select; then
 fi
 ```
 
-This will bring up the uwsm compositor selection menu after you log into tty1. Choose `Hyprland` entry and you're good to go.
+This will bring up the uwsm compositor selection menu after you log into tty1. Choose the `Hyprland` entry and you're good to go.
 
 If you want to bypass compositor selection menu and launch Hyprland directly, use this code in your shell profile, instead.
 
@@ -97,7 +97,7 @@ fi
 
 #### Using a display manager
 
-If you use a display manager, choose `Hyprland (uwsm-managed)` entry in a display manager selection menu.
+If you use a display manager, choose the `Hyprland (uwsm-managed)` entry in the display manager selection menu.
 
 ### Launching applications inside session
 
@@ -142,7 +142,7 @@ end)
 
 ## Autostart
 
-XDG Autostart is handled by systemd, and its target is activated in uwsm-managed session automatically. User services usually require `graphical-session.target` to be activated by any method on this page.
+XDG Autostart is handled by systemd, and its target is activated in the uwsm-managed session automatically. User services usually require `graphical-session.target` to be activated by any method on this page.
 
 Some applications provide native systemd user units to be autostarted with. Those might need to be enabled explicitly via `systemctl --user enable [some-app.service]`. Or, in case the unit is missing `[Install]` section, enabled more directly: `systemctl --user add-wants graphical-session.target [some-app.service]`. Also ensure the unit has `After=graphical-session.target` ordering (it can be added via drop-in).
 
@@ -172,7 +172,7 @@ export XCURSOR_SIZE=24
 
 See [uwsm readme](https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file#4-environments-and-shell-profile) for additional information.
 
-Avoid using the hyprland `exit` dispatcher, or terminating Hyprland process directly, as exiting Hyprland this way removes it from under its clients and interferes with ordered shutdown sequence, causing forced shutdown. Use `uwsm stop` (or [other variants](https://github.com/Vladimir-csp/uwsm#how-to-stop)) which will gracefully bring down graphical session (and login session bound to it, if any). If you experience problems with units entering inconsistent states, affecting subsequent sessions, use `loginctl terminate-user ""` instead (terminates all units of the user).
+Avoid using the hyprland `exit` dispatcher or terminating the Hyprland process directly, as exiting Hyprland this way removes it from under its clients and interferes with ordered shutdown sequence; causing a forced shutdown. Use `uwsm stop` (or [other variants](https://github.com/Vladimir-csp/uwsm#how-to-stop)) which will gracefully bring down graphical session (and login session bound to it, if any). If you experience problems with units entering inconsistent states, affecting subsequent sessions, use `loginctl terminate-user ""` instead (terminates all units of the user).
 
 ## NixOS UWSM
 

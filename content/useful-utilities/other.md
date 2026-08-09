@@ -40,7 +40,7 @@ for Hyprland's IPC written in Rust.
 - [hyprshade](https://github.com/loqusion/hyprshade) by _loqusion_: Utility for
   swapping and scheduling screen shaders; also functions as an
   [automatic color temperature shifter](https://en.wikipedia.org/wiki/F.lux).
-- [gammastep](https://gitlab.com/chinstrap/gammastep) by _Chinstrap_: Control temperature color automatically depending on the time of the day and location.
+- [gammastep](https://gitlab.com/chinstrap/gammastep) by _Chinstrap_: Control color temperature automatically depending on the time of the day and location.
 
 ### Wireless settings
 
