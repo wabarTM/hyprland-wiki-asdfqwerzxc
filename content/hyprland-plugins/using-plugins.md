@@ -61,9 +61,9 @@ Then, enable or disable them via `hyprpm enable name` and `hyprpm disable name`.
 In order for the plugins to be loaded into Hyprland, run `hyprpm reload`.
 
 You can add `hyprpm reload` to your Hyprland config's autostarts to have
-plugins loaded at startup. Optionally add `-n` flag to get notification
-that plugin loaded successfully (eye candy). Note regardless of whether
-`-n` is present or not, `reload` command will generate notification for
+plugins loaded at startup. Optionally add the `-n` flag to get a notification
+that the plugin loaded successfully (eye candy). Note regardless of whether
+`-n` is present or not, the `reload` command will generate a notification for
 warning and error events.
 
 To update your plugins, run `hyprpm update`.

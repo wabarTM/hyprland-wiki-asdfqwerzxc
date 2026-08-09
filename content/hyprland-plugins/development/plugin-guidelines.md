@@ -55,7 +55,7 @@ the plugin. Every command will reset the cwd to the repo root.
 
 ### Commit pins
 
-Commit pins allow you to manage versioning of your plugin. they are pairs of
+Commit pins allow you to manage versioning of your plugin. They are pairs of
 `hash,hash`, where the first hash is the Hyprland commit hash, and the second is
 your plugin's corresponding commit hash.
 
@@ -70,7 +70,7 @@ latest git will be used.
 ## Formatting
 
 Although Hyprland plugins obviously are not _required_ to follow Hyprland's
-formatting, naming conventions, etc. it might be a good idea to keep your code
+formatting, naming conventions, etc.; it might be a good idea to keep your code
 consistent. See
 [`.clang-format`](https://github.com/hyprwm/Hyprland/blob/main/.clang-format) in
 the Hyprland repo.
