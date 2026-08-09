@@ -94,7 +94,7 @@ hl.window_rule({ match = { float = false, workspace = "f[1]s[false]" }, rounding
 ### Float browser's extension windows
 
 All known browsers have the annoying "feature" of setting title to their own name when opening
-extensions' window. This function listens to opened windows and floats the matches
+extensions' windows. This function listens to opened windows and floats the matches:
 
 ```lua
 hl.on("window.open", function(w)
@@ -142,7 +142,7 @@ if hl.version() == "0.55.2" then
     })
 else
     hl.notification.create({ 
-        text = "Youre using: ".. hl.version(), 
+        text = "You're using: ".. hl.version(), 
         timeout = 10000
     })
 end
@@ -204,7 +204,7 @@ hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
 ### Cycle layout for current workspace
 
-To change layout for current workspace you can use this bind:
+To change layout for current workspace, you can use this bind:
 
 ```lua
 hl.bind("SUPER + tab", function ()
