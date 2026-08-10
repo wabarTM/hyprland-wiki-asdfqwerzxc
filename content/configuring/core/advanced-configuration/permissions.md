@@ -67,7 +67,7 @@ There are 3 modes:
  - Default: **ALLOW**
  - Access to connecting a new keyboard. Regex of the device name.
  - If you want to disable all keyboards not matching a regex, make a rule that sets `DENY` for `.*` _as the last keyboard permission rule_.
- - Why deny? Rubber duckies, malicious virtual / usb keyboards.
+ - Why deny? Rubber duckies, malicious virtual / USB keyboards.
 
 `cursorpos`:
  - Default: **ASK**
