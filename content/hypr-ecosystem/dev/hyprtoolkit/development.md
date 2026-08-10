@@ -127,7 +127,7 @@ Then, you can take that object and slap it into an `ImageElement` to add it to y
 
 ### Additional FDs
 
-If you have an app that depends on some other loop, e.g. pipewire, D-Bus, etc. you need to remember
+If you have an app that depends on some other loop, e.g. PipeWire, D-Bus, etc. you need to remember
 that hyprtoolkit is strictly single-threaded for layout and rendering.  
 You cannot edit the layout from another thread.
 
