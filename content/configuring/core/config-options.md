@@ -485,7 +485,7 @@ Path: `misc`
 | focus_on_activate | Whether Hyprland should focus an app that requests to be focused (an `activate` request) | bool | `false` |   |
 | float_force_onscreen | whether/how existing floating windows should be constrained to stay on-screen. 0 - no constraints, 1 - must be partially onscreen, 2 - must be fully onscreen | int | `0` | [0 - 2] |
 | new_float_force_onscreen | same as `float_force_onscreen`, but specifically for newly-spawned floating windows | int | `2` | [0 - 2] |
-| font_family | Set the global default font to render the text including debug fps/notification, config error messages, etc.; selected from system fonts | string | `"Sans"` |   |
+| font_family | Set the global default font to render the text including debug FPS/notification, config error messages, etc.; selected from system fonts | string | `"Sans"` |   |
 | force_default_wallpaper | Enforce any of the 3 default wallpapers. 0 - disables the anime background, 1 - disables the anime background, 2 - enables anime background, -1 - random | int | `-1` | [-1 - 2] |
 | initial_workspace_tracking | If enabled, windows will open on the workspace they were invoked on. 0 - disabled, 1 - single-shot, 2 - persistent (all children too) | int | `1` |   |
 | initial_workspace_token_timeout | the time in seconds a window has to open on its invoked workspace before the tracking token expires. | int | `10` | [1 - 3600] |
@@ -497,7 +497,7 @@ Path: `misc`
 | mouse_move_focuses_monitor | Whether mouse moving into a different monitor should focus it | bool | `true` |   |
 | name_vk_after_proc | Name virtual keyboards after the processes that create them, e.g. `/usr/bin/fcitx5` will have hl-virtual-keyboard-fcitx5 | bool | `true` |   |
 | on_focus_under_fullscreen | If there is a fullscreen or maximized window, decide whether a tiled window requested to focus should replace it, stay behind or disable the fullscreen/maximized state. 0 - ignore focus request (keep focus on fullscreen window), 1 - takes over, 2 - unfullscreen/unmaximize | int | `2` | [0 - 2] |
-| render_unfocused_fps | The maximum limit for render_unfocused windows' fps in the background (see also [Window-Rules](../rules/window-rules/#dynamic-effects), e.g. `render_unfocused`) | int | `15` | [1 - 120] |
+| render_unfocused_fps | The maximum limit for render_unfocused windows' FPS in the background (see also [Window-Rules](../rules/window-rules/#dynamic-effects), e.g. `render_unfocused`) | int | `15` | [1 - 120] |
 | session_lock_blur | Enables blur for lockscreen. `session_lock_xray` must be enabled | bool | `false` |   |
 | session_lock_xray | If true, keep rendering workspaces below your lockscreen | bool | `false` |   |
 | size_limits_tiled | Whether to apply min_size and max_size rules to tiled windows | bool | `false` |   |
