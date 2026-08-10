@@ -48,7 +48,7 @@ Prefixes can only be one character.
 | -- | -- | -- | -- |
 | `default_finder` | Controls the default finder used. | string | `desktop` |
 | `desktop_prefix` | Prefix for the desktop finder to be used. | string | [[Empty]] |
-| `unicode_prefix` | Prefix for the unicode finder to be used. | string | `.` |
+| `unicode_prefix` | Prefix for the Unicode finder to be used. | string | `.` |
 | `math_prefix` | Prefix for the math finder to be used. | string | `=` |
 | `font_prefix` | Prefix for the font finder to be used. | string | `'` |
 | `desktop_launch_prefix` | Launch prefix for each desktop app, e.g. `uwsm app -- `. | string | [[Empty]] |
