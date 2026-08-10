@@ -33,7 +33,7 @@ The syntax is the same as `hl.window_rule()`.
 {{% details title="Examples" closed="true" %}}
 
 ```lua
--- Enable blur for waybar
+-- Enable blur for Waybar
 hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
 
 -- Named layer rule
