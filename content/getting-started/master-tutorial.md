@@ -50,7 +50,7 @@ config path, ignoring a check for the above, etc.
 Login managers are not officially supported, but here's a short compatibility
 list:
 
-- SDDM → Works flawlessly. Install sddm ⩾ 0.20.0 or the
+- SDDM → Works flawlessly. Install SDDM version ⩾ 0.20.0 or the
   [latest git version](https://github.com/sddm/sddm) (or
   [sddm-git](https://aur.archlinux.org/packages/sddm-git) from AUR) to prevent
   SDDM bug [1476](https://github.com/sddm/sddm/issues/1476) (90s shutdowns).
