@@ -66,8 +66,8 @@ Variables in the `auth` category:
 
 | Variable | Description | Type | Default |
 | -- | -- | -- | -- |
-| `pam:enabled` | Whether to enable pam authentication. | bool | `true` |
-| `pam:module` | Sets the pam module used for authentication. If the module isn't found in `/etc/pam.d`, "su" will be used as a fallback. | str | `hyprlock` |
+| `pam:enabled` | Whether to enable PAM authentication. | bool | `true` |
+| `pam:module` | Sets the PAM module used for authentication. If the module isn't found in `/etc/pam.d`, "su" will be used as a fallback. | str | `hyprlock` |
 | `fingerprint:enabled` | Enables parallel fingerprint auth with fprintd. | bool | `false` |
 | `fingerprint:ready_message` | Sets the message that will be displayed when fprintd is ready to scan a fingerprint. | str | `(Scan fingerprint to unlock)` |
 | `fingerprint:present_message` | Sets the message that will be displayed when a finger is placed on the scanner. | str | `Scanning fingerprint` |
@@ -159,8 +159,8 @@ The following variables in widget text options will be substituted.
 - `$LAYOUT` - current keyboard layout
 - `$ATTEMPTS` - failed authentication attempts
 - `$FAIL` - last authentication fail reason
-- `$PAMPROMPT` - pam auth last prompt
-- `$PAMFAIL` - pam auth last fail reason
+- `$PAMPROMPT` - PAM auth last prompt
+- `$PAMFAIL` - PAM auth last fail reason
 - `$FPRINTPROMPT` - fingerprint auth last prompt
 - `$FPRINTFAIL` - fingerprint auth last fail reason
 
