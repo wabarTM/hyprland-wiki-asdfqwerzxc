@@ -125,7 +125,7 @@ it.
 A few more environment variables for forcing Wayland mode are documented
 [here](../../configuring/core/environment-variables).
 
-You can check whether an app is running in xwayland or not with
+You can check whether an app is running in Xwayland or not with
 `hyprctl clients`.
 
 ## Themes

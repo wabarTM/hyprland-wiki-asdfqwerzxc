@@ -47,13 +47,13 @@ I don't care what some random person tells you online. Don't do it.
 
 ### My apps are pixelated
 
-This just means they are running through XWayland, which physically cannot scale
+This just means they are running through Xwayland, which physically cannot scale
 by fractional amounts.
 
 To force them to run in native Wayland mode, see
 [the Master Tutorial](../getting-started/master-tutorial#force-apps-to-use-wayland).
 
-If they can't, see [the XWayland page](../configuring/extra/xwayland).
+If they can't, see [the Xwayland page](../configuring/extra/xwayland).
 
 ### My external monitor is blank / doesn't render / receives no signal (laptop)
 
@@ -354,7 +354,7 @@ You most likely have `ELECTRON_OZONE_PLATFORM_HINT = wayland` in your config.
 Try running Discord like this `ELECTRON_OZONE_PLATFORM_HINT= discord`.
 
 > [!WARNING]
-> Keep in mind that this will run Discord under XWayland.
+> Keep in mind that this will run Discord under Xwayland.
 
 If it works, navigate to the Discord desktop entry (usually located in `/usr/share/applications/`). Duplicate it and replace `Exec=/usr/bin/discord` with `Exec=env ELECTRON_OZONE_PLATFORM_HINT= /usr/bin/discord`. You can also give it a new name, e.g. `Name=DiscordX`, to avoid confusion as to which is which.
 

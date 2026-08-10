@@ -414,7 +414,7 @@ To apply custom build flags, you'll have to ditch make.
 Supported custom build flags on CMake:
 
 ```bash
-NO_XWAYLAND - Removes XWayland support
+NO_XWAYLAND - Removes Xwayland support
 NO_SYSTEMD - Removes systemd dependencies
 NO_UWSM - Does not install the hyprland-uwsm.desktop file
 NO_HYPRPM - Does not build and install hyprpm

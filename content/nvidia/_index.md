@@ -143,7 +143,7 @@ It _should_ work now.
 
 Electron and CEF apps flicker because:
 
-1. They run in XWayland by default.
+1. They run in Xwayland by default.
 2. They don't use the `syncobj` protocol by default.
 
 To enable native Wayland support for most Electron apps, add this
@@ -237,9 +237,9 @@ There are some workarounds to try:
 This might slow down rendering to secondary monitors and make Hyprland a bit laggy on them,
 but it's better than not having a secondary monitor at all, and it's the best we can do on NVIDIA.
 
-#### Flickering in XWayland games
+#### Flickering in Xwayland games
 
-XWayland games may flicker or present frames out-of-order in a way which makes
+Xwayland games may flicker or present frames out-of-order in a way which makes
 them unplayable. This is due to the lack of implicit synchronization in the
 driver, and/or flaky explicit sync support in newer ones.
 

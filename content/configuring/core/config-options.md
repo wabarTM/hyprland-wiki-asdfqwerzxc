@@ -540,16 +540,16 @@ Path: `binds`
 | workspace_back_and_forth | If enabled, an attempt to switch to the currently focused workspace will instead switch to the previous workspace, akin to i3's `_auto_back_and_forth_` | bool | `false` |   |
 | workspace_center_on | Whether switching workspaces should center the cursor on the workspace (0) or on the last active window for that workspace (1) | int | `1` | [0 - 1] |
 
-### XWayland
+### Xwayland
 
 Path: `xwayland`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | enabled | Allow running applications using X11 | bool | `true` |   |
-| create_abstract_socket | Create the [abstract Unix domain socket](../../extra/xwayland/#abstract-unix-domain-socket) for XWayland connections. XWayland restart is required for changes to take effect; Linux only | bool | `false` |   |
-| force_zero_scaling | Forces a scale of 1 on xwayland windows on scaled displays | bool | `false` |   |
-| use_nearest_neighbor | Uses the nearest neighbor filtering for xwayland apps, making them pixelated rather than blurry | bool | `true` |   |
+| create_abstract_socket | Create the [abstract Unix domain socket](../../extra/xwayland/#abstract-unix-domain-socket) for Xwayland connections. Xwayland restart is required for changes to take effect; Linux only | bool | `false` |   |
+| force_zero_scaling | Forces a scale of 1 on Xwayland windows on scaled displays | bool | `false` |   |
+| use_nearest_neighbor | Uses the nearest neighbor filtering for Xwayland apps, making them pixelated rather than blurry | bool | `true` |   |
 
 ### OpenGL
 
