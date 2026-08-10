@@ -580,7 +580,7 @@ Path: `render`
 | non_shader_cm | Enable CM without shader. `0` - disable, `1` - whenever possible, `2` - DS and passthrough only, `3` - disable and ignore CM issues. Options: [0 - 3] | int | `2` | [0 - 3] |
 | non_shader_cm_interop | `0` - external ctm (hyprsunset, etc.) is disabled in fullscreen, `1` - external ctm is enabled in fullscreen, `2` - external ctm is disabled for fullscreen photo/video/game content types | int | `2` | [0 - 2] |
 | send_content_type | Report content type to allow monitor profile autoswitch (may result in a black screen during the switch) | bool | `true` |   |
-| use_fp16 | Use FP16 buffers internally. `0` - disabled, `1` - enabled, `2` - enabled in hdr mode | int | `2` | [0 - 2] |
+| use_fp16 | Use FP16 buffers internally. `0` - disabled, `1` - enabled, `2` - enabled in HDR mode | int | `2` | [0 - 2] |
 | use_shader_blur_blend | Use experimental blurred bg blending (glitched on rotated screens). Set to `true` if blur is missing with fp16 or `keep_unmodified_copy` | bool | `false` |   |
 | xp_mode | Disables back buffer and bottom layer rendering | bool | `false` |   |
 
