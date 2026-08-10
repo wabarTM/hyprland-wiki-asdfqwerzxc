@@ -52,7 +52,7 @@ XCursor theme, and run
 gsettings set org.gnome.desktop.interface cursor-theme 'THEME_NAME'
 ```
 
-for gtk.  
+for GTK.  
 
 If `gsettings` schemas are not available to you (e.g. on NixOS you will get `No schemas installed`), you can run instead: 
 

@@ -609,7 +609,7 @@ Path: `cursor`
 | warp_back_after_non_mouse_input | Warp the cursor back to where it was after using a non-mouse input to move it, and then returning back to the mouse | bool | `false` |   |
 | warp_on_change_workspace | Move the cursor to the last focused window after changing the workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |
 | warp_on_toggle_special | Move the cursor to the last focused window when toggling a special workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |
-| sync_gsettings_theme | Sync xcursor theme with gsettings. It applies cursor-theme and cursor-size on theme load to gsettings making most CSD gtk based clients use the same xcursor theme and size | bool | `true` |   |
+| sync_gsettings_theme | Sync xcursor theme with gsettings. It applies cursor-theme and cursor-size on theme load to gsettings making most CSD GTK based clients use the same xcursor theme and size | bool | `true` |   |
 | use_cpu_buffer | Makes HW cursors use a CPU buffer. Required on Nvidia to have HW cursors. `0` - disabled, `1` - enabled, `2` - auto (enabled with nvidia) | int | `2` | [0 - 2] |
 | zoom_detached_camera | Detach the camera from the mouse when zoomed in, only ever moving the camera to keep the mouse in view when it goes past the screen edges | bool | `true` |   |
 | zoom_disable_aa | Disable antialiasing when zooming, which means things will be pixelated instead of blurry | bool | `false` |   |
