@@ -10,7 +10,7 @@ Then, to make OpenGL produce error messages, set `debug.gl_debugging` to `true`.
 
 Don't forget to disable these when done logging as they cause a performance hit.
 
-If you are in a TTY, and the Hyprland session that crashed was the last one you
+If you are in a tty, and the Hyprland session that crashed was the last one you
 launched, the log can be printed with
 
 ```sh
@@ -38,7 +38,7 @@ Attach that file to your issue.
 
 Diagnose the issue by what is in the log:
 
-- `backend failed to start` -> launch in the TTY and refer to the logs in RED.
+- `backend failed to start` -> launch in the tty and refer to the logs in RED.
 - `Monitor X has NO PREFERRED MODE, and an INVALID one was requested` -> your
   monitor is bork.
 - Other -> see the coredump. Use `coredumpctl`, find the latest one's PID and do
@@ -117,7 +117,7 @@ git reset --hard --recurse-submodules
 make all
 ```
 
-...and run the built executable from the TTY `./build/Hyprland`.
+...and run the built executable from the tty `./build/Hyprland`.
 
 Try to reproduce your issue. If you can't (i.e. the bug is not present), go back to the
 Hyprland repo and run `git bisect good`. If you can reproduce it, run `git bisect bad`.
