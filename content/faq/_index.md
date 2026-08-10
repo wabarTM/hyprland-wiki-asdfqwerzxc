@@ -266,7 +266,7 @@ You most likely have multiple portal impls / an impl is failing to launch.
 ### My screenshot utilities won't work with multiple screens
 
 Some programs like Flameshot (currently) have limited Wayland support, consider
-using one made for wayland natively.
+using one made for Wayland natively.
 
 ### I cannot bind SUPER as my mod key on my laptop
 

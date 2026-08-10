@@ -56,7 +56,7 @@ There are 3 modes:
  - Default: **ASK**
  - Access to your screen _without_ going through xdg-desktop-portal-hyprland. Examples include: `grim`, `wl-screenrec`, `wf-recorder`.
  - If denied, will render a black screen with a "permission denied" text.
- - Why deny? For apps / scripts that might maliciously try to capture your screen without your knowledge by using wayland protocols directly.
+ - Why deny? For apps / scripts that might maliciously try to capture your screen without your knowledge by using Wayland protocols directly.
 
 `plugin`:
  - Default: **ASK**

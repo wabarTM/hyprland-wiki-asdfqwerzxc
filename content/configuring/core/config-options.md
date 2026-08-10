@@ -645,7 +645,7 @@ Path: `input-capture`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | capture_modifiers | if enabled, modifiers are also captured and sent to the program | bool | `false` |   |
-| enforce_barriers | if enabled, throw a wayland error when an invalid barrier is received | bool | `true` |   |
+| enforce_barriers | if enabled, throw a Wayland error when an invalid barrier is received | bool | `true` |   |
 
 
 ### Debug

@@ -20,7 +20,7 @@ See also: `hyprlock --help`.
 | `-v` \| `--verbose` | Enable verbose logging |
 | `-q` \| `--quiet` | Disable logging |
 | `-c` FILE \| `--config` FILE | Specify config file to use |
-| `--display` NAME | Specify the wayland display to connect to |
+| `--display` NAME | Specify the Wayland display to connect to |
 | `--grace` SECONDS | Set grace period in seconds before requiring authentication |
 | `--immediate-render` | Do not wait for resources before drawing the background (Same as `general:immediate_render`) |
 | `--no-fade-in` | Disable the fade-in animation when the lock screen appears |
@@ -105,7 +105,7 @@ Check out Hyprland's [animation documentation](../../../configuring/core/animati
 global
   ↳ fade
     ↳ fadeIn - fade to lockscreen
-    ↳ fadeOut - fade back to the wayland session
+    ↳ fadeOut - fade back to the Wayland session
   ↳ inputField
     ↳ inputFieldColors - fade between colors and gradients
     ↳ inputFieldFade - fade_on_empty animation

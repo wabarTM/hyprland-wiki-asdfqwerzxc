@@ -64,7 +64,7 @@ be run as a service for faster startups.
 
 ## Vicinae
 
-Vicinae is a C++ and Qt native launcher with a focus on wayland. Comes with many
+Vicinae is a C++ and Qt native launcher with a focus on Wayland. Comes with many
 built-in modules. It runs as a server in the background. It supports raycast extensions
 via a compatibility layer.
 [GitHub](https://github.com/vicinaehq/vicinae)

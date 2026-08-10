@@ -37,7 +37,7 @@ Variables in the `general` category:
 > - `0` disables sleep inhibition.
 > - `1` makes the system wait until hypridle launched `general:before_sleep_cmd`.
 > - `2` (auto) selects either `3` or `1` depending on whether hypridle detects if you want to launch hyprlock before sleep.
-> - `3` makes your system wait until the session gets locked by a lock screen app. This works with all wayland session-lock apps.
+> - `3` makes your system wait until the session gets locked by a lock screen app. This works with all Wayland session-lock apps.
 
 ### Listeners
 
