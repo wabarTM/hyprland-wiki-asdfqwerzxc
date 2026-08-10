@@ -163,7 +163,7 @@ There is no need to explicitly set XDG environment variables, as uwsm sets them 
 
 
 Avoid placing environment variables in the `hyprland.lua` file.  
-Instead, use `~/.config/uwsm/env` for theming, xcursor, Nvidia and toolkit variables, and `~/.config/uwsm/env-hyprland` for `HYPR*` and `AQ_*` variables.  
+Instead, use `~/.config/uwsm/env` for theming, xcursor, NVIDIA and toolkit variables, and `~/.config/uwsm/env-hyprland` for `HYPR*` and `AQ_*` variables.  
 The format is `export KEY=VAL`.
 
 ```plain

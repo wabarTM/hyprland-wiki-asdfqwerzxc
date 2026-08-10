@@ -57,7 +57,7 @@ If they can't, see [the XWayland page](../configuring/extra/xwayland).
 
 ### My external monitor is blank / doesn't render / receives no signal (laptop)
 
-For Nvidia graphics - This issue appears to be resolved when using Nvidia
+For NVIDIA graphics - This issue appears to be resolved when using NVIDIA
 Drivers 525.60.11 or later, but it may persist with older drivers.
 
 For systems with limited hardware (Ex. iGPU, USB-C, USB Hubs) - Set env `AQ_NO_MODIFIERS` to `1` in your config.

@@ -17,12 +17,12 @@ successfully installed Hyprland.
 Install `kitty` (default terminal emulator). This is available in most distros'
 repositories.
 
-## Nvidia?
+## NVIDIA?
 
 > [!NOTE]
-> If not using an Nvidia card, skip this step.
+> If not using an NVIDIA card, skip this step.
 
-Please take a look at [The Nvidia page](../../nvidia) before launching. It has
+Please take a look at [The NVIDIA page](../../nvidia) before launching. It has
 information regarding the needed environment and tweaks.
 
 ## VM?

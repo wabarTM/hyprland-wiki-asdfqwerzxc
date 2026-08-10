@@ -557,7 +557,7 @@ Path: `opengl`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| nvidia_anti_flicker | Reduces flickering on nvidia at the cost of possible frame drops on lower-end GPUs. On non-nvidia, this is ignored | bool | `true` |   |
+| nvidia_anti_flicker | Reduces flickering on NVIDIA at the cost of possible frame drops on lower-end GPUs. On non-NVIDIA, this is ignored | bool | `true` |   |
 
 ### Render
 
@@ -569,7 +569,7 @@ Path: `render`
 | cm_enabled | Whether the color management pipeline should be enabled or not. Requires restart | bool | `true` |   |
 | cm_sdr_eotf | Default transfer function for displaying SDR apps. `default` - Use default value (sRGB), `gamma22` - treat unspecified as Gamma 2.2, `gamma22force` - treat unspecified and sRGB as Gamma 2.2, `srgb` - treat unspecified as sRGB. Options: `"default"`/`"gamma22"`/`"gamma22force"`/`"srgb"` | string | `"default"` |   |
 | commit_timing_enabled | Enable commit timing proto. Requires restart | bool | `true` |   |
-| ctm_animation | Whether to enable a fade animation for CTM changes (hyprsunset). 2 means "auto" which disables them on Nvidia | int | `2` | [0 - 2] |
+| ctm_animation | Whether to enable a fade animation for CTM changes (hyprsunset). 2 means "auto" which disables them on NVIDIA | int | `2` | [0 - 2] |
 | direct_scanout | Enables direct scanout. Direct scanout attempts to reduce lag when there is only one fullscreen application on a screen (game). It is also recommended to set this to false if the fullscreen application shows graphical glitches. `0` - disabled, `1` - enabled, `2` - auto (enabled with content type 'game') | int | `0` | [0 - 2] |
 | expand_undersized_textures | Whether to expand undersized textures along the edge, or rather stretch the entire texture | bool | `true` |   |
 | fp16_sdr_tf | Internal workbuffer transfer function for fp16 in SDR mode. 0 - monitor, 1 - linear | int | `0` | [0 - 1] |
@@ -610,7 +610,7 @@ Path: `cursor`
 | warp_on_change_workspace | Move the cursor to the last focused window after changing the workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |
 | warp_on_toggle_special | Move the cursor to the last focused window when toggling a special workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |
 | sync_gsettings_theme | Sync xcursor theme with gsettings. It applies cursor-theme and cursor-size on theme load to gsettings making most CSD GTK based clients use the same xcursor theme and size | bool | `true` |   |
-| use_cpu_buffer | Makes HW cursors use a CPU buffer. Required on Nvidia to have HW cursors. `0` - disabled, `1` - enabled, `2` - auto (enabled with nvidia) | int | `2` | [0 - 2] |
+| use_cpu_buffer | Makes HW cursors use a CPU buffer. Required on NVIDIA to have HW cursors. `0` - disabled, `1` - enabled, `2` - auto (enabled with NVIDIA) | int | `2` | [0 - 2] |
 | zoom_detached_camera | Detach the camera from the mouse when zoomed in, only ever moving the camera to keep the mouse in view when it goes past the screen edges | bool | `true` |   |
 | zoom_disable_aa | Disable antialiasing when zooming, which means things will be pixelated instead of blurry | bool | `false` |   |
 | zoom_factor | The factor to zoom by around the cursor. Like a magnifying glass. Minimum 1.0 (meaning no zoom) | float | `1.0` | [1 - 10] |
