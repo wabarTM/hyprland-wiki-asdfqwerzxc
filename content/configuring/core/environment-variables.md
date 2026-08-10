@@ -24,7 +24,7 @@ hl.env("GTK_THEME", "Nord")
 - `hl.env("HYPRLAND_TRACE", "1")` - Enables more verbose logging.
 - `hl.env("HYPRLAND_NO_RT", "1")` - Disables realtime priority setting by Hyprland.
 - `hl.env("HYPRLAND_NO_SD_NOTIFY", "1")` - If systemd, disables the `sd_notify` calls.
-- `hl.env("HYPRLAND_NO_SD_VARS", "1")` - Disables management of variables in systemd and dbus activation environments.
+- `hl.env("HYPRLAND_NO_SD_VARS", "1")` - Disables management of variables in systemd and D-Bus activation environments.
 - `hl.env("HYPRLAND_CONFIG", "/path/to/hyprland.lua")` - Specifies where you want your Hyprland configuration.
 
 ## Aquamarine Environment Variables <!-- ref https://github.com/hyprwm/aquamarine/blob/main/docs/env.md -->
