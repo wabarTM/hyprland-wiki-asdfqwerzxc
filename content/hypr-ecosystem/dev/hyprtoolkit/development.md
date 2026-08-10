@@ -86,7 +86,7 @@ For example:
 
 ### Layout Mode
 
-This happens when the parent of your element is a layout. These will attempt to position your child elements. They work similarly to CSS's `flex` and qt's `RowLayout` and `ColumnLayout`,
+This happens when the parent of your element is a layout. These will attempt to position your child elements. They work similarly to CSS's `flex` and Qt's `RowLayout` and `ColumnLayout`,
 but will not wrap. If elements overflow and cannot shrink, they will disappear.
 
 RowLayout positions elements next to each other side-by-side, while ColumnLayout does it top-to-bottom.
