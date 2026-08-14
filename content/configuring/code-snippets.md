@@ -5,8 +5,7 @@ title: Lua code snippets
 
 ## Code snippets
 
-Code snippets provided on this page may be useful for stealing 
-some functions or getting inspiration.
+Code snippets provided on this page may be useful for stealing some functions or getting inspiration.
 
 <!-- TODO scrap discord/forums for helper functions that may or may not be useful -->
 
@@ -51,7 +50,8 @@ hl.bind("SUPER + D", layout_bind({
 
 ### Minimize windows using special workspaces
 
-This approach uses special workspaces to mimic the “minimize window” function, by using a single keybind to toggle the minimized state. Note that one keybind can only handle one window.
+This approach uses special workspaces to mimic the "minimize window" function, by using a single keybind to toggle the minimized state.
+Note that one keybind can only handle one window.
 
 ```lua
 hl.bind("SUPER + X", function ()
@@ -67,7 +67,7 @@ end)
 
 ### Smart gaps
 
-To replicate "smart gaps" / "no gaps when only" from other WMs/Compositors, use this bad boy:
+To replicate "smart gaps"/"no gaps when only" from other WMs/Compositors, use this bad boy:
 
 ```lua
 hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
@@ -91,10 +91,10 @@ hl.window_rule({ match = { float = false, workspace = "f[1]s[false]" }, border_s
 hl.window_rule({ match = { float = false, workspace = "f[1]s[false]" }, rounding = 0 })
 ```
 
-### Float browser's extension windows
+### Float browsers' extension windows
 
-All known browsers have the annoying "feature" of setting title to their own name when opening
-extensions' windows. This function listens to opened windows and floats the matches:
+All known browsers have the annoying "feature" of setting extension window titles to the browser's own name.
+This function listens to opened windows and floats the matches:
 
 ```lua
 hl.on("window.open", function(w)
@@ -141,8 +141,8 @@ if hl.version() == "0.55.2" then
         }
     })
 else
-    hl.notification.create({ 
-        text = "You're using: ".. hl.version(), 
+    hl.notification.create({
+        text = "You're using: ".. hl.version(),
         timeout = 10000
     })
 end
@@ -158,7 +158,7 @@ end
 
 ### Toggle animations/blur/etc hotkey
 
-For less distractions at a keypress, or battery saving on a laptop
+For less distractions at a keypress, or battery saving on a laptop.
 
 Add the following to your Hyprland config:
 
@@ -191,7 +191,9 @@ hl.bind("SUPER + F1", function ()
 end)
 ```
 
-Edit to your liking of course. If animations are enabled, it disables all the pretty stuff. Otherwise, the script reloads your config to grab your defaults.
+If animations are enabled, it disables all the pretty stuff.
+Otherwise, the script reloads your config to grab your defaults.
+Edit to your liking.
 
 ### Per workspace layouts
 
@@ -204,7 +206,7 @@ hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
 ### Cycle layout for current workspace
 
-To change layout for current workspace, you can use this bind:
+To change the layout of the current workspace, you can use this bind:
 
 ```lua
 hl.bind("SUPER + tab", function ()
@@ -236,9 +238,10 @@ hl.bind("SUPER + tab", function ()
 end)
 ```
 
-### Glass magnifier zoom
+### Windows Magnifier-like cursor zoom
 
-Bind to use cursor zoom like a glass magnifier
+These binds adjust the zoom factor, which zooms into your entire screen and moves to keep the cursor in view.
+This acts similarly to Windows Magnifier, in its full-screen mode.
 
 ```lua
 local MAX_ZOOM = 3
@@ -267,12 +270,12 @@ end)
 hl.bind("SUPER + minus", function()
     zoom(-0.5)
 end)
-
 ```
 
 ## Vim-like keymaps
 
-Hyprland has so many features that you might run out of keys on your keyboard if you want to bind them all. Rest assured, you can utilize submaps to create keymaps if you want more, and they're also easier to press.
+Hyprland has so many features that you might run out of keys on your keyboard if you want to bind them all.
+Rest assured, you can utilize submaps to create keymaps if you want more, and they're also easier to press than a single bind with many modidiers.
 
 Here's an example of managing window groups this way:
 
