@@ -54,7 +54,7 @@ gsettings set org.gnome.desktop.interface cursor-theme 'THEME_NAME'
 
 for GTK.  
 
-If `gsettings` schemas are not available to you (e.g. on NixOS you will get `No schemas installed`), you can run instead: 
+If GSettings schemas are not available to you (e.g. on NixOS you will get `No schemas installed`), you can run instead: 
 
 ```sh
 dconf write /org/gnome/desktop/interface/cursor-theme "'THEME_NAME'"
