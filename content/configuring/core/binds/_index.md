@@ -27,9 +27,9 @@ For example,
 hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("firefox"))
 ```
 
-will bind opening Firefox to <key>SUPER</key> + <key>SHIFT</key> + <key>Q</key>
+will bind opening Firefox to SUPER + SHIFT + Q
 
-<!-- TODO: why on earth <key> is needed there? wiki parsing? -->
+<!-- TODO: why on earth  is needed there? wiki parsing? -->
 
 The dispatcher list can be found in
 [Dispatchers](../dispatchers).
@@ -56,7 +56,7 @@ a `code:` prefix, e.g.:
 hl.bind("SUPER + code:28", hl.dsp.exec_cmd("amongus"))
 ```
 
-This will bind <key>SUPER</key> + <key>t</key> since <key>t</key> is keycode 28.
+This will bind SUPER + t since t is keycode 28.
 
 ## Binding modkeys only
 
