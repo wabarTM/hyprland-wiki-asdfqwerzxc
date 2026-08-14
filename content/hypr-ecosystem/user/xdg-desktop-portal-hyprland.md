@@ -181,7 +181,9 @@ screencopy {
 
 Config file `~/.config/hypr/xdph.conf` allows for these variables:
 
-### category screencopy
+### Screencopy
+
+Variables in the `screencopy` category:
 
 | Variable | Description | Type | Default |
 | -- | -- | -- | -- |
