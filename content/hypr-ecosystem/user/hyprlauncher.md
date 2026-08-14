@@ -3,7 +3,7 @@ weight: 30
 title: hyprlauncher
 ---
 
-[hyprlauncher](https://github.com/hyprwm/hyprlauncher) is a multipurpose and versatile launcher / picker for hyprland. It's fast, simple, and provides
+[hyprlauncher](https://github.com/hyprwm/hyprlauncher) is a multipurpose and versatile launcher / picker for Hyprland. It's fast, simple, and provides
 various modules.
 
 ## Usage
@@ -59,4 +59,3 @@ Prefixes can only be one character.
 | option | description | type | default |
 | -- | -- | -- | -- |
 | window_size | the size of the launcher | vec2 | `400 260` |
-

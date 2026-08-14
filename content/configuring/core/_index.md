@@ -37,7 +37,7 @@ It's [here](https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua).
 
 #### Using Multiple Configuration Files
 
-Splitting hyprland's configuration across multiple files is an easier way of managing the configuration. To source or reference other files we use Lua's [require](#require) function. 
+Splitting Hyprland's configuration across multiple files is an easier way of managing the configuration. To source or reference other files we use Lua's [require](#require) function. 
 
 You can refer to the files using relative paths from the location of `hyprland.lua`. Example:
 

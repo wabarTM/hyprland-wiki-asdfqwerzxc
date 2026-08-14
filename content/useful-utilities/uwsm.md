@@ -172,7 +172,7 @@ export XCURSOR_SIZE=24
 
 See [uwsm readme](https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file#4-environments-and-shell-profile) for additional information.
 
-Avoid using the hyprland `exit` dispatcher or terminating the Hyprland process directly, as exiting Hyprland this way removes it from under its clients and interferes with ordered shutdown sequence; causing a forced shutdown. Use `uwsm stop` (or [other variants](https://github.com/Vladimir-csp/uwsm#how-to-stop)) which will gracefully bring down graphical session (and login session bound to it, if any). If you experience problems with units entering inconsistent states, affecting subsequent sessions, use `loginctl terminate-user ""` instead (terminates all units of the user).
+Avoid using the Hyprland `exit` dispatcher or terminating the Hyprland process directly, as exiting Hyprland this way removes it from under its clients and interferes with ordered shutdown sequence; causing a forced shutdown. Use `uwsm stop` (or [other variants](https://github.com/Vladimir-csp/uwsm#how-to-stop)) which will gracefully bring down graphical session (and login session bound to it, if any). If you experience problems with units entering inconsistent states, affecting subsequent sessions, use `loginctl terminate-user ""` instead (terminates all units of the user).
 
 ## NixOS UWSM
 

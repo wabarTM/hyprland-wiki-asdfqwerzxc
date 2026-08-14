@@ -17,4 +17,4 @@ The section [Advanced](./advanced) contains tweaks such as options, overrides, o
 
 ## Contributing and debugging Hyprland
 
-See this page if you want to debug some issue or contribute code to hyprland: [Contributing and debugging](./contributing-and-debugging).
+See this page if you want to debug some issue or contribute code to Hyprland: [Contributing and debugging](./contributing-and-debugging).

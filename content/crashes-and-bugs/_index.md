@@ -137,7 +137,7 @@ If requested, this is the deepest level of memory issue debugging possible.
 
 _Do this in the tty, with no Hyprland instances running._
 
-Clone hyprland: `git clone --recursive https://github.com/hyprwm/Hyprland`
+Clone Hyprland: `git clone --recursive https://github.com/hyprwm/Hyprland`
 
 `make asan`
 
@@ -165,7 +165,7 @@ sudo dmesg -C                                           # clears kernel debug lo
 dmesg -w > ~/dmesg.log &                                # writes kernel logs in the background to a file at ~/dmesg.log
 Hyprland
 
-# ... repro the issue, then quit hyprland
+# ... repro the issue, then quit Hyprland
 
 
 fg # after this, use CTRL+C to stop writing the logs

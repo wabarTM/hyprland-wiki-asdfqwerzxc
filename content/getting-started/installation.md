@@ -216,7 +216,7 @@ sudo add-apt-repository universe && sudo apt update && sudo apt install hyprland
 Hyprland is currently available in Alpine's [community repository](https://wiki.alpinelinux.org/wiki/Repositories#Community)
 and it is maintained by the community.
 
-The following command will install hyprland and its dependencies.
+The following command will install Hyprland and its dependencies.
 
 ```plain
 apk add hyprland
@@ -393,7 +393,7 @@ See [Crashes and Bugs](../../crashes-and-bugs).
 
 ## Custom installation (debug build, etc)
 
-1. cd into the hyprland repo.
+1. cd into the Hyprland repo.
 2. for debug build:
 
 ```bash

@@ -25,7 +25,7 @@ hl.layout.register("columns", {
 
 Which can be used as `lua:columns`.
 
-There are some example layouts in the hyprland repo [here](https://github.com/hyprwm/Hyprland/tree/main/example/layouts).
+There are some example layouts in the Hyprland repo [here](https://github.com/hyprwm/Hyprland/tree/main/example/layouts).
 
 `ctx` has some convenience functions for you, like `grid_cell`, `column`, `row` and `split`.
 It also provides `area` and `targets`, for the work area and target list respectively.

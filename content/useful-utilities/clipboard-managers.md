@@ -3,7 +3,7 @@ weight: 100
 title: Clipboard managers
 ---
 
-_Starting method:_ manual (in hyprland config's autostarts)
+_Starting method:_ manual (in Hyprland config's autostarts)
 
 Clipboard Managers provide a convenient way to organize and access previously
 copied content, including both text and images.  
@@ -213,7 +213,7 @@ Start by adding the following to your autostarts: `cursor-clip --daemon`
 
 This starts the background daemon that monitors clipboard changes.
 
-To bind `cursor-clip` to a hotkey for quick access, you can add a keybind to run `cursor-clip` to your hyprland config.
+To bind `cursor-clip` to a hotkey for quick access, you can add a keybind to run `cursor-clip` to your Hyprland config.
 
 When triggered, `cursor-clip` will automatically position its overlay window at your current mouse location, providing a Windows 11-style clipboard history interface. The overlay supports all clipboard formats including text, images, and files, with a native GNOME design built using GTK4 and Libadwaita.
 

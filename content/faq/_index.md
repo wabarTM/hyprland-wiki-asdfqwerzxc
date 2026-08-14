@@ -339,9 +339,9 @@ If using yay, make sure to `CleanBuild` every package. If using paru, manually r
 
 If you are not using any -git packages, this is a mistake in your distro's packaging and should be solved there.
 
-### My cursor is a hyprland icon?
+### My cursor is a Hyprland icon?
 
-This means you have no hyprcursor theme installed, and hyprland failed to find an XCursor theme as well. Install a cursor theme.
+This means you have no hyprcursor theme installed, and Hyprland failed to find an XCursor theme as well. Install a cursor theme.
 
 ### Smart gaps please?
 
@@ -364,7 +364,7 @@ The issue is likely the default monitor for X11 is not your desired primary moni
 
 Add `xrandr --output [MONITOR_ID] --primary` to your autostarts in the config, replacing [MONITOR_ID] with your main monitor's ID (e.g. DP-3). You can find your monitor ID by running `hyprctl monitors`.
 
-By adding this to your hyprland config, you will set your main monitor as the default for X11 applications.
+By adding this to your Hyprland config, you will set your main monitor as the default for X11 applications.
 
 ### My mouse cursor keeps escaping the game window!
 

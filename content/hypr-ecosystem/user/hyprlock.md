@@ -128,7 +128,7 @@ The following keys and key-combinations describe hyprlock's default behaviour:
 | `Ctrl + u` | Clear password buffer |
 | `Ctrl + Backspace` | Clear password buffer |
 
-The [`locked` flag](../../../configuring/core/binds/flags#bind-flags) `l` can be used to allow specific hyprland keybinds to also work while hyprlock is active (e.g. brightness/volume/media control).
+The [`locked` flag](../../../configuring/core/binds/flags#bind-flags) `l` can be used to allow specific Hyprland keybinds to also work while hyprlock is active (e.g. brightness/volume/media control).
 
 ## Widgets
 
@@ -144,7 +144,7 @@ widget_name {
 ### Monitor Selection
 `monitor` is available for all widgets and can be left empty for "all monitors".
 
-It takes the same string that is used to reference monitors in the hyprland configuration.
+It takes the same string that is used to reference monitors in the Hyprland configuration.
 So either use the portname (e.g. `eDP-1`) or the monitor description (e.g. `desc:Chimei Innolux Corporation 0x150C`).
 
 See [Monitors](../../../configuring/core/monitors).
@@ -229,7 +229,7 @@ If `path` is `screenshot`, a screenshot of your desktop at launch will be used.
 | `zindex` | z-index of the widget. | int | `-1` |
 
 > [!NOTE]
-> Blur options are taken from hyprland.
+> Blur options are taken from Hyprland.
 > See [blur](../../../configuring/core/config-options#blur).
 
 {{% details title="Example background" closed="true" %}}

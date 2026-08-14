@@ -33,7 +33,7 @@ Instead of writing your hyprland.lua contents directly inside your nix config, y
 
 ## Hjem-impure
 
-The hyprland.lua file is most likely a highly changing file. What if you want to try a new change in your hyprland config without having to build switch your nixos config? After hyprland.lua is deployed by hjem, it will write a link into `~/.config/hyprland.lua` from the nix store. This file is read-only by default, but we can easily get to rewrite it by using a tool called [`hjem-impure`](https://github.com/Rexcrazy804/hjem-impure).
+The hyprland.lua file is most likely a highly changing file. What if you want to try a new change in your Hyprland config without having to build switch your nixos config? After hyprland.lua is deployed by hjem, it will write a link into `~/.config/hyprland.lua` from the nix store. This file is read-only by default, but we can easily get to rewrite it by using a tool called [`hjem-impure`](https://github.com/Rexcrazy804/hjem-impure).
 
 Executing `hjem-impure` replaces every hjem symlink with writable normal files and directories. So after that, you can write into your `~/.config/hyprland.lua` file deployed by hjem. **This enables experimentation.** What this mean is that after a nixos build switch or after a system reboot, the changes that you made in `~/.config/hyprland.lua` **will be gone**. So after you are happy with some changes, write them into your nix config for them to be persisted.
 
@@ -56,7 +56,7 @@ In NixOS, we can achieve this making a custom user unit using Hjem:
 }
 ```
 
-We need to start this unit at hyprland start, and finish it at hyrpland shutdown:
+We need to start this unit at Hyprland start, and finish it at Hyprland shutdown:
 
 ```lua {filename="hyprland.nix"}
 {

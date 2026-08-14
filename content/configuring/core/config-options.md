@@ -380,7 +380,7 @@ Path: `gestures.scrolling`
 
 ### Group
 
-<!-- TODO: what on earth groups are? I.e.: "Groups are for hyprland the same as Tabs are for firefox" -->
+<!-- TODO: what on earth groups are? I.e.: "Groups are for Hyprland the same as Tabs are for firefox" -->
 
 Path: `group`
 
@@ -623,7 +623,7 @@ Path: `ecosystem`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| no_update_news | Disable the popup that shows up when you update hyprland to a new version | bool | `false` |   |
+| no_update_news | Disable the popup that shows up when you update Hyprland to a new version | bool | `false` |   |
 | no_donation_nag | Disable the popup that shows up twice a year encouraging to donate | bool | `false` |   |
 | enforce_permissions | Whether to enable [permission control](../advanced-configuration/permissions) | bool | `false` |   |
 

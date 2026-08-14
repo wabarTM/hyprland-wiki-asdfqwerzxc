@@ -58,7 +58,7 @@ launcher with its Applications Plugin.
 ## Walker
 
 Walker is an extensible Wayland-native runner with various built-in modules
-(applications, runner, hyprland windows, websearch [as of 2024-03-15]). It can
+(applications, runner, Hyprland windows, websearch [as of 2024-03-15]). It can
 be run as a service for faster startups.
 [GitHub](https://github.com/abenz1267/walker)
 
