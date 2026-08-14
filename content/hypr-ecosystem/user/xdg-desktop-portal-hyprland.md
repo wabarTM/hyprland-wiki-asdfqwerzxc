@@ -68,7 +68,7 @@ dev-qt/qtdeclarative opengl
 sys-apps/xdg-desktop-portal screencast
 ```
 
-### Unmask Dependencies and xdph
+### Unmask Dependencies and XDPH
 
 ```plain {filename="/etc/portage/package.accept_keywords"}
 gui-libs/xdg-desktop-portal-hyprland 

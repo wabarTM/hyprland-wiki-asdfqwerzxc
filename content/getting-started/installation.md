@@ -346,7 +346,7 @@ sudo apt install -y xdg-desktop-portal-wlr
 _Unfortunately, `xdg-desktop-portal-hyprland` is still not in Ubuntu Repo so you have to build it from source_
 
 See
-[The xdph GitHub repo's readme](https://github.com/hyprwm/xdg-desktop-portal-hyprland). Refer to
+[The XDPH GitHub repo's readme](https://github.com/hyprwm/xdg-desktop-portal-hyprland). Refer to
 [XDPH](../../hypr-ecosystem/user/xdg-desktop-portal-hyprland) and
 [Ubuntu Guide For Installing And Building Hyprland Gist](https://gist.github.com/Vertecedoc4545/3b077301299c20c5b9b4db00f4ca6000)
 for more information.

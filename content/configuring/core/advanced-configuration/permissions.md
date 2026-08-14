@@ -81,7 +81,7 @@ There are 3 modes:
 
 ## Notes
 
-**xdg-desktop-portal** implementations (including xdph) are just regular applications. They will go through permissions too. You might want to consider
+**xdg-desktop-portal** implementations (including XDPH) are just regular applications. They will go through permissions too. You might want to consider
 adding a rule like this:
 ```lua
 hl.permission({ binary = "/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", type = "screencopy", mode = "allow" })
