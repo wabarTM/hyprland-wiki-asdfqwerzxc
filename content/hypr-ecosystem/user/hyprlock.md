@@ -359,7 +359,7 @@ Draws a password input field.
 | `check_text` | Text rendered when waiting for the authentication result. | str | _empty_ |
 | `fail_color` | Color accent when authentication fails. | gradient | `rgba(204, 34, 34, 1.0)` |
 | `fail_text` | Text rendered when authentication fails. | str | `<i>$FAIL <b>($ATTEMPTS)</b></i>` |
-| `capslock_color` | Color accent when capslock is active. | gradient | _empty_ |
+| `capslock_color` | Color accent when Caps Lock is active. | gradient | _empty_ |
 | `numlock_color` | Color accent when numlock is active. | gradient | _empty_ |
 | `bothlock_color` | Color accent when both locks are active. | gradient | _empty_ |
 | `invert_numlock` | Change color if numlock is off. | bool | `false` |
@@ -373,7 +373,7 @@ Draws a password input field.
 >
 > When `outline_thickness` is set to `0`, the color of the inner box will be changed instead of the outer.   
 > Behaviour of `swap_font_color` is as follows:  
-> - `outline_thickness` is `0`: if set, font color will be swapped with inner one on color change events (e.g. Caps-lock on or password check).
+> - `outline_thickness` is `0`: if set, font color will be swapped with inner one on color change events (e.g. Caps Lock on or password check).
 > - `outline_thickness` is not `0`: if set, font and inner colors will be swapped on password check and authentication failure.
 > - `swap_font_color` will narrow the accent colors from a gradient to a single color by using the first specified color.
 

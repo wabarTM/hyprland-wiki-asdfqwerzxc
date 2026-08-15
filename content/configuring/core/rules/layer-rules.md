@@ -43,7 +43,7 @@ local selectionRule = hl.layer_rule({
   no_anim   = true,
 })
 
--- Enable blur and ignore_alpha for rofi
+-- Enable blur and ignore_alpha for Rofi
 hl.layer_rule({
   match        = { namespace = "rofi" },
   blur         = true,

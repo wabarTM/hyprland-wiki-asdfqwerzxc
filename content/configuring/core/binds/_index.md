@@ -21,7 +21,7 @@ title: Binds
 hl.bind("keys", dispatcher or function() , {bind_flags})
 ```
 
-for example,
+For example,
 
 ```lua
 hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("firefox"))
@@ -108,7 +108,7 @@ hl.unbind("SUPER + Tab") -- this will NOT unbind
 hl.unbind("SUPER + TAB") -- this will unbind
 ```
 
-## XKB Remapping mod keys
+## XKB remapping mod keys
 
 You can customize the behavior of some modifier keys using `kb_options`.
 
@@ -120,7 +120,7 @@ cat /usr/share/X11/xkb/rules/base.lst
 
 {{% details title="Examples" closed="true" %}}
 
-To remap Caps lock to Ctrl:
+To remap Caps Lock to Ctrl:
 
 ```lua
 hl.config({

@@ -7,13 +7,13 @@ title: Nix
 
 See [Hyprland on NixOS](./installing-hyprland-on-nixos).  
 
-## Using Hyprland on any distro with the nix package manager
+## Using Hyprland on any distro with the Nix package manager
 
 See [this page](./hyprland-on-any-distro-using-nix).
 
 ## Advanced
 
-The section [Advanced](./advanced) contains tweaks such as options, overrides, overlays, building plugins with nix, ...
+The section [Advanced](./advanced) contains tweaks such as options, overrides, overlays, building plugins with Nix, ...
 
 ## Contributing and debugging Hyprland
 
