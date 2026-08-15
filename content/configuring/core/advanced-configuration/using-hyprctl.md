@@ -118,7 +118,7 @@ Available backends:
 - `headless`: Creates a headless monitor output. If you're running a VNC/RDP/
   Sunshine server, you should use this.
 - `auto`: Picks a backend for you. For example, if you're running Hyprland from
-  the tty, `headless` will be chosen.
+  the TTY, `headless` will be chosen.
 
 For example, to create a headless output named "test":
 

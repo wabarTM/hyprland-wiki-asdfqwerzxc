@@ -154,7 +154,7 @@ update the package. Paru has been problematic with updating before, use Yay.
 ### How do I screen lock?
 
 Use a Wayland-compatible locking utility using WLR protocols, e.g. `swaylock`.
-Be aware that they will not prevent tty-changing using Ctrl-Alt-F1...F7.
+Be aware that they will not prevent changing TTY using Ctrl-Alt-F1...F7.
 
 ### How do I change my mouse cursor?
 

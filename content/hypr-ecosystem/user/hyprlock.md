@@ -467,5 +467,5 @@ label {
 
 ## User Signals
 
-- `SIGUSR1`: Unlocks hyprlock. For example, you can switch to another tty and run `pkill -USR1 hyprlock`.
+- `SIGUSR1`: Unlocks hyprlock. For example, you can switch to another TTY and run `pkill -USR1 hyprlock`.
 - `SIGUSR2`: Updates labels and images. See above.

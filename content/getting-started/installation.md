@@ -486,7 +486,7 @@ virt-install \
 ```
 
 Connect with `virt-viewer`, which will open a graphical session on
-the tty. The default login is 'arch' for both the user and its password.
+the TTY. The default login is 'arch' for both the user and its password.
 
 > [!WARNING]
 > Make sure the --attach flag is used, enabling virgl makes it so that

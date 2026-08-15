@@ -39,7 +39,7 @@ Please bear in mind 3D acceleration in VMs may be pretty slow.
 
 ## Launching Hyprland
 
-Hyprland can be executed by typing `start-hyprland` in your tty.
+Hyprland can be executed by typing `start-hyprland` in your TTY.
 
 > [!WARNING]
 > Do **not** launch Hyprland with `root` permissions (don't `sudo`)
