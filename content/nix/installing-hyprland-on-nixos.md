@@ -92,7 +92,7 @@ For more details, see
 This section is for using the Hyprland flake in a NixOS system without support for Nix flakes.
 
 > [!NOTE]
-> If you don't want to compile Hyprland yourself, make sure to enable [Cachix](../Cachix).
+> If you don't want to compile Hyprland yourself, make sure to enable [Cachix](../cachix).
 
 ```nix {filename="configuration.nix"}
 {pkgs, ...}: let
