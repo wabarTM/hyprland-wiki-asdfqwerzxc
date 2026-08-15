@@ -25,7 +25,7 @@ If you don't know what this is, just don't.
 
 Before you do anything, [enable flakes](https://nixos.wiki/wiki/Flakes#Enable_flakes), by adding this to `/etc/nix/nix.conf` or `~/.config/nix/nix.conf`:
 
-```ini
+```nix
 experimental-features = nix-command flakes
 ```
 

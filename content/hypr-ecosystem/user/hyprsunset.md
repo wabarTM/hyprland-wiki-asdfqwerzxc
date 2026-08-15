@@ -43,6 +43,7 @@ For example, when launching hyprsunset with the following example config at 20:0
 Once the clock strikes 21:00, hyprsunset will automatically apply the new profile.
 
 **Example Configuration**
+
 ```ini
 max-gamma = 150
 

@@ -26,16 +26,15 @@ Note that Hyprland currently doesn't support the way it tries to hide the main w
 See [this issue](https://invent.kde.org/system/xwaylandvideobridge/-/issues/1) for more information.
 For example:
 
-```ini
-windowrule {
-    name = xwayland-video-bridge-fixes
-    match:class = xwaylandvideobridge
-
-    no_initial_focus = true
-    no_focus = true
-    no_anim = true
-    no_blur = true
-    max_size = 1 1
-    opacity = 0.0
-}
+```lua
+hl.window_rule({
+    name  = xwayland-video-bridge-fixes,
+    match = { class = "xwaylandvideobridge" },
+    no_initial_focus = true,
+    no_focus         = true,
+    no_anim          = true,
+    no_blur          = true,
+    max_size         = { 1, 1 },
+    opacity          = 0.0,
+})
 ```

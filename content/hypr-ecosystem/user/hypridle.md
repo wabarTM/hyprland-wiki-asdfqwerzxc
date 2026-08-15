@@ -92,10 +92,10 @@ Don't suspend while an SSH session is connected:
 
 ```ini
 listener {
-    timeout = 900                                              # 15min.
-        on-timeout = systemctl suspend                         # suspend pc.
-        condition_cmd = ~/.config/hypr/scripts/can-suspend.sh  # exit 0 = suspend, non-zero = stay awake.
-        condition_retry = 30                                   # re-check every 30s while still idle.
+    timeout = 900                                          # 15min.
+    on-timeout = systemctl suspend                         # suspend pc.
+    condition_cmd = ~/.config/hypr/scripts/can-suspend.sh  # exit 0 = suspend, non-zero = stay awake.
+    condition_retry = 30                                   # re-check every 30s while still idle.
 }
 ```
 

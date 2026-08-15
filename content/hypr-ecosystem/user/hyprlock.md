@@ -89,7 +89,8 @@ Variables in the `animations` category:
 
 The `animation` and `bezier` keywords can be used:
 
-For Example:
+For example:
+
 ```ini
 bezier = linear, 1, 1, 0, 0
 animation = fade, 1, 1.8, linear

@@ -64,7 +64,7 @@ To set this up, add the `pam_gnome_keyring.so` lines to the PAM configuration fi
 Consult your distribution's documentation for the correct file and syntax.
 For example, on Arch Linux:
 
-```ini {hl_lines=[5,8,10]}
+```plain {hl_lines=[5,8,10]}
 #%PAM-1.0
 
 auth       requisite    pam_nologin.so
