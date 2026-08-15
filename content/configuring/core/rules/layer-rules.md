@@ -5,7 +5,7 @@ weight: 30
 
 ## Layer Rules
 
-Some things in Wayland are not windows, but layers - app launchers, status bars, wallpapers, etc.
+Some things in Wayland are not windows, but layers --- app launchers, status bars, wallpapers, etc.
 These have separate rules using `hl.layer_rule()`.
 The syntax is the same as `hl.window_rule()`.
 

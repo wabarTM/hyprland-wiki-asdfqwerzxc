@@ -83,7 +83,7 @@ With `condition_retry = 0` (the default), a deferred `on-timeout` is simply skip
 Any user activity resets the listener and cancels a pending retry.
 
 > [!NOTE]
-> `condition_cmd` runs synchronously on hypridle's event loop, so keep it fast - a script that blocks holds up idle handling.
+> `condition_cmd` runs synchronously on hypridle's event loop, so keep it fast --- a script that blocks holds up idle handling.
 > Retry timing is checked on hypridle's ~5s event-loop tick, so very small `condition_retry` values are effectively rounded up to that granularity.
 
 {{% details title="Examples" closed="true" %}}

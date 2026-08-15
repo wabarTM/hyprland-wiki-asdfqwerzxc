@@ -69,7 +69,7 @@ Additionally:
 
 ### No raw pointers
 
-This is a simple rule - don't use raw pointers (e.g. `CMyClass*`) unless _absolutely necessary_.
+This is a simple rule --- don't use raw pointers (e.g. `CMyClass*`) unless _absolutely necessary_.
 You have `UP`, `SP` and `WP` at your disposal.
 These are unique, shared and weak pointers respectively.
 

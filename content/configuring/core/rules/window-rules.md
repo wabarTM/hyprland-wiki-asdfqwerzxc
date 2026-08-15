@@ -288,13 +288,13 @@ hl.window_rule({
 Effects marked as _dynamic_ are reevaluated whenever the matching property of the window changes.
 For instance, if a rule changes the `border_color` when a window is floating, the color reverts to default when it's tiled again.
 
-Effects are processed top to bottom - the _last_ match takes precedence:
+Effects are processed top to bottom --- the _last_ match takes precedence:
 ```lua
 hl.window_rule({ match = { class = "kitty" }, opacity = "0.8 0.8" })
 hl.window_rule({ match = { float = true },    opacity = "0.5 0.5" })
 ```
 
-Here, all non-fullscreen kitty windows have `opacity 0.8`, except when floating - those get `0.5`.
+Here, all non-fullscreen kitty windows have `opacity 0.8`, except when floating --- those get `0.5`.
 All other floating windows get `0.5`.
 
 ```lua

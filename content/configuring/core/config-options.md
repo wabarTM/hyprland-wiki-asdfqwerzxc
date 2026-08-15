@@ -347,7 +347,7 @@ Path: `gestures`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | close_max_timeout | The timeout for a window to close when using a 1:1 gesture, in ms | int | `1000` | [10 - 2000] |
-| workspace_swipe_cancel_ratio | How much the swipe has to proceed in order to commence it. Example, when set to `0.7`: if more than 70% of the distance is covered - switch, else - cancel the gesture | float | `0.5` | [0.0 - 1.0] |
+| workspace_swipe_cancel_ratio | How much the swipe has to proceed in order to commence it. Example, when set to `0.7`: if more than 70% of the distance is covered, switch; else, cancel the gesture | float | `0.5` | [0.0 - 1.0] |
 | workspace_swipe_create_new | Whether a swipe right on the last workspace should create a new one | bool | `true` |   |
 | workspace_swipe_direction_lock | If enabled, switching direction will be locked when you swipe past the `direction_lock_threshold` (touchpad only) | bool | `true` |   |
 | workspace_swipe_direction_lock_threshold | In pixels, the distance to swipe before direction lock activates (touchpad only) | int | `10` | [0 - 200] |
