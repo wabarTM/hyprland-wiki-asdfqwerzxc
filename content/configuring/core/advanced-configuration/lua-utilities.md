@@ -37,7 +37,7 @@ Hyprland exposes the following convenience functions:
  - `hl.is_key_down(key = num|str)`
 
 Use the LSP (or examine the stubs yourself) for the return values (classes and their parameters) of these functions.
-See [here](../../../core#autocompletions) to set up the LSP in your code editor.
+See [here](../../../core#editor-autocompletion) to set up the LSP in your code editor.
 
 ### `hl.exec_cmd` function
 

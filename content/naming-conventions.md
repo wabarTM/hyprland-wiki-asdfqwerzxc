@@ -52,7 +52,7 @@ Coordinates are in an inverse-Y Cartesian system, so moving to the right is the 
 
 There are implicit conversions between certain types, however, this may lead to undefined behavior later.
 LSP with Lua stub can be used to warn about the use of wrong types.
-More on that can be read [here](../configuring/core#autocompletions).
+More on that can be read [here](../configuring/core#editor-autocompletion).
 
 ### Colors
 
