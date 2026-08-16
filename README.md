@@ -6,7 +6,7 @@ You can find the site at [https://wiki.hypr.land/](https://wiki.hypr.land/)
 
 ## Wiki styling
 
-Before suggesting your changes, make sure to follow wiki styling guidelines. They can be read on [the wiki](https://wiki.hypr.land/contributing-and-debugging/wiki-guidelins/) or [github](./content/contributing-and-debugging/wiki-guidelins.md)
+Before suggesting your changes, make sure to follow wiki styling guidelines. They can be read on [the wiki](https://wiki.hypr.land/contributing-and-debugging/wiki-guidelins/) or [github](./content/contributing-and-debugging/wiki-guidelines.md)
 
 ## Contributing guidelines
 
