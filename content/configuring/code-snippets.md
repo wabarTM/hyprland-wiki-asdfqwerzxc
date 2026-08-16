@@ -1,6 +1,6 @@
 ---
+weight: 40
 title: Lua code snippets
-weight: 20
 ---
 
 ## Code snippets
