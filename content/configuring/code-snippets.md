@@ -272,6 +272,18 @@ hl.bind("SUPER + minus", function()
 end)
 ```
 
+### Move focus between tiled and floating windows
+
+This functions similarly to the i3 `focus mode_toggle` bind.
+
+```lua
+hl.bind("SUPER + space", function()
+    hl.dispatch(hl.dsp.window.cycle_next({
+        floating = not hl.get_active_window().floating
+    }))
+end, { description = "Switch focus between tiled and floating windows" })
+```
+
 ## Vim-like keymaps
 
 Hyprland has so many features that you might run out of keys on your keyboard if you want to bind them all.
@@ -280,13 +292,13 @@ Rest assured, you can utilize submaps to create keymaps if you want more, and th
 Here's an example of managing window groups this way:
 
 ```lua
-hl.bind("SUPER + G", hl.dsp.submap("group_management"), { desc = "Enter a group management submap" })
+hl.bind("SUPER + G", hl.dsp.submap("group_management"), { description = "Enter a group management submap" })
 
-local map = function(key, action, desc)
+local map = function(key, action, description)
     hl.bind(key, function()
         hl.dispatch(action)
         hl.dispatch(hl.dsp.submap("reset"))
-    end, { desc = desc })
+    end, { description = description })
 end
 
 hl.define_submap("group_management", function()
@@ -311,6 +323,6 @@ hl.define_submap("group_management", function()
         map(tostring(i % 10), hl.dsp.group.active({ index = i }), "Focus window " .. i .. " in a group")
     end
 
-    hl.bind("escape", hl.dsp.submap("reset"), { desc = "Quit submap" })
+    hl.bind("escape", hl.dsp.submap("reset"), { description = "Quit submap" })
 end)
 ```

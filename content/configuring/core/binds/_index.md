@@ -164,7 +164,7 @@ When trying to create a bind with a condition inside it, you almost always want 
 For example, this bind:
 
 ```lua
-hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", {float = not (hl.get_active_window().title == "foot") }) )
+hl.bind("SUPER + L", hl.dsp.exec_cmd("foot", { float = not (hl.get_active_window().title == "foot") }) )
 ```
 
 will be resolved to:
