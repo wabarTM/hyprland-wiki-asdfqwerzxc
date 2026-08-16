@@ -106,8 +106,8 @@ It executes immediately, going straight to the address on the letter it is hande
 | `kill({ window? })` | Kill the process owning the window with a `SIGKILL`. |
 | `signal({ window?, signal })` | Send a POSIX signal to the process owning the window. |
 | `float({ window?, action? })` | Set a window's floating state. |
-| `fullscreen({ window?, action?, mode?, layout_aware? })` | Set a window's fullscreen state. `mode` can be "maximized" and "fullscreen". `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behaviour. |
-| `fullscreen_state({ window?, action?, internal, client, layout_aware? })` | Set a window's fullscreen state with more precision. `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behaviour.  See [Fullscreenstate](#fullscreenstate), [Fullscreen Handlers](#fullscreen-handlers) |
+| `fullscreen({ window?, action?, mode?, layout_aware? })` | Set a window's fullscreen state. `mode` can be "maximized" and "fullscreen". `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behavior. |
+| `fullscreen_state({ window?, action?, internal, client, layout_aware? })` | Set a window's fullscreen state with more precision. `action` can be `toggle`/`set`/`unset`. `layout_aware` takes `true`(default)/`false`, allows you to choose if you want to use layout or default handled FS behavior.  See [Fullscreenstate](#fullscreenstate), [Fullscreen Handlers](#fullscreen-handlers) |
 | `pseudo({ window?, action? })` | Set a window's pseudotiling state. |
 | `move({ window?, direction, group_aware? })` | Move a window in a direction. `group_aware = true` will put windows in/out of groups alongside the given direction. |
 | `move({ window?, workspace, follow? })` | Move a window to a workspace |

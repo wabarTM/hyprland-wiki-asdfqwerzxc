@@ -15,7 +15,7 @@ There are three potential setups you can have with driver setup on NVIDIA.
 1. Nouveau open source drivers.
    A clean-room implementation of NVIDIA drivers, referred to simply as "Nouveau", and not to be confused with the "open drivers."
 
-For maximum performance and support with newer cards, running either of the first two setups is recommended as it contains some vital optimisations and power management support for newer GPUs.
+For maximum performance and support with newer cards, running either of the first two setups is recommended as it contains some vital optimizations and power management support for newer GPUs.
 
 > [!WARNING]
 > For those on the NVIDIA 50xx series of graphics cards (5090, 5080, etc) or newer, the open drivers are **REQUIRED**; the older proprietary drivers will not work.

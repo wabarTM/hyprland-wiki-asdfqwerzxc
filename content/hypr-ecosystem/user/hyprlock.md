@@ -122,7 +122,7 @@ If you would like to change this, refer to the [Arch Linux wiki](https://wiki.ar
 
 ## Keyboard Shortcuts and Actions
 
-The following keys and key-combinations describe hyprlock's default behaviour:
+The following keys and key-combinations describe hyprlock's default behavior:
 
 | input | description |
 | -- | -- |
@@ -380,7 +380,7 @@ Draws a password input field.
 > [!NOTE] **Colors information**
 > When `outline_thickness` is set to `0`, the color of the inner box will be changed instead of the outer.
 >
-> Behaviour of `swap_font_color` is as follows:
+> Behavior of `swap_font_color` is as follows:
 > - `outline_thickness` is `0`: if set, font color will be swapped with inner one on color change events (e.g. Caps Lock on or password check).
 > - `outline_thickness` is not `0`: if set, font and inner colors will be swapped on password check and authentication failure.
 > - `swap_font_color` will narrow the accent colors from a gradient to a single color by using the first specified color.
