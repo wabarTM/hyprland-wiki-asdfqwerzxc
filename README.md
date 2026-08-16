@@ -30,9 +30,9 @@ For info about how to squash commits, see [this](https://stackoverflow.com/a/518
 ### Content
 
 Page content should follow the [xkcd 1285](https://xkcd.com/1285) formatting style, i.e. a new line after every sentence.
-These line breaks are ignored when content is rendered, but help make the source more readable for documentation writers.
+These line breaks are ignored when content is rendered, but help reduce diff size and make the source more readable for documentation writers.
 
-See [this article](https://writingslowly.com/2025/01/13/semantic-line-breaks-are-a.html) and the [Semantic Line Breaks specification](https://sembr.org) for details.
+See [this article](https://writingslowly.com/2025/01/13/semantic-line-breaks-are-a.html) and the [Semantic Line Breaks specification](https://sembr.org) for details that aren't in comic panel form.
 
 ## TODO list 
 
