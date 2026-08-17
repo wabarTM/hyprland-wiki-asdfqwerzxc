@@ -10,19 +10,30 @@ For [binds](../binds), [monitors](../monitors), [animations](../animations), etc
 
 ## Syntax
 
+Update many options at once with:
+
 ```lua
 hl.config({
     path1 = {
-        value = key
+        option = value,
     },
     path2 = {
-        value1 = key1,
-        value2 = key2,
+        option1 = value1,
+        option2 = value2,
     },
 })
 ```
 
-Multiple `hl.config()` invocations can be used to set the configuration options since each call will only update what was passed into it.
+Or only a few with:
+
+```lua
+hl.config({ ["path.option"] = value })
+```
+
+Multiple `hl.config()` invocations can be used to set options, since each call will only update what was passed into it.
+
+This also means you can update options at runtime, without adding them to your configuration file, using [`hyprctl eval 'hl.config(...)'`](../advanced-configuration/using-hyprctl#eval).
+In this case, they will return to their default values the next time you reload (or relaunch) Hyprland.
 
 > [!TIP]
 > Before continuing, make sure you've read and understood the [naming conventions used in this wiki](../../../naming-conventions).
