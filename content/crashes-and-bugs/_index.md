@@ -5,10 +5,14 @@ title: Crashes and Bugs
 
 ## Getting the log
 
-Firstly, make sure you have enabled logs in the Hyprland config by setting `debug.disable_logs` to `false`.
-Then, to make OpenGL produce error messages, set `debug.gl_debugging` to `true`.
+Firstly, make sure you have enabled logs in the Hyprland config by [setting](../configuring/core/config-options#syntax) `debug.disable_logs` to `false`.
+If you also need OpenGL messages, set `debug.gl_debugging` to `true`.
 
 Don't forget to disable these when done logging as they cause a performance hit.
+
+> [!TIP]
+> Debug logging can be toggled dynamically, using `hyprctl eval` to change the option at runtime.
+> If you don't need to see startup logs, consider setting debug options this way (rather than in your config file), so that you can simply reload your config to disable logging when you finish.
 
 If you are in a TTY, and the Hyprland session that crashed was the last one you launched, the log can be printed with
 
