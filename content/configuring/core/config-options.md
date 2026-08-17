@@ -3,11 +3,10 @@ weight: 20
 title: Config options
 ---
 
-This page documents all of Hyprland's "options."
-For binds, monitors, animations, etc. see the sidebar.
+This page documents all Hyprland configuration options except layout-specific ones.
+Those are documented on their respective [layout pages](../../layouts) instead.
 
-Please keep in mind some options that are layout-specific will be documented in the layout pages and not here.
-See the sidebar for Dwindle/Scrolling/Master/Monocle/Custom layout pages.
+For [binds](../binds), [monitors](../monitors), [animations](../animations), etc., seek the other pages in [Core](..).
 
 ## Syntax
 
@@ -23,7 +22,7 @@ hl.config({
 })
 ```
 
-Multiple `hl.config()` invocations can be used to set options, each call will update only what was passed into it.
+Multiple `hl.config()` invocations can be used to set the configuration options since each call will only update what was passed into it.
 
 > [!TIP]
 > Before continuing, make sure you've read and understood the [naming conventions used in this wiki](../../../naming-conventions).
