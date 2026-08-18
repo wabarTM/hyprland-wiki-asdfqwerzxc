@@ -208,7 +208,7 @@ Note that:
 ### notify
 
 Sends a notification using the built-in Hyprland notification system.
-Read more about it [here](./notifications)
+Read more about it [here](../notifications), especially for icon and color options.
 
 ```sh
 hyprctl notify <ICON> <TIME_MS> <COLOR> <MESSAGE>

@@ -3,11 +3,8 @@ weight: 30
 title: Notifications
 ---
 
-<!-- i cant think on how to write this page -->
-<!-- please help. wabar.-->
-
 Hyprland has simple built-in notification system.
-Notifications are positioned in the top-right corner of the monitor.
+Notifications are simple text boxes, with an optional icon, positioned in the top-right corner of the active monitor.
 **They are not meant to handle your system notifications.**
 
 ## Parameters
@@ -22,27 +19,26 @@ Notifications are positioned in the top-right corner of the monitor.
 
 ### Icon
 
-Icon can be on of:
-<!-- NOTE: im not putting multiple icons here https://github.com/hyprwm/Hyprland/blob/9d4f7a83ce2764ddb51b4ea01f8ae1e6f1c18f66/src/notification/SharedDefines.hpp#L19 -->
-| Icon name | Lua | hyprctl | Color |
+Icon can be one of the following, selected by either Lua name or hyprctl ID:
+| Name | Lua name | hyprctl ID | Default color |
 | --- | --- | --- | --- |
-| None | none | -1 | #000000 |
-| Warning | warn/warning | 0 | #FFCC66 |
-| Info | info | 1 | #80FFFF |
-| Hint | hint | 2 | #B3FFCC |
-| Error | err/error | 3 | #FF4D4D |
-| Confused | confused/question | 4 | #FFCC99 |
-| Ok | ok | 5 | #80FF80 |
+| None | none | -1 | <code style="background-color:#000000;color:#FFFFFF">#000000</code> |
+| Warning | warn/warning | 0 | <code style="background-color:#FFCC66;color:#000000">#FFCC66</code> |
+| Info | info | 1 | <code style="background-color:#80FFFF;color:#000000">#80FFFF</code> |
+| Hint | hint | 2 | <code style="background-color:#B3FFCC;color:#000000">#B3FFCC</code> |
+| Error | err/error | 3 | <code style="background-color:#FF4D4D;color:#000000">#FF4D4D</code> |
+| Confused | confused/question | 4 | <code style="background-color:#FFCC99;color:#000000">#FFCC99</code> |
+| Ok | ok | 5 | <code style="background-color:#80FF80;color:#000000">#80FF80</code> |
 
 ## Creating a notification
 
 ### Lua
 
 ```lua
--- Create "HL.Notification" object and push the notification
+-- Just push a notification
 hl.notification.create({ text = "Hello from Lua!", timeout = 15000, icon = "info", font_size = 20 })
 
--- Assign  notification object to "somevar" for later use and pushes the notification
+-- Assign "HL.Notification" object to "somevar" for later use and push the notification
 local somevar = hl.notification.create({ text = "Please store me", timeout = 228638, icon = "hint" })
 
 -- Get a table of all active notifications as "HL.Notification" objects
@@ -52,4 +48,5 @@ hl.notification.get()
 ### Hyprctl
 
 To create a notification from hyprctl, you can use `hyprctl notify` command.
-See more about it [here](./using-hyprctl#notify)
+It takes the same information as `hl.notification.create()`, but in a slightly different format.
+See more about it [here](../using-hyprctl#notify).
