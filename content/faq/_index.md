@@ -45,7 +45,7 @@ hyprtoolkit
 hyprland
 ```
 
-Other things, e.g. hyprapps (hyprlock, hyprsunset, etc) can be built in any order after Hyprland.
+Other things, e.g. hyprapps (hyprlock, hyprsunset, etc.) can be built in any order after Hyprland.
 
 > [!WARNING]
 > ***Never, under any circumstances***, symbolically link different .so versions together, this will lead to memory bugs and crashes.

@@ -7,7 +7,7 @@ title: Installation
 > Hyprland is not meant to be a full and user-friendly Desktop Environment.
 > In a nutshell, it's a set of tools to allow you to create your own Desktop Environment.
 >
-> Apps, integrations, shells, etc, are **your** responsibility to pick, install and configure.
+> Apps, integrations, shells, etc. are **your** responsibility to pick, install and configure.
 >
 > This wiki is _very_ verbose.
 > It's highly recommended to scour and read the wiki before assuming something is not working or not available.
@@ -163,7 +163,7 @@ sudo emerge --ask gui-wm/hyprland
 ```
 
 Additional packages like hyprlock, hypridle, xdg-desktop-portal-hyprland, hyprland-plugins, hyprpaper and hyprpicker are in the overlay.
-Some of the community-contributed scripts of [hyprwm/contrib](https://github.com/hyprwm/contrib) are also available in their own package (app-misc/grimblast, app-misc/hdrop, etc).
+Some of the community-contributed scripts of [hyprwm/contrib](https://github.com/hyprwm/contrib) are also available in their own package (app-misc/grimblast, app-misc/hdrop, etc.).
 
 ```sh
 emerge --ask gui-apps/hyprlock
@@ -386,7 +386,7 @@ _CMake is always recommended as it's the intended way Hyprland should be install
 
 See [Crashes and Bugs](../../crashes-and-bugs).
 
-## Custom installation (debug build, etc)
+## Custom installation (debug build, etc.)
 
 1. cd into the Hyprland repo.
 2. for debug build:

@@ -53,7 +53,7 @@ Almost definitely means your GPU driver does not support tearing.
 
 Please _do not_ report issues if this is the culprit.
 
-### Graphical artifacts (random colorful pixels, etc)
+### Graphical artifacts (random colorful pixels, etc.)
 
 Likely issue with your graphics driver.
 

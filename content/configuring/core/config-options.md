@@ -483,7 +483,7 @@ Path: `misc`
 | focus_on_activate | Whether Hyprland should focus an app that requests to be focused (an `activate` request) | bool | `false` |   |
 | float_force_onscreen | whether/how existing floating windows should be constrained to stay on-screen. 0 - no constraints, 1 - must be partially onscreen, 2 - must be fully onscreen | int | `0` | [0 - 2] |
 | new_float_force_onscreen | same as `float_force_onscreen`, but specifically for newly-spawned floating windows | int | `2` | [0 - 2] |
-| font_family | Set the global default font to render the text including debug FPS/notification, config error messages, etc.; selected from system fonts | string | `"Sans"` |   |
+| font_family | Sets the global default font used to render text | string | `"Sans"` |   |
 | force_default_wallpaper | Enforce any of the 3 default wallpapers. 0 - disables the anime background, 1 - disables the anime background, 2 - enables anime background, -1 - random | int | `-1` | [-1 - 2] |
 | initial_workspace_tracking | If enabled, windows will open on the workspace they were invoked on. 0 - disabled, 1 - single-shot, 2 - persistent (all children too) | int | `1` |   |
 | initial_workspace_token_timeout | the time in seconds a window has to open on its invoked workspace before the tracking token expires. | int | `10` | [1 - 3600] |
@@ -602,7 +602,7 @@ Path: `cursor`
 | min_refresh_rate | Minimum refresh rate for cursor movement when `no_break_fs_vrr` is active. Set to minimum supported refresh rate or higher | int | `24` | [10 - 500] |
 | no_break_fs_vrr | Disables scheduling new frames on cursor movement for fullscreen apps with VRR enabled to avoid framerate spikes (may require `no_hardware_cursors` set to `1`). `0` - disabled, `1` - enabled, `2` - auto (enabled with content type 'game') | int | `2` | [0 - 2] |
 | no_hardware_cursors | Disables hardware cursors. `0` - use hw cursors if possible, `1` - don't use hw cursors, `2` - auto (disable when tearing) | int | `2` | [0 - 2] |
-| no_warps | If true, will not warp the cursor in many cases (focusing, keybinds, etc) | bool | `false` |   |
+| no_warps | If true, will not warp the cursor in many cases (focusing, keybinds, etc.) | bool | `false` |   |
 | persistent_warps | When a window is refocused, the cursor returns to its last position relative to that window, rather than to the centre | bool | `false` |   |
 | warp_back_after_non_mouse_input | Warp the cursor back to where it was after using a non-mouse input to move it, and then returning back to the mouse | bool | `false` |   |
 | warp_on_change_workspace | Move the cursor to the last focused window after changing the workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |

@@ -11,7 +11,7 @@ After you've installed Hyprland, read the [Master tutorial](./master-tutorial).
 > Hyprland is not meant to be a full and user-friendly Desktop Environment.
 > In a nutshell, it's a set of tools to allow you to create your own Desktop Environment.
 >
-> Apps, integrations, shells, etc, are **your** responsibility to pick, install and configure.
+> Apps, integrations, shells, etc. are **your** responsibility to pick, install and configure.
 >
 > This wiki is _very_ verbose.
 > It's highly recommended to scour and read the wiki before assuming something is not working or not available.

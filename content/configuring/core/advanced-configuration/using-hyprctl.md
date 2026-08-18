@@ -102,7 +102,7 @@ hyprctl output remove [name]
 ```
 
 Where `[backend]` is the name of the backend and `(name)` is an optional name for the output.
-If `(name)` is not specified, the default naming scheme will be used (`HEADLESS-2`, `WL-1`, etc).
+If `(name)` is not specified, the default naming scheme will be used (`HEADLESS-2`, `WL-1`, etc.).
 
 > [!NOTE]
 > `create` and `remove` can also be `add` or `destroy`, respectively.

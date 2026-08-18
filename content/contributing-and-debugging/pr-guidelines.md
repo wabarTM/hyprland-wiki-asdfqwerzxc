@@ -46,7 +46,7 @@ No test regressions is a _must_, while new tests are _required_ if possible to t
 Some stuff clang-tidy/clang-format won't catch:
 - No uninitialized _primitives_ (int, float, double, size_t, etc.)
 - No short if braces. if your if/else body contains 1 _line_ (not 1 statement) do not put `{}` around it.
-  - The above rule does not apply to loops, etc
+  - The above rule does not apply to loops, etc.
 - Consider adding a `;` inside of empty function bodies
 - Whenever you're initializing vectors arrays or maps with a lot of elements, add a `,` after the last element to make the styling nicer
 - Consider forward-declaring things in headers if possible instead of including. Speeds up compile times.

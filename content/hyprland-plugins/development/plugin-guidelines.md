@@ -66,7 +66,7 @@ If no pin matches, latest git will be used.
 
 ## Formatting
 
-Although Hyprland plugins obviously are not _required_ to follow Hyprland's formatting, naming conventions, etc, it might be a good idea to keep your code consistent.
+Although Hyprland plugins are not _required_ to follow Hyprland's formatting, naming conventions, etc., it might be a good idea to keep your code consistent.
 See [`.clang-format`](https://github.com/hyprwm/Hyprland/blob/main/.clang-format) in the Hyprland repo.
 
 ## Usage of the API

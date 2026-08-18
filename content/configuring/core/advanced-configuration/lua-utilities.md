@@ -75,7 +75,7 @@ end)
 
 ### Prop Refresh
 
-A prop refresh is an event where Hyprland updates/refreshes many of its configurable options (e.g. keyboard layouts, device configurations, monitor states, window gaps, etc...).
+A prop refresh is an event where Hyprland updates/refreshes many of its configurable options (e.g. keyboard layouts, device configurations, monitor states, window gaps, etc.).
 
 Events such as the creation of a workspace rule cause a prop refresh event to be scheduled after the current event.
 

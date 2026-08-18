@@ -123,7 +123,7 @@ $ wl-paste --watch clipvault store --min-entry-length 2 --max-entries 200 --max-
 Note that you can uncomment any of the commented out lines above based on your needs.
 Refer to the setup section in the project's GitHub repository linked above for more information.
 
-To bind `clipvault` to a hotkey and display it using a picker of your choice (e.g. `rofi`, `dmenu`, `wofi`, etc), you can add one of the below commands to a bind to your `hyprland.lua`:
+To bind `clipvault` to a hotkey and display it using a picker of your choice (e.g. `rofi`, `dmenu`, `wofi`, etc.), you can add one of the below commands to a bind to your `hyprland.lua`:
 
 {{< tabs >}}
 
