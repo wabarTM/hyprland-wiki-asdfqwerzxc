@@ -92,7 +92,10 @@ See [The GitHub repo's readme](https://github.com/hyprwm/xdg-desktop-portal-hypr
 
 ## Usage
 
-<!-- TODO: patched by almost every distro xddddddddd -->
+<!--
+NOTE: patched by almost every distro xD
+TODO: remove this comment when systemd-target is merged
+-->
 
 XDPH is automatically started by D-Bus, once Hyprland starts.
 

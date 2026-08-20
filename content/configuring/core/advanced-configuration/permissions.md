@@ -1,6 +1,6 @@
 ---
-title: Permissions
 weight: 40
+title: Permissions
 ---
 
 If you have `hyprland-guiutils` installed, you can make use of Hyprland's built-in permission system.

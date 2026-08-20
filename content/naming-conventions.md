@@ -1,6 +1,6 @@
 ---
-title: Naming conventions
 weight: 20
+title: Naming conventions
 ---
 
 ## Syntax
@@ -56,13 +56,20 @@ More on that can be read [here](../configuring/core#editor-autocompletion).
 
 ### Colors
 
+<!-- NOTE: if " is not escaped, Hugo makes them curly, and it is ugly -->
 You have 4 options:
-- Web-styled hash in RGB or RGBA form: `"#fafc21"` or `"#ddd"` or `"#fa3d7bff"`
-- rgba(): `"rgba(b3ff1aee)"`, or decimal equivalent `"rgba(179,255,26,0.933)"`
-- rgb(): `"rgb(b3ff1a)"`, or the decimal equivalent  `"rgb(179,255,26)"`
-- Legacy ARGB format: `0xeeb3ff1a`
+- Web-styled hash in RGB or RGBA form: <code style="background-color:#FAFC21;color:#000000">"#FAFC32"</code> or <code style="background-color:#DDD;color:#000000">"#DDD"</code> or <code style="background-color:#FA3D7BFF;color:#000000">"#FA3D7BFF"</code>
+- rgba(): <code style="background-color:#57BBFFEE;color:#000000">\"rgba(57BBFFEE)"</code>, or decimal equivalent <code style="background-color:#57BBFFEE;color:#000000">\"rgba(87,187,255,0.933)"</code>
+- rgb(): <code style="background-color:#FF4410;color:#000000">\"rgb(FF4410)"</code>, or decimal equivalent <code style="background-color:#FF4410;color:#000000">\"rgb(255,68,16)"</code>
+- Legacy ARGB format: <code style="background-color:#B3FF1A;color:#000000">\"0xeeb3ff1a"</code>
 
-Note that decimal arguments to `rgb()`/`rgba()` should have no spaces between them.
+Note that decimal arguments in `rgb()`/`rgba()` should have no spaces between them.
+
+{{% details title="RGB explanation" closed="true" %}}
+
+lorem ipusm
+
+{{% /details %}}
 
 ## Selectors
 

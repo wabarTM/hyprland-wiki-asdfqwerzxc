@@ -285,13 +285,21 @@ sudo eopkg install hyprland
 {{< /tabs >}}
 
 ---
+<!-- NOTE: this ^^^ line is here to visually separate contents of tabs; it is thin, but it is there -->
 
 ### Manual build
 
 #### Dependencies:
 
-> [!NOTE]
-> Please note that Hyprland uses the C++26 standard, so both your compiler and your C++ standard library have to support that (`gcc>=16` or `clang>=19`).
+> [!WARNING]
+> ***Never, under any circumstances***, symbolically link different .so versions together, this will lead to memory bugs and crashes.
+> We don't care what some random person from the Internet tells you that.
+> Do _not_ do it.
+
+> [!IMPORTANT]
+> Hyprland uses the C++26 standard, so both your compiler and your C++ standard library have to support that (`gcc >= 16` or `clang >= 19`).
+
+If any packages are missing from the list, make a pull request or open an issue in wiki repository.
 
 {{< tabs >}}
 
@@ -300,9 +308,6 @@ sudo eopkg install hyprland
 ```plain
 yay -S ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite libxrender libxcursor pixman wayland-protocols cairo pango libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus hyprlang-git hyprcursor-git hyprwayland-scanner-git hyprwire-git xcb-util-errors hyprutils-git glaze hyprgraphics-git aquamarine-git re2 hyprland-qtutils-git muparser
 ```
-
-_(Please make a pull request or open an issue if any packages are missing from
-the list)_
 
 {{< /tab >}}
 
@@ -339,16 +344,13 @@ To install Hyprland from source, you will need the dependencies below:
 sudo apt install -y meson wget build-essential ninja-build cmake-extras cmake gettext gettext-base fontconfig libfontconfig-dev libffi-dev libxml2-dev libdrm-dev libxkbcommon-x11-dev libxkbregistry-dev libxkbcommon-dev libpixman-1-dev libudev-dev libseat-dev seatd libxcb-dri3-dev libegl-dev libgles2 libegl1-mesa-dev glslang-tools libinput-bin libinput-dev libxcb-composite0-dev libavutil-dev libavcodec-dev libavformat-dev libxcb-ewmh2 libxcb-ewmh-dev libxcb-present-dev libxcb-icccm4-dev libxcb-render-util0-dev libxcb-res0-dev libxcb-xinput-dev libtomlplusplus3 libre2-dev
 ```
 
-You will also need to build the latest wayland, wayland-protocols, and
-libdisplay-info tagged releases from source.
+You will also need to build the latest wayland, wayland-protocols, and libdisplay-info tagged releases from source.
 
 For screen sharing, you can also install `xdg-desktop-portal-wlr` or `xdg-desktop-portal-hyprland`
 
 ```bash
 sudo apt install -y xdg-desktop-portal-wlr
 ```
-
-_Unfortunately, `xdg-desktop-portal-hyprland` is still not in Ubuntu repos, so you have to build it from source._
 
 See [The XDPH GitHub repo's readme](https://github.com/hyprwm/xdg-desktop-portal-hyprland).
 Refer to [XDPH](../../hypr-ecosystem/user/xdg-desktop-portal-hyprland) and the
@@ -371,14 +373,24 @@ for more information.
 
 {{< /tabs >}}
 
-> [!WARNING]
-> In addition to those, you will also need a few hypr\* dependencies which may or may not be packaged for your distro of choice:
-> - aquamarine
-> - Lua/hyprlang for Hyprland and other stack respectively
-> - hyprcursor
-> - hyprutils
-> - hyprgraphics
-> - hyprwayland-scanner (build-only)
+The order in which you **must** build is:
+
+```
+Lua
+hyprland-protocols
+hyprwayland-scanner
+hyprutils
+hyprgraphics
+hyprlang
+hyprcursor
+aquamarine
+xdg-desktop-portal-hyprland
+hyprwire
+hyprtoolkit
+hyprland
+```
+
+Other packages from hypr* stack (e.g., hyprlock, hyprsunset, etc.) can be built in any order after Hyprland.
 
 ### CMake (recommended)
 

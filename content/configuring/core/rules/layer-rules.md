@@ -1,6 +1,6 @@
 ---
-title: Layer rules
 weight: 30
+title: Layer rules
 ---
 
 ## Layer Rules

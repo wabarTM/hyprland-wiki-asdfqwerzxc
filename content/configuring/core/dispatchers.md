@@ -44,14 +44,13 @@ It executes immediately, going straight to the address on the letter it is hande
 
 {{% /details %}}
 
-
-<!-- TODO: make a styling note: (to) where? what (action)? how? -->
+<!-- NOTE: please before adding a new dispatcher consult wiki guidelines page -->
 
 ### Parameter explanation
 
 | Param type | Description |
 | --- | --- |
-| `window` | [Window selector](../../../naming-conventions#window-selector) |
+| `window` | If not set, defaults to "activewindow". Can be one of [window selectors](../../../naming-conventions#window-selector) |
 | `action` | If not set, defaults to `toggle`. Can be: `toggle`, `enable`/`on`, `disable`/`off` |
 | `relative` | If not set, defaults to `false`. Can be: `false`, `true` |
 
