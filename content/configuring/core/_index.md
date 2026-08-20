@@ -93,7 +93,7 @@ This latter option may be helpful if you load third-party modules that are broke
 
 #### Editor autocompletion
 
-Pre-generated Lua stub can be found in `/usr/share/hypr/stubs/` directory.
+A pre-generated Lua stub can be found in the `/usr/share/hypr/stubs/` directory (NixOS systems can find it in `/run/current-system/sw/share/hypr/stubs/`).
 Configure your LSP to include that directory in your Lua workspace to enable autocompletion.
 
 {{< tabs >}}
