@@ -9,22 +9,6 @@ This method is preferred to screen shaders as it will _not_ be captured via reco
 
 hyprsunset also provides a gamma filter, which can be used to adjust perceived display brightness on monitors that do not support software control, or to reduce perceived brightness below the monitor's minimum.
 
-## Installation
-
-<!-- TODO only arch?) -->
-
-{{< tabs >}}
-
-{{< tab name="Arch Linux" >}}
-
-```sh
-pacman -S hyprsunset
-```
-
-{{< /tab >}}
-
-{{< /tabs >}}
-
 ## Configuration
 
 Configuration is done via the config file at `~/.config/hypr/hyprsunset.conf`.

@@ -5,37 +5,6 @@ title: hyprpaper
 
 [hyprpaper](https://github.com/hyprwm/hyprpaper) is a fast, IPC-controlled wallpaper utility for Hyprland.
 
-## Installation
-
-
-{{< tabs >}}
-
-{{< tab name="Arch" >}}
-
-```sh
-pacman -S hyprpaper
-```
-
-{{< /tab >}}
-
-{{< tab name="openSUSE" >}}
-
-```sh
-zypper install hyprpaper
-```
-
-{{< /tab >}}
-
-{{< tab name="Fedora" >}}
-
-```sh
-sudo dnf install hyprpaper
-```
-
-{{< /tab >}}
-
-{{< /tabs >}}
-
 ## Configuration
 
 The config file is located at `~/.config/hypr/hyprpaper.conf`.

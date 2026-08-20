@@ -43,8 +43,6 @@ On NixOS, XDPH is already enabled by the [NixOS module for Hyprland](../../../ni
 
 {{< tab name="Gentoo" >}}
 
-<!-- TODO: no. why. who? this is wrong. rewrite. -->
-
 ### Unmask Dependencies
 
 ```plain {filename="/etc/portage/profile/package.unmask"}
