@@ -44,18 +44,16 @@ It executes immediately, going straight to the address on the letter it is hande
 
 {{% /details %}}
 
-<!-- NOTE: please before adding a new dispatcher consult wiki guidelines page -->
-
 ### Parameter explanation
 
 | Param type | Description |
 | --- | --- |
-| `window` | If not set, defaults to "activewindow". Can be one of [window selectors](../../../naming-conventions#window-selector) |
-| `action` | If not set, defaults to `toggle`. Can be: `toggle`, `enable`/`on`, `disable`/`off` |
-| `relative` | If not set, defaults to `false`. Can be: `false`, `true` |
+| `window` | If not set, defaults to `"activewindow"`. Can be one of [window selectors](../../../naming-conventions#window-selector) |
+| `action` | If not set, defaults to `"toggle"`. Can be: `"toggle"`, `"enable"`/`"on"`, `"disable"`/`"off"` |
+| `relative` | If not set, defaults to `"false"`. Can be: `"false"`, `"true"` |
 
 ## Dispatchers
-
+<!-- NOTE: please, before adding a new dispatcher consult wiki guidelines page -->
 ### General
 
 `hl.dsp.` contains:
