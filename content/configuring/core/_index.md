@@ -135,9 +135,9 @@ Create a `settings.json` file in `.vscode/` (if it doesn't exist, make it), then
 Hyprland attempts as much as it can to make errors as non-destructive as possible.
 However, some errors cannot be handled cleanly:
 - Fundamental Lua syntax errors will make Hyprland refuse to reload your config and pop an error.
-- Runtime Lua syntax errors will abort execution of the current Lua file and pop an error (e.g. calling a `nil`).
-- Runtime Hyprland type errors will continue execution and pop an error (e.g. passing a string instead of a float to `hl.*`).
-- Runtime errors during async execution (e.g. a keybind function) will pop a notification about the error.
+- Runtime Lua syntax errors will abort execution of the current Lua file and pop an error (e.g., calling a `nil`).
+- Runtime Hyprland type errors will continue execution and pop an error (e.g., passing a string instead of a float to `hl.*`).
+- Runtime errors during async execution (e.g., a keybind function) will pop a notification about the error.
 
 If an errors occurs before any of the binds were registered, Hyprland will register a few emergency keybinds: `SUPER + Q` to open terminal, `SUPER + R` to open hyprlauncher, and `SUPER + M` to exit Hypland.
 This will be mentioned in the error popup.

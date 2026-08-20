@@ -75,8 +75,7 @@ It's always advised to use the API entries whenever possible, as they are guaran
 
 It is, of course, possible to use the internal methods by just including the proper headers, but it should not be treated as the default way of doing things.
 
-Hyprland's internal methods may be changed, removed or added without any prior notice.
-It is worth noting though that methods that "seem" fundamental, like e.g. `focusWindow` or `mouseMoveUnified` probably are, and are unlikely to change their general method of functioning.
+Hyprland's internal methods may be changed, removed or added without any prior notice; though methods that "seem" fundamental (e.g., `focusWindow` `mouseMoveUnified`) are unlikely to change their general way of functioning.
 
 ## Function Hooks
 
@@ -88,4 +87,4 @@ Always prefer using Event Hooks.
 ## Threads
 
 The Wayland event loop is strictly single-threaded.
-It is not recommended to create threads in your code, unless they are fully detached from the Hyprland process (e.g. saving a file).
+It is not recommended to create threads in your code, unless they are fully detached from the Hyprland process (e.g., saving a file).

@@ -75,7 +75,7 @@ Path: `general`
 | extend_border_grab_area | Extends the area around the border where you can click and drag on, only used when `general.resize_on_border` is on | int | `15` | [0 - 100] |
 | hover_icon_on_border | Show a cursor icon when hovering over borders, only used when `general.resize_on_border` is on | bool | `true` |   |
 | layout | Which layout to use. Options: `"dwindle"`/`"master"`/`"scrolling"`/`"monocle"` | string | `"dwindle"` |   |
-| locale | Overrides the system locale, e.g. `"en_US"`, `"es"` | string | [[Empty]] |   |
+| locale | Overrides the system locale (e.g., `"en_US"`, `"es"`) | string | [[Empty]] |   |
 | modal_parent_blocking | Whether parent windows of modals will be interactive | bool | `true` |   |
 | no_focus_fallback | If true, will not fall back to the next available window when moving focus in a direction where no window was found | bool | `false` |   |
 
@@ -131,12 +131,12 @@ Path: `decoration.blur`
 | brightness | Brightness modulation for blur | float | `1` |[0.0 - 2.0] |
 | contrast | Contrast modulation for blur | float | `0.8916` | [0.0 - 2.0] |
 | ignore_opacity | Make the blur layer ignore the opacity of the window | bool | `true` |   |
-| input_methods | Whether to blur input methods, e.g. `fcitx5` | bool | `false` |   |
+| input_methods | Whether to blur input methods (e.g., `fcitx5`) | bool | `false` |   |
 | input_methods_ignorealpha | Works like ignore_alpha in layer rules. If pixel opacity is below the set value, will not blur | float | `0.2` | [0.0 - 1.0] |
 | new_optimizations | Whether to enable further optimizations to the blur. Recommended to leave on, as it will massively improve performance | bool | `true` |   |
 | noise | How much noise to apply | float | `0.0117` | [0.0 - 1.0] |
 | passes | The amount of passes to perform | int | `1` | [0 - 10] |
-| popups | Whether to blur popups, e.g. `right-click menus` | bool | `false` |   |
+| popups | Whether to blur popups (e.g., `right-click menus`) | bool | `false` |   |
 | popups_ignorealpha | Works like ignore_alpha in layer rules. If pixel opacity is below the set value, will not blur | float | `0.2` | [0.0 - 1.0] |
 | size | Blur size (distance) | int | `8` |   |
 | special | Whether to blur behind the special workspace (note: expensive) | bool | `false` |   |
@@ -341,7 +341,7 @@ Path: `input.tablettool`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | eraser_button_mode | Change the eraser button behavior on the tool. When set to `0`, use the default hardware behavior of the tool. When set to `1`, the eraser button on the tool sends a button event instead | int | 0 | [0 - 6] |
-| eraser_button_override | Set a button to be button event when eraser_button_mode is set to `1`. Must be a valid button (e.g. BTN_STYLUS) excluding fake buttons (e.g. BTN_TOOL_\*) and keys (KEY_\*). Check `wev` for the ID. `0` means default | int | 0 | [0 - ...] |
+| eraser_button_override | Set a button to be button event when eraser_button_mode is set to `1`. Must be a valid button (e.g., BTN_STYLUS) excluding fake buttons (e.g., BTN_TOOL_\*) and keys (KEY_\*). Check `wev` for the ID. `0` means default | int | 0 | [0 - ...] |
 | pressure_range_min | Set the minimum pressure range for the tool. Negative values mean it will use device defaults. Usually it is `0.0` | float | -1.0 | [-1.0 - 1.0] |
 | pressure_range_max | Set the maximum pressure range for the tool. Negative values mean it will use device defaults. Usually it is `1.0` | float | -1.0 | [-1.0 - 1.0] |
 ### Per-device input config
@@ -478,7 +478,7 @@ Path: `misc`
 | enable_swallow | Enable window swallowing | bool | `false` |   |
 | screencopy_force_8b | Forces 8 bit screencopy | bool | `true` |   |
 | swallow_regex | The _class_ regex to be used for windows that should be swallowed (usually, a terminal) | string | \[\[Empty\]\] |   |
-| swallow_exception_regex | The _title_ regex to be used for windows that should _not_ be swallowed by the windows specified in swallow_regex, e.g. `wev`. The regex is matched against the parent, e.g. Kitty, window's title on the assumption that it changes to whatever process it's running | string | \[\[Empty\]\] |   |
+| swallow_exception_regex | The _title_ regex to be used for windows that should _not_ be swallowed by the windows specified in swallow_regex (e.g., `wev`). The regex is matched against the parent (e.g., Kitty) window's title on the assumption that it changes to whatever process it's running | string | \[\[Empty\]\] |   |
 | exit_window_retains_fullscreen | Whether closing a fullscreen window makes the next focused window to be fullscreened. 0 - disabled, 1 - enabled, 2 - only when closing a grouped window, 3 - only when closing a non-grouped window | int | `0` | [0 - 3] |
 | focus_on_activate | Whether Hyprland should focus an app that requests to be focused (an `activate` request) | bool | `false` |   |
 | float_force_onscreen | whether/how existing floating windows should be constrained to stay on-screen. 0 - no constraints, 1 - must be partially onscreen, 2 - must be fully onscreen | int | `0` | [0 - 2] |
@@ -488,14 +488,14 @@ Path: `misc`
 | initial_workspace_tracking | If enabled, windows will open on the workspace they were invoked on. 0 - disabled, 1 - single-shot, 2 - persistent (all children too) | int | `1` |   |
 | initial_workspace_token_timeout | the time in seconds a window has to open on its invoked workspace before the tracking token expires. | int | `10` | [1 - 3600] |
 | key_press_enables_dpms | If DPMS is set to off, wake up the monitors if a key is pressed | bool | `false` |   |
-| layers_hog_keyboard_focus | If true, will make keyboard-interactive layers keep their focus on mouse move, e.g. `wofi`, `bemenu` | bool | `true` |   |
+| layers_hog_keyboard_focus | If true, will make keyboard-interactive layers keep their focus on mouse move (e.g., `wofi`, `bemenu`) | bool | `true` |   |
 | lockdead_screen_delay | Delay after which the "lockdead" screen will appear in case a lockscreen app fails to cover all the outputs (5 seconds max) | int | `1000` | [0 - 5000] |
 | middle_click_paste | Whether to enable middle-click-paste (aka primary selection) | bool | `true` |   |
 | mouse_move_enables_dpms | If DPMS is set to off, wake up the monitors if the mouse moves | bool | `false` |   |
 | mouse_move_focuses_monitor | Whether mouse moving into a different monitor should focus it | bool | `true` |   |
-| name_vk_after_proc | Name virtual keyboards after the processes that create them, e.g. `/usr/bin/fcitx5` will have hl-virtual-keyboard-fcitx5 | bool | `true` |   |
+| name_vk_after_proc | Name virtual keyboards after the processes that create them (e.g., `/usr/bin/fcitx5` will have hl-virtual-keyboard-fcitx5) | bool | `true` |   |
 | on_focus_under_fullscreen | If there is a fullscreen or maximized window, decide whether a tiled window requested to focus should replace it, stay behind or disable the fullscreen/maximized state. 0 - ignore focus request (keep focus on fullscreen window), 1 - takes over, 2 - unfullscreen/unmaximize | int | `2` | [0 - 2] |
-| render_unfocused_fps | The maximum limit for render_unfocused windows' FPS in the background (see also [Window-Rules](../rules/window-rules/#dynamic-effects), e.g. `render_unfocused`) | int | `15` | [1 - 120] |
+| render_unfocused_fps | The maximum limit for render_unfocused windows' FPS in the background (see also [`render_unfocused`](../rules/window-rules/#dynamic-effects) effect) | int | `15` | [1 - 120] |
 | session_lock_blur | Enables blur for lockscreen. `session_lock_xray` must be enabled | bool | `false` |   |
 | session_lock_xray | If true, keep rendering workspaces below your lockscreen | bool | `false` |   |
 | size_limits_tiled | Whether to apply min_size and max_size rules to tiled windows | bool | `false` |   |
@@ -525,7 +525,7 @@ Path: `binds`
 | --- | --- | --- | --- | --- |
 | allow_pin_fullscreen | If enabled, allow fullscreen to pinned windows, and restore their pinned status afterwards | bool | `false` |   |
 | allow_workspace_cycles | If enabled, workspaces don't forget their previous workspace, so cycles can be created by switching to the first workspace in a sequence, then endlessly going to the previous workspace | bool | `false` |   |
-| disable_keybind_grabbing | If enabled, apps that request keybinds to be disabled, e.g. `VMs`, will not be able to do so | bool | `false` |   |
+| disable_keybind_grabbing | If enabled, apps that request keybinds to be disabled (e.g., `VMs`) will not be able to do so | bool | `false` |   |
 | drag_threshold | Movement threshold in pixels for window dragging and `click`/`drag` bind flags. `0` means disabled | int | `0` | [0 - ...] |
 | focus_preferred_method | Sets the preferred focus finding method when using `hl.dsp.focus({ direction })`/`hl.dsp.window.move({ direction })`/etc. `0` - most recent active window has priority, `1` - longer shared edges have priority) | int | `0` | [0 - 1] |
 | hide_special_on_workspace_change | If enabled, changing the active workspace (including to itself) will hide the special workspace on the monitor where the newly active workspace resides | bool | `false` |   |
