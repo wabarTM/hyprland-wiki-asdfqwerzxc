@@ -239,7 +239,7 @@ For example:
   This can be useful to prevent Chromium-based browsers from going into presentation mode when they detect they have been fullscreened.
 - `{internal = 0, client = 2}` keeps the window non-fullscreen, but pretends to the client that is is now in fullscreen mode.
 
-### `FSMODE_MAX`
+### Restore client maximized state
 
 This is not a user accessible mode, but a state that occurs when a client requests fullscreen when the internal mode of that window is maximized.
 

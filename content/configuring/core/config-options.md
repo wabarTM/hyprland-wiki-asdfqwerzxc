@@ -377,8 +377,6 @@ Path: `gestures.scrolling`
 
 ### Group
 
-<!-- TODO: what on earth groups are? I.e.: "Groups are for Hyprland the same as Tabs are for firefox" -->
-
 Path: `group`
 
 | Name | Description | Type | Default | Limits |

@@ -53,7 +53,7 @@ This code can go in the `package` attribute of the NixOS/Home Manager modules.
 ### Setup
 
 Make a copy of your config in `~/.config/hypr` called `hyprlandd.lua`.
-`Debug` builds automatically use `hyprlandd.lua`, but you can also pass `--config ~/path/to/conf.lua` for an override to any type of build.
+`Debug` builds automatically use `hyprlandd.lua` in the default search path, but `--config ~/path/to/conf.lua` can be passed to override the configuration file location.
 
 #### Recommended debug config changes
 
