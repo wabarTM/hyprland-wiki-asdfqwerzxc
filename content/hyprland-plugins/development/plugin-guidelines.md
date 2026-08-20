@@ -76,7 +76,7 @@ It's always advised to use the API entries whenever possible, as they are guaran
 It is, of course, possible to use the internal methods by just including the proper headers, but it should not be treated as the default way of doing things.
 
 Hyprland's internal methods may be changed, removed or added without any prior notice.
-It is worth nothing though that methods that "seem" fundamental, like e.g. `focusWindow` or `mouseMoveUnified` probably are, and are unlikely to change their general method of functioning.
+It is worth noting though that methods that "seem" fundamental, like e.g. `focusWindow` or `mouseMoveUnified` probably are, and are unlikely to change their general method of functioning.
 
 ## Function Hooks
 
