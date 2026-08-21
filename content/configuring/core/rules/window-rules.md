@@ -35,8 +35,8 @@ Effects are what is applied.
 
 _All_ props must match for a rule to be applied.
 
-You can have as many props and effects per rule as you please, in any order as you please, as long as:
-- There is only one of one type (e.g., specifying `match.class` twice is invalid)
+You can have as many props and effects per rule as you want, and in any order, as long as:
+- They are not repeated
 - There is at least one _prop_
 
 ### Props
@@ -56,7 +56,7 @@ The supported fields for the `match` table are:
 | pin | bool | Pins the window (i.e. show it on all workspaces). _Note: pinning is ignored for non-floating windows. You most likely want to use this together with `float = true`_. |
 | focus | \[bool\] | Currently focused window. |
 | group | \[bool\] | Grouped windows. |
-| modal | \[bool\] | Modal windows (e.g., "Are you sure" popups) |
+| modal | \[bool\] | Modal windows (e.g., "Are you sure" popups). |
 | fullscreen_state_client | \[int\] | Windows with matching `fullscreenstate`. `0` - none, `1` - maximize, `2` - fullscreen, `3` - maximize and fullscreen. |
 | fullscreen_state_internal | \[int\] | Windows with matching `fullscreenstate`. `0` - none, `1` - maximize, `2` - fullscreen, `3` - maximize and fullscreen. |
 | workspace | \[workspace\] | Windows on matching workspace. Can be `id`, `"name:string"` or a workspace selector. |

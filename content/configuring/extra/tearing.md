@@ -44,7 +44,7 @@ hl.window_rule({
 Make sure your window rules are matching and you have the master toggle enabled.
 
 Also make sure nothing except for your game is showing on your monitor.
-No notifications, overlays, lockscreens, bars, other windows, etc.
+No notifications, overlays, lock screens, bars, other windows, etc.
 (Having these elements on a different monitor is fine.)
 
 ### Apps that should tear, freeze

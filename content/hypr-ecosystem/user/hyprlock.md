@@ -106,7 +106,7 @@ Check out Hyprland's [animation documentation](../../../configuring/core/animati
 ```txt
 global
   ↳ fade
-    ↳ fadeIn - fade to lockscreen
+    ↳ fadeIn - fade to lock screen
     ↳ fadeOut - fade back to the Wayland session
   ↳ inputField
     ↳ inputFieldColors - fade between colors and gradients

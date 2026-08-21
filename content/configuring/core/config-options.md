@@ -458,7 +458,7 @@ Path: `misc`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| allow_session_lock_restore | If true, will allow you to restart a lockscreen app in case it crashes | bool | `false` |   |
+| allow_session_lock_restore | If true, will allow you to restart a lock screen app in case it crashes | bool | `false` |   |
 | always_follow_on_dnd | Will make mouse focus follow the mouse when dragging and dropping. Recommended to leave it enabled, especially for people using focus follows mouse at 0 | bool | `true` |   |
 | animate_manual_resizes | If true, will animate manual window resizes/moves | bool | `false` |   |
 | animate_mouse_windowdragging | If true, will animate windows being dragged by mouse, note that this can cause weird behavior on some curves | bool | `false` |   |
@@ -489,15 +489,15 @@ Path: `misc`
 | initial_workspace_token_timeout | the time in seconds a window has to open on its invoked workspace before the tracking token expires. | int | `10` | [1 - 3600] |
 | key_press_enables_dpms | If DPMS is set to off, wake up the monitors if a key is pressed | bool | `false` |   |
 | layers_hog_keyboard_focus | If true, will make keyboard-interactive layers keep their focus on mouse move (e.g., `wofi`, `bemenu`) | bool | `true` |   |
-| lockdead_screen_delay | Delay after which the "lockdead" screen will appear in case a lockscreen app fails to cover all the outputs (5 seconds max) | int | `1000` | [0 - 5000] |
+| lockdead_screen_delay | Delay after which the "lockdead" screen will appear in case a lock screen app fails to cover all the outputs (5 seconds max) | int | `1000` | [0 - 5000] |
 | middle_click_paste | Whether to enable middle-click-paste (aka primary selection) | bool | `true` |   |
 | mouse_move_enables_dpms | If DPMS is set to off, wake up the monitors if the mouse moves | bool | `false` |   |
 | mouse_move_focuses_monitor | Whether mouse moving into a different monitor should focus it | bool | `true` |   |
 | name_vk_after_proc | Name virtual keyboards after the processes that create them (e.g., `/usr/bin/fcitx5` will have hl-virtual-keyboard-fcitx5) | bool | `true` |   |
 | on_focus_under_fullscreen | If there is a fullscreen or maximized window, decide whether a tiled window requested to focus should replace it, stay behind or disable the fullscreen/maximized state. 0 - ignore focus request (keep focus on fullscreen window), 1 - takes over, 2 - unfullscreen/unmaximize | int | `2` | [0 - 2] |
 | render_unfocused_fps | The maximum limit for render_unfocused windows' FPS in the background (see also [`render_unfocused`](../rules/window-rules/#dynamic-effects) effect) | int | `15` | [1 - 120] |
-| session_lock_blur | Enables blur for lockscreen. `session_lock_xray` must be enabled | bool | `false` |   |
-| session_lock_xray | If true, keep rendering workspaces below your lockscreen | bool | `false` |   |
+| session_lock_blur | Enables blur for lock screen. `session_lock_xray` must be enabled | bool | `false` |   |
+| session_lock_xray | If true, keep rendering workspaces below your lock screen | bool | `false` |   |
 | size_limits_tiled | Whether to apply min_size and max_size rules to tiled windows | bool | `false` |   |
 | vrr | Controls the VRR (Adaptive Sync) of your monitors. 0 - off, 1 - on, 2 - fullscreen only, 3 - fullscreen with `video` or `game` content type | int | `0` | [0 - 3] |
 
