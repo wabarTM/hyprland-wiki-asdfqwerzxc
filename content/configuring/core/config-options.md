@@ -117,9 +117,31 @@ Path: `decoration`
 | dim_strength | How much inactive windows should be dimmed | float | `0.5` |[0.0 - 1.0] |
 | fullscreen_opacity | Opacity of fullscreen windows | float | `1.0` | [0.0 - 1.0] |
 | inactive_opacity | Opacity of inactive windows | float | `1.0` | [0.0 - 1.0] |
-| rounding | Rounded corners' radius (in layout px) | int | `0` | [0 - 40] |
+| rounding | Rounded corners' radius (in layout px) | int | `0` | [0 - 100] |
 | rounding_power | Adjusts the curve used for rounding corners, larger is smoother, 1.0 is a triangular corner, 2.0 is a circle, 4.0 is a squircle | float | `2.0` | [1.0 - 10.0] |
 | screen_shader | A path to a custom shader to be applied at the end of rendering. See `examples/screenShader.frag` for an example | string | \[\[Empty\]\] | |
+
+#### Opacity
+
+> [!IMPORTANT]
+> Opacity level over `1.0` is allowed, but any product over `1.0` will cause graphical glitches.
+
+Opacity is a **product** of all opacities.
+Use `" override"` after an opacity value to set it as an exact value rather than a multiplier.
+
+For example, setting `active_opacity` to `0.5` and `opacity` window rule to `0.5` results in a total of `0.25`.
+
+{{% details title="Examples" closed="true" %}}
+
+```lua
+-- Active 0.8, inactive 0.8, fullscreen 1.0 regardless of other rules:
+hl.window_rule({
+  match   = { class = "kitty" },
+  opacity = "0.8 override 0.8 override 1.0 override",
+})
+```
+
+{{% /details %}}
 
 #### Blur
 
@@ -418,7 +440,7 @@ Path: `group.groupbar`
 | gaps_out | Gap size between gradients and window | int | `2` | [0 - 20] |
 | gradients | Enables gradients | bool | `false` | |
 | gradient_round_only_edges | Round only the gradient edges of the entire groupbar | bool | `true` | |
-| gradient_rounding | How much to round the gradients | int | `2` | [0 - 20] |
+| gradient_rounding | How much to round the gradients | int | `2` | [0 - 100] |
 | gradient_rounding_power | Adjusts the curve used for rounding gradient corners, larger is smoother, 1.0 is a triangular corner, 2.0 is a circle, 4.0 is a squircle | float | `2.0` | [1.0 - 10.0] |
 | height | Height of the groupbar | int | `14` | [0 - 64] |
 | indicator_gap | Height of gap between groupbar indicator and title | int | `0` |[0 - 64] |

@@ -44,6 +44,7 @@ Coordinates are in an inverse-Y Cartesian system, so moving to the right is the 
 | float | Floating point number |
 | bool | Boolean, `true` or `false` |
 | string | Lua string. Symbols wrapped in `""`/`[[]]`/`''` (e.g., `"dwindle"`, `'master'`, `[[scrolling]]`). When using Lua literal strings (`[[]]`), escaping of `"` and `'` is not needed |
+| table | A Lua table, `{ }` |
 | vec2 | Vector with 2 float values. `{x, y}` (e.g., `{20, 20}`) |
 | css_gaps | An integer, or `{ top?, left?, right?, bottom? }` |
 | color | Color. See hint below for color info |
