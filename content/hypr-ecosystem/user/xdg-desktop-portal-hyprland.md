@@ -172,8 +172,8 @@ Variables in the `screencopy` category:
 
 | Variable | Description | Type | Default |
 | -- | -- | -- | -- |
-| `max_fps`  | Maximum FPS of a screen sharing session. `0` means no limit. | int | `120` |
-| `allow_token_by_default`  | If enabled, will tick the "Allow restore token" box by default. | bool  | `false` |
-| `custom_picker_binary`  | If non-empty, will use that **binary** as your share picker. Please note that it has to conform to the stdout selection layout of `hyprland-share-picker`. | string  | `"hyprland-share-picker"` |
-| `force_shm` | If enabled, will skip DMA-BUF and always use SHM for screen sharing. SHM is slower than DMA-BUF (especially at high resolutions) but can work around DMA-BUF allocation failures on multi-GPU systems. | bool | `false` |
-| `cursor_mode` | Default cursor mode for clients that don't specify a mode (e.g., browsers). Any implemented mode for [XDG ScreenCast Portal](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.ScreenCast.html#org-freedesktop-portal-screencast-availablecursormodes), i.e. `1` - hidden or `2` - embedded. Defaults to protocol default (hidden). | int | `0` |
+| `max_fps`  | Maximum FPS of a screen sharing session. `0` means no limit | int | `120` |
+| `allow_token_by_default`  | If enabled, will tick the "Allow restore token" box by default | bool  | `false` |
+| `custom_picker_binary`  | If non-empty, will use that **binary** as your share picker. Please note that it has to conform to the stdout selection layout of `hyprland-share-picker` | string  | `"hyprland-share-picker"` |
+| `force_shm` | If enabled, will skip DMA-BUF and always use SHM for screen sharing. SHM is slower than DMA-BUF (especially at high resolutions) but can work around DMA-BUF allocation failures on multi-GPU systems | bool | `false` |
+| `cursor_mode` | Default cursor mode for clients that don't specify a mode (e.g., browsers). Any implemented mode for [XDG ScreenCast Portal](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.ScreenCast.html#org-freedesktop-portal-screencast-availablecursormodes), i.e. `1` - hidden or `2` - embedded. Defaults to protocol default (hidden) | int | `0` |
