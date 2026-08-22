@@ -9,9 +9,9 @@ title: Window Rules
 hl.window_rule({
     name? = str,
     match = {
-        prop = some_prop_value
+        prop = some_prop_value,
     },
-    effect = some_effect_value
+    effect = some_effect_value,
 })
 ```
 

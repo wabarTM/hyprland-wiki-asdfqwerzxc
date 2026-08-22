@@ -13,8 +13,8 @@ Some layouts have their own specific rules, they can be found on the correspondi
 ```lua
 hl.workspace_rule({
     workspace = workspace_selector,
-    rule1,
-    rule2
+    rule1 = some_value,
+    rule2 = other_value,
 })
 ```
 
@@ -59,6 +59,7 @@ hl.workspace_rule({ workspace = "15", animation = "slidevert", default_name = "s
 ### Per-workspace layouts
 
 Use workspace rules to set per-workspace layouts:
+
 ```lua
 hl.workspace_rule({ workspace = "2", layout = "scrolling" })
 ```
