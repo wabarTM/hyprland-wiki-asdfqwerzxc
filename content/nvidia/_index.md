@@ -20,7 +20,7 @@ For maximum performance and support with newer cards, running either of the firs
 > [!WARNING]
 > For those on the NVIDIA 50xx series of graphics cards (5090, 5080, etc.) or newer, the open drivers are **REQUIRED**; the older proprietary drivers will not work.
 
-According to [NVIDIA](https://developer.nvidia.com/blog/nvidia-transitions-fully-towards-open-source-gpu-kernel-modules/), the open source kernel modules are also recommended for use with Turing and Ampere cards.
+According to [NVIDIA](https://developer.nvidia.com/blog/nvidia-transitions-fully-towards-open-source-gpu-kernel-modules/), the open source kernel modules are also recommended for the Turing and Ampere architectures.
 This includes the 16xx and 20xx series of consumer cards and later.
 Your mileage may vary, so please try both of them if your card is supported by both.
 
@@ -34,7 +34,7 @@ On Arch Linux and other Arch-based distros, we recommend using the DKMS variety 
 If you are only using the `linux` or `linux-lts` kernels on your system, you can also use the non-dkms packages if you wish.
 
 For the entirely proprietary NVIDIA drivers, you can therefore use the `nvidia-dkms` package.
-And for those wanting/needing to use the open source kernel modules, `nvidia-open-dkms` can be used.
+For the open source kernel modules, `nvidia-open-dkms` can be used.
 
 These DKMS packages rely on having the "headers" package installed for your kernels of choice.
 So please make sure you have all relevant headers packages installed on your system.
