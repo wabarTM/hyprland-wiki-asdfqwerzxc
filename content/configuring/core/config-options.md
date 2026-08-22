@@ -572,7 +572,7 @@ Path: `render`
 | expand_undersized_textures | Whether to expand undersized textures along the edge, or rather stretch the entire texture | bool | `true` |   |
 | fp16_sdr_tf | Internal workbuffer transfer function for fp16 in SDR mode. 0 - monitor, 1 - linear | int | `0` | [0 - 1] |
 | icc_vcgt_enabled | Enable sending VCGT ramps to KMS with ICC profiles | bool | `true` |   |
-| keep_unmodified_copy | Keep unmodified SDR frame copy for screensharing. `0` - disabled, `1` - enabled, `2` - auto (enabled in HDR with SDR modifiers). Set to 1 if screenshots are transparent | int | `2` | [0 - 2] |
+| keep_unmodified_copy | Keep unmodified SDR frame copy for screen sharing. `0` - disabled, `1` - enabled, `2` - auto (enabled in HDR with SDR modifiers). Set to 1 if screenshots are transparent | int | `2` | [0 - 2] |
 | new_render_scheduling | Automatically uses triple buffering when needed, improves FPS on underpowered devices | bool | `false` |   |
 | not_shown_fifo_lock | Control fifo locking for not shown surfaces. always - use fifo lock for any surface, ignore_unfocused - ignore render_unfocused windows, never - skip locking invisible surfaces | int | `0` | [0 - 2] |
 | non_shader_cm | Enable CM without shader. `0` - disable, `1` - whenever possible, `2` - DS and passthrough only, `3` - disable and ignore CM issues. Options: [0 - 3] | int | `2` | [0 - 3] |

@@ -90,7 +90,7 @@ Choose a utility from [Screenshots and recording](../useful-utilities/screenshot
 
 ### Screenshare / OBS no worky
 
-Check [Screensharing](../useful-utilities/screen-sharing).
+Check [Screen sharing](../useful-utilities/screen-sharing).
 
 Also install `qt6-wayland` if you plan to use OBS.
 
