@@ -12,6 +12,7 @@ Their purpose is to be fed into `hl.bind()` or `hl.dispatch()`.
 Please keep in mind that some layout-specific dispatchers will be listed in the layout pages (see the sidebar).
 
 To use a dispatcher (any of `hl.dsp.*`) inside a function, you need to wrap it in `hl.dispatch()` for it to be executed.
+**Simply writing `hl.dsp.whatever()` on its own will do nothing.**
 
 {{% details title="Examples" closed="true" %}}
 
@@ -33,14 +34,6 @@ hl.bind("ALT + Tab", function()
     hl.dsp.window.bring_to_top()
 end)
 ```
-
-As a metaphor:
-`hl.dsp`s are factories, while `hl.dispatch()` is a truck driver who delivers products from the factories to a client.
-If you forget to invoke the driver, nothing will be delivered.
-In the above example, the function never invokes `hl.dispatch()`, so nothing is actually dispatched.
-
-On the other hand, [`hl.exec_cmd()`](../advanced-configuration/lua-utilities#hlexec_cmd-function) is a postman.
-It executes immediately, going straight to the address on the letter it is handed.
 
 {{% /details %}}
 
