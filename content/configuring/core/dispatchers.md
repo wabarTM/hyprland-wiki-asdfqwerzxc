@@ -178,7 +178,7 @@ You can lock a group with the `lock` dispatcher in order to stop new windows fro
 
 You can prevent a window from being added to a group or becoming a group with the `window.deny_from_group` dispatcher.
 
-## Special Workspaces
+## Special workspaces
 
 > [!NOTE]
 > You can define multiple named special workspaces, but only up to 97 may exist at one time.

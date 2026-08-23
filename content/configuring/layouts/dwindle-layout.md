@@ -24,9 +24,9 @@ Path: `dwindle`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | force_split | 0 - split follows mouse, 1 - always split to the left (new = left or top) 2 - always split to the right (new = right or bottom) | int | `0` | [0 - 2] |
-| preserve_split | if enabled, the split (side/top) will not change regardless of what happens to the container. | bool | `false` | |
-| smart_split | if enabled, allows a more precise control over the window split direction based on the cursor's position. The window is conceptually divided into four triangles, and cursor's triangle determines the split direction. This feature also turns on preserve_split. | bool | `false` | |
-| smart_resizing | if enabled, resizing direction will be determined by the mouse's position on the window (nearest to which corner). Else, it is based on the window's tiling position. | bool | `true` | |
+| preserve_split | if enabled, the split (side/top) will not change regardless of what happens to the container | bool | `false` | |
+| smart_split | if enabled, allows a more precise control over the window split direction based on the cursor's position. The window is conceptually divided into four triangles, and cursor's triangle determines the split direction. This feature also turns on preserve_split | bool | `false` | |
+| smart_resizing | if enabled, resizing direction will be determined by the mouse's position on the window (nearest to which corner). Else, it is based on the window's tiling position | bool | `true` | |
 | permanent_direction_override | if enabled, makes the preselect direction persist until either this mode is turned off, another direction is specified, or a non-direction is specified (anything other than l,r,u/t,d/b) | bool | `false` | |
 | special_scale_factor | specifies the scale factor of windows on the special workspace | float | `1` | [0 - 1] |
 | split_width_multiplier | specifies the auto-split width multiplier. Multiplying window size is useful on widescreen monitors where window W > H even after several splits. | float | `1.0` | [0.1 - 3.0] |
