@@ -13,7 +13,7 @@ There are three potential setups you can have with driver setup on NVIDIA.
 1. Entirely proprietary NVIDIA drivers, often referred to as "proprietary drivers."
 1. Entirely proprietary NVIDIA drivers, except with the open source kernel modules, referred to as "open drivers."
 1. Nouveau open source drivers.
-   A clean-room implementation of NVIDIA drivers, referred to simply as "Nouveau", and not to be confused with the "open drivers."
+   A clean-room implementation of NVIDIA drivers, referred to simply as "Nouveau," and not to be confused with the "open drivers."
 
 For maximum performance and support with newer cards, running either of the first two setups is recommended as it contains some vital optimizations and power management support for newer GPUs.
 

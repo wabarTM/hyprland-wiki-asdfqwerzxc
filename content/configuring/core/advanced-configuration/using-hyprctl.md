@@ -306,9 +306,6 @@ hyprctl -j monitors
 ```
 
 Flag list:
-
-```plain
-j → output in JSON
-i → select instance (id or index in hyprctl instances)
-r → force state refresh after issuing commands (e.g., layout or rule changes)
-```
+- `j` - output in JSON
+- `i` - select instance (id or index in hyprctl instances)
+- `r` - force state refresh after issuing commands (e.g., layout or rule changes)

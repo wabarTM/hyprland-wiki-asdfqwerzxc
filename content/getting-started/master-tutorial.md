@@ -45,14 +45,14 @@ You can see some launch flags by doing `start-hyprland -- -h`, these include set
 
 Login managers are not officially supported, but here's a short compatibility list:
 
-- SDDM → Works flawlessly.
+- SDDM: Works flawlessly.
   Install SDDM version ⩾ 0.20.0 or the [latest git version](https://github.com/sddm/sddm)
   (or [sddm-git](https://aur.archlinux.org/packages/sddm-git) from the AUR)
   to prevent SDDM bug [1476](https://github.com/sddm/sddm/issues/1476) (90s shutdowns).
-- plasma-login-manager → Works flawlessly, but depends on systemd.
-- GDM → Works with the caveat of crashing Hyprland on the first launch.
-- greetd → Works flawlessly, especially with [ReGreet](https://github.com/rharish101/ReGreet).
-- ly → Works flawlessly.
+- plasma-login-manager: Works flawlessly, but depends on systemd.
+- GDM: Works with the caveat of crashing Hyprland on the first launch.
+- greetd: Works flawlessly, especially with [ReGreet](https://github.com/rharish101/ReGreet).
+- ly: Works flawlessly.
 
 ## DE-like pre-configured setups
 

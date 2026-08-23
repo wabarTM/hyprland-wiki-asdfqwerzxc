@@ -80,14 +80,11 @@ hl.monitor({ output = "eDP-1", mode = "2880x1800@90", position = "0x0", scale = 
 ```
 
 Transform values have the following meanings:
-
-```plain
-0 → normal (no transforms)
-1 → 90 degrees
-2 → 180 degrees
-3 → 270 degrees
-4 → flipped
-5 → flipped + 90 degrees
-6 → flipped + 180 degrees
-7 → flipped + 270 degrees
-```
+- 0: normal (no transforms)
+- 1: 90 degrees
+- 2: 180 degrees
+- 3: 270 degrees
+- 4: flipped
+- 5: flipped + 90 degrees
+- 6: flipped + 180 degrees
+- 7: flipped + 270 degrees

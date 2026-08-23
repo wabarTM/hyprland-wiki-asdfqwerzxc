@@ -39,11 +39,11 @@ Attach that file to your issue.
 
 Diagnose the issue by what is in the log:
 
-- `backend failed to start` → launch in the TTY and refer to the logs shown in RED.
-- `Monitor X has NO PREFERRED MODE, and an INVALID one was requested` → your monitor is broken.
-- Other → see the coredump. Use `coredumpctl`, find the latest one's PID and do `coredumpctl info PID`.
-- failing on a driver (e.g. `radeon`) → report an issue.
-- failing on `Hyprland` → report an issue.
+- `backend failed to start`: launch in the TTY and refer to the logs shown in RED.
+- `Monitor X has NO PREFERRED MODE, and an INVALID one was requested`: your monitor is broken.
+- Other: see the coredump. Use `coredumpctl`, find the latest one's PID and do `coredumpctl info PID`.
+- failing on a driver (e.g. `radeon`): report an issue.
+- failing on `Hyprland`: report an issue.
 
 ## Crashes not at launch
 

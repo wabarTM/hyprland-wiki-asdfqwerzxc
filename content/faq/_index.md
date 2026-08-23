@@ -54,7 +54,7 @@ Outside those, there are multiple ways to fix this that _might_ work for you:
 
 1. Use _only_ the external monitor.  
    By using the `AQ_DRM_DEVICES=/dev/dri/card1` (or maybe `card0`) environment variable, you can force Hyprland to use only your dGPU, meaning your laptop's screen will be gone but your external one will work.
-2. Use all outputs, at the cost of battery life.  
+1. Use all outputs, at the cost of battery life.  
    By switching your laptop to only use the dGPU in the BIOS, you _might_ be able to get everything to work, at the cost of high battery usage.
 
 > [!NOTE]
@@ -71,7 +71,7 @@ Choose a utility from [Screenshots and recording](../useful-utilities/screenshot
 
 Check [Screen sharing](../useful-utilities/screen-sharing).
 
-Also install `qt6-wayland` if you plan to use OBS.
+To use OBS, you must also have `qt6-wayland` installed.
 
 ### How do I change my wallpaper?
 
