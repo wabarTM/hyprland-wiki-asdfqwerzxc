@@ -1,12 +1,14 @@
 # Hyprland Wiki
 
-Welcome to the Hyprland Wiki! Here we store the wiki pages.
+Welcome to the Hyprland Wiki!
+Here we store the wiki pages.
 They are automatically updated on the website whenever a change occurs, within a reasonable timeframe (usually 1–2 minutes).
 You can find the site at [https://wiki.hypr.land/](https://wiki.hypr.land/).
 
 ## Wiki styling
 
-Before suggesting your changes, make sure to follow wiki styling guidelines. They can be read on [the wiki](https://wiki.hypr.land/contributing-and-debugging/wiki-guidelins/) or [github](./content/contributing-and-debugging/wiki-guidelines.md)
+Before suggesting your changes, make sure to follow wiki styling guidelines.
+They can be read on [the wiki](https://wiki.hypr.land/contributing-and-debugging/wiki-guidelines/) or [GitHub](./content/contributing-and-debugging/wiki-guidelines.md)
 
 ## Contributing guidelines
 
@@ -54,7 +56,8 @@ lorem ipsum
 
 ## Local development
 
-To see your local changes, make sure to have `go` and `hugo` installed. Then, run
+To see your local changes, make sure to have `go` and `hugo` installed.
+Then, run
 
 ```sh
 $ hugo serve
