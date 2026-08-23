@@ -17,14 +17,14 @@ COMMAND = VALUE
 
 The command can be a variable, or a special keyword (those are defined by the app you are using).
 
-Variables are like "options", while keywords are like "commands".
+Variables are like "options," while keywords are like "commands."
 Options can be specified only once (if you do it more times, the previous one will be overwritten), while commands invoke some behavior every time they are defined.
 
 The trailing spaces at the beginning and end of words are not necessary, and are there only for legibility.
 
 ### Categories
 
-Categories can be regular, and "special".
+Categories can be regular, and "special."
 
 Both are specified in the same way:
 
@@ -47,7 +47,7 @@ special {
 }
 ```
 
-This is like defining two "groups", one with the key of A, another with B.
+This is like defining two "groups," one with the key of A, another with B.
 Hyprland for example uses those for per-device configs.
 
 ### Defining variables

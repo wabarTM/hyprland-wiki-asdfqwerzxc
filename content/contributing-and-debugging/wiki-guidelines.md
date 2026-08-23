@@ -5,7 +5,7 @@ title: Wiki writing guidelines
 
 ## Wiki engine notes
 
-Markdown (and thus Hugo) automatically concatenates pairs of lines, unless a newline or a double space is present at the end of the first line in the pair.
+Markdown (and thus Hugo) automatically concatenate pairs of lines, unless a newline or a double space is present at the end of the first line in the pair.
 
 Templates can be invoked by <code>\{\{< shortcode >\}\}</code> or <code>\{\{% shortcode %\}\}</code>.
 The correct usage can be found in comments in each shortcode's file.
@@ -29,7 +29,6 @@ In addition:
 - Warnings must go to the top of the section.
 - All abbreviations must be capitalized.
 - Spelling should follow standard United States English conventions.
-
 
 When adding a new dispatcher, position arguments in a way, that answers the following questions:
 - What is addressed?

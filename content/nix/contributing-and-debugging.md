@@ -41,8 +41,8 @@ To get proper stacktraces from Hyprland, make sure it was [built in debug mode](
 After a crash, perform the following steps:
 
 ```sh
-nix shell nixpkgs#gdb # get GDB temporarily
-coredumpctl # check the PID of the recent crash
+nix shell nixpkgs#gdb   # get GDB temporarily
+coredumpctl             # check the PID of the recent crash
 coredumpctl debug <PID> # using the PID found in the previous step
 ```
 

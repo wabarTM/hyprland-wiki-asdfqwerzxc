@@ -3,4 +3,4 @@ weight: 80
 title: hyprland-guiutils
 ---
 
-[Hyprland GUI utilities](https://github.com/hyprwm/hyprland-guiutils) (successor to hyprland-qtutils)
+[Hyprland GUI utilities](https://github.com/hyprwm/hyprland-guiutils) is a successor to hyprland-qtutils.

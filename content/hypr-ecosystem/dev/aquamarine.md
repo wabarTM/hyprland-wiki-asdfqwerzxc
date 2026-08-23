@@ -10,7 +10,7 @@ Instead it implements only the low-level KMS, DRM, etc. rendering backends.
 
 ## Configuration
 
-Configuration options are passed via environment variables starting with `AQ_` to an app that uses aquamarine (e.g., Hyprland)
+Configuration options are passed via environment variables starting with `AQ_` to an app that uses aquamarine (e.g., Hyprland).
 
 ### Variables
 

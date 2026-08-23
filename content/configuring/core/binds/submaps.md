@@ -99,7 +99,7 @@ end)
 
 ### Automatically close a submap on dispatch
 
-Submaps can be automatically closed or sent to another submap by appending `,` followed by a submap or `reset`.
+Submaps can be automatically closed or sent to another submap, by providing either a submap name or `"reset"` as the second argument to `hl.define_submap()`.
 
 ```lua
 hl.bind("SUPER + a", hl.dsp.submap("submapA"))

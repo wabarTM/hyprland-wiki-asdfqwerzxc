@@ -9,11 +9,11 @@ Animations are declared with the `hl.animation()` method.
 
 Syntax:
 ```
-hl.animation({ leaf = str, enabled = bool, speed = float, curve = str[, style? = str] })
+hl.animation({ leaf = str, enabled = bool, speed = float, curve = str, style? = str })
 ```
 - `leaf` is the scope of the animation. See [Animation tree](#animation-tree).
 - `enabled` can be either `true` to enable or `false` to disable. _Note:_ if it's `false`, you can omit further arguments.
-- `speed` is the amount of *deciseconds* (100ms each) the animation will take. For example, `speed = 1` = 100ms.
+- `speed` is the number of *deciseconds* (100ms each) the animation will take. For example, `speed = 1` = 100ms.
 - `bezier`/`spring` is a curve name, see [curves](#curves).
 - `style` is the animation style. See [Animation tree](#animation-tree).
 
@@ -26,10 +26,11 @@ hl.animation({ leaf = "fade", enabled = 0 })
 ```
 
 ### Animation tree
+
 The animations are a tree.
 If an animation is unset, it will inherit its parent's values.
 
-```txt
+```plain
 global
   ↳ windows - styles: slide, popin, gnomed
     ↳ windowsIn - window open - styles: same as windows
@@ -103,7 +104,7 @@ hl.curve( "rubber", { type = "spring", mass = 1, stiffness = 70, dampening = 10 
 
 ### Extras
 
-For animation style `popin` in `windows`, you can specify a minimum percentage to start from.
+For animation styles `popin` in `windows`, you can specify a minimum percentage to start from.
 For example, the following will make the window animate from 80% to 100% of its size:
 
 ```lua
@@ -117,7 +118,7 @@ For example, the following will make windows move 20% of the screen width:
 hl.animation({ leaf = "workspaces", enabled = true, speed = 8, curve = "default", style = "slidefade 20%" })
 ```
 
-For animation style `slide` in `windows` and `layers` you can specify a forced side.
+For animation styles `slide` in `windows` and `layers` you can specify a forced side.
 You can choose between `top`, `bottom`, `left` or `right`.
 
 ```lua

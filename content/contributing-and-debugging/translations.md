@@ -64,6 +64,6 @@ In general, if you are translating into a language with regional variants, if th
 
 Order of fallbacks is as follows:
 
-`xy_ZT` -> `xy_XY` -> `xy_ANYTHING` -> `global fallback`, usually `en_US`.
+`xy_ZT` → `xy_XY` → `xy_ANYTHING` → `global fallback`, usually `en_US`.
 
 So, if you write something for `de_DE`, and the user has `de_AT`, if `de_AT` is missing, `de_DE` will be used.

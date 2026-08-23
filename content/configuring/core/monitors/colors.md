@@ -28,7 +28,8 @@ hdredid - same as hdr with edid primaries (experimental)
 Fullscreen HDR is possible without the `hdr` cm setting if `render:cm_auto_hdr` is enabled.
 
 Use `sdrbrightness` and `sdrsaturation` to control SDR brightness and saturation in HDR mode.
-The default for both values is `1.0`. Typical brightness value should be in the `1.0 ... 2.0` range.
+The default for both values is `1.0`.
+Typical brightness value should be in the `1.0 - 2.0` range.
 
 ```lua
 hl.monitor({

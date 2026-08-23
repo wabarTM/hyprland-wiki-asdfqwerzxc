@@ -6,7 +6,7 @@ title: Config options
 This page documents all Hyprland configuration options except layout-specific ones.
 Those are documented on their respective [layout pages](../../layouts) instead.
 
-For [binds](../binds), [monitors](../monitors), [animations](../animations), etc., seek the other pages in [Core](..).
+For [binds](../binds), [monitors](../monitors), [animations](../animations), etc., see the other pages in [Core](..).
 
 ## Syntax
 
@@ -45,13 +45,13 @@ Options are described using tables:
 | string | string | [data type](../../../naming-conventions#data-types ) | `Default` | `Limit` |
 
 `Default` can be one of:
- - Value with respect to type
- - [[Empty]]
- - [[Auto]]
+- Value with respect to type
+- [[Empty]]
+- [[Auto]]
 
 `Limit` can be one of:
- - Value range
- - `None`
+- Value range
+- `None`
 
 If literal `None` is specified in the limit field, it means that there is no limit set for that option.
 If the value of an option exceeds its limits, Hyprland will throw a config error.
@@ -165,7 +165,7 @@ Path: `decoration.blur`
 | variant | Blur pattern variant. May significantly increase GPU and CPU usage | str | `kawase` | [see below](#blur-variants) |
 | vibrancy | Increase saturation of blurred colors | float | `0.1696` | [0.0 - 1.0] |
 | vibrancy_darkness | How strong the effect of `vibrancy` is on dark areas | float | `0.0` | [0.0 - 1.0] |
-| xray | If enabled, floating windows will ignore tiled windows in their blur. Will reduce overhead on floating blur significantly. Disabled if new_optimizations is `false`` | bool | `false` | |
+| xray | If enabled, floating windows will ignore tiled windows in their blur. Will reduce overhead on floating blur significantly. Disabled if `new_optimizations = false` | bool | `false` | |
 
 
 > [!NOTE]
@@ -180,17 +180,17 @@ Some settings may be reused by different blur methods.
 
 Available variants:
 
-- `kawase` --- default
-- `frost` --- cracked ice
-- `ripple` --- ripple on click
-- `drops` --- rain on a window pane
-- `water` --- ripple done with a heightmap
-- `fluid_jar` --- 2D fluid simulation
-- `prism` --- triangular refraction mask
-- `heat_shimmer` --- a small shimmer with aberration
-- `acrylic` --- similar to liquid glass
-- `aurora` --- aurora-like light streaks
-- `haze` --- a different diffused effect
+- `kawase` - default
+- `frost` - cracked ice
+- `ripple` - ripple on click
+- `drops` - rain on a window pane
+- `water` - ripple done with a heightmap
+- `fluid_jar` - 2D fluid simulation
+- `prism` - triangular refraction mask
+- `heat_shimmer` - a small shimmer with aberration
+- `acrylic` - similar to liquid glass
+- `aurora` - aurora-like light streaks
+- `haze` - a different diffused effect
 
 ###### glass
 
@@ -302,7 +302,7 @@ Path: `decoration.motion_blur`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| enabled | enable motion blur on moving / resizing windows | bool | `false` | |
+| enabled | enable motion blur on moving/resizing windows | bool | `false` | |
 | samples | The amount of samples to render. More will mean clearer blur, at the cost of more compute | int | `7` | [1 - 64] |
 
 #### Wobble
@@ -311,7 +311,7 @@ Path: `decoration.wobble`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| enabled | enable wobble on moving / resizing windows | bool | `false` | |
+| enabled | enable wobble on moving/resizing windows | bool | `false` | |
 | mesh | amount of wobble mesh vertices per edge | int | `12` | [2 - 32] |
 | stiffness | spring stiffness for wobble deformation | float | `200` | [0.0001 - 1000] |
 | damping | spring damping for wobble deformation | float | `12` | [0 - 1000] |
@@ -584,7 +584,7 @@ Path: `misc`
 | close_special_on_empty | Close the special workspace if the last window is removed | bool | `true` | |
 | disable_autoreload | If true, the config will not reload automatically on save, and instead needs to be reloaded with `hyprctl reload`. Might save on battery | bool | `false` | |
 | disable_hyprland_guiutils_check | Disable the warning if hyprland-guiutils is not installed | bool | `false` | |
-| disable_hyprland_logo | Disables the random Hyprland logo / anime girl background. :( | bool | `false` | |
+| disable_hyprland_logo | Disables the random Hyprland logo/anime girl background. :( | bool | `false` | |
 | disable_scale_notification | Disables notification popup when a monitor fails to set a suitable scale | bool | `false` | |
 | disable_splash_rendering | Disables the Hyprland splash rendering (requires a monitor reload to take effect) | bool | `false` | |
 | disable_watchdog_warning | Disables the warning about not using start-hyprland | bool | `false` | |
@@ -648,7 +648,7 @@ Path: `binds`
 | ignore_group_lock | If enabled, dispatchers like `hl.dsp.window.move({ into_group })` and `hl.dsp.window.move({ out_of_group })` will ignore lock per group | bool | `false` | |
 | movefocus_cycles_fullscreen | If enabled, when on a fullscreen window, `hl.dsp.focus({ direction })` will cycle fullscreen, else, it will move the focus in a direction | bool | `false` | |
 | movefocus_cycles_groupfirst | If enabled, when in a grouped window, `hl.dsp.focus({ direction })` will cycle windows in the groups first, then at each ends of the tabs, it'll move on to other windows/groups | bool | `false` | |
-| pass_mouse_when_bound | If enabled, will pass the mouse events to apps / dragging windows around if a keybind has been triggered | bool | `false` | |
+| pass_mouse_when_bound | If enabled, will pass the mouse events to apps/dragging windows around if a keybind has been triggered | bool | `false` | |
 | scroll_event_delay | In ms, how many ms to wait after a scroll event to allow passing another one for the binds | int | `300` | [0 - 2000] |
 | window_direction_monitor_fallback | If enabled, moving a window or focus over the edge of a monitor with a direction will move it to the next monitor in that direction | bool | `true` | |
 | workspace_back_and_forth | If enabled, an attempt to switch to the currently focused workspace will instead switch to the previous workspace, akin to i3's `_auto_back_and_forth_` | bool | `false` | |
@@ -720,7 +720,7 @@ Path: `cursor`
 | no_hardware_cursors | Disables hardware cursors. `0` - use hw cursors if possible, `1` - don't use hw cursors, `2` - auto (disable when tearing) | int | `2` | [0 - 2] |
 | no_warps | If true, will not warp the cursor in many cases (focusing, keybinds, etc.) | bool | `false` | |
 | persistent_warps | When a window is refocused, the cursor returns to its last position relative to that window, rather than to the centre | bool | `false` | |
-| sync_gsettings_theme | Sync xcursor theme with GSettings. It applies cursor-theme and cursor-size on theme load to GSettings making most CSD GTK based clients use the same xcursor theme and size | bool | `true` | |
+| sync_gsettings_theme | Sync XCursor theme with GSettings. It applies cursor-theme and cursor-size on theme load to GSettings making most CSD GTK based clients use the same XCursor theme and size | bool | `true` | |
 | use_cpu_buffer | Makes HW cursors use a CPU buffer. Required on NVIDIA to have HW cursors. `0` - disabled, `1` - enabled, `2` - auto (enabled with NVIDIA) | int | `2` | [0 - 2] |
 | warp_back_after_non_mouse_input | Warp the cursor back to where it was after using a non-mouse input to move it, and then returning back to the mouse | bool | `false` | |
 | warp_on_change_workspace | Move the cursor to the last focused window after changing the workspace. `0` - Disabled, `1` - Enabled, `2` - Force (ignores cursor:no_warps option) | int | `0` | [0 - 2] |

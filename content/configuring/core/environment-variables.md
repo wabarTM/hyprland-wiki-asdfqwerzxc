@@ -4,6 +4,7 @@ title: Environment variables
 ---
 
 You can use the `hl.env()` method to set environment variables before the display server initializes, for example:
+
 ```lua
 hl.env("GTK_THEME", "Nord")
 ```

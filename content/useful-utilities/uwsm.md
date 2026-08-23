@@ -145,7 +145,7 @@ export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1"
 There is no need to explicitly set XDG environment variables, as uwsm sets them automatically.
 
 Avoid placing environment variables in the `hyprland.lua` file.
-Instead, use `~/.config/uwsm/env` for theming, xcursor, NVIDIA and toolkit variables, and `~/.config/uwsm/env-hyprland` for `HYPR*` and `AQ_*` variables.
+Instead, use `~/.config/uwsm/env` for theming, XCursor, NVIDIA and toolkit variables, and `~/.config/uwsm/env-hyprland` for `HYPR*` and `AQ_*` variables.
 The format is `export KEY=VAL`.
 
 ```plain

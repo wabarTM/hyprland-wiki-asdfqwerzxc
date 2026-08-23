@@ -103,7 +103,7 @@ Check out Hyprland's [animation documentation](../../../configuring/core/animati
 
 #### Animation Tree
 
-```txt
+```plain
 global
   ↳ fade
     ↳ fadeIn - fade to lock screen
@@ -350,7 +350,7 @@ Draws a password input field.
 | `outline_thickness` | Thickness of the outline | int | `4` |
 | `dots_size` | Size of the dots. [0.001 - 0.8] | float | `0.25` |
 | `dots_spacing` | Spacing between dots. [-1.0 - 1.0] | float | `0.15` |
-| `dots_center` | Whether to center the dots. Align left otherwise.  | bool | `true` |
+| `dots_center` | Whether to center the dots. Align left otherwise. | bool | `true` |
 | `dots_rounding` | Rounding of the dots | int | `-1` |
 | `dots_text_format` | Text character(s) used for the input indicator, rounded rectangles are the default | str | _empty_ |
 | `outer_color` | Border color | gradient | `rgba(17, 17, 17, 1.0)` |

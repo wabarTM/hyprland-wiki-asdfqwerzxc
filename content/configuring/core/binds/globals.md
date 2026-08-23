@@ -38,7 +38,7 @@ hl.bind("SUPER + F10", hl.dsp.send_shortcut({ mods = "SUPER", key = "F4", window
 
 ### D-Bus global shortcuts
 
->[!NOTE]
+> [!NOTE]
 > This function will _only_ work with [XDPH](../../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland).
 
 Some applications may already support the GlobalShortcuts portal in xdg-desktop-portal.
