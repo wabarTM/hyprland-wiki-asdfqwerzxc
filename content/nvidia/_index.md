@@ -81,7 +81,8 @@ MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
 > [!WARNING]
 > Electron or Chromium-based apps can stall for up to a minute after boot on hybrid graphics systems with an Intel iGPU and an NVIDIA dGPU.
 >
-> This can be fixed by loading the `i915` module **before** the NVIDIA ones in `/etc/mkinitcpio.conf`. Just edit the `MODULES` line like this:
+> This can be fixed by loading the `i915` module **before** the NVIDIA ones in `/etc/mkinitcpio.conf`.
+> Just edit the `MODULES` line like this:
 >
 > ```conf {filename="/etc/mkinitcpio.conf"}
 > MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
@@ -118,7 +119,7 @@ It _should_ work now.
 Electron and CEF apps flicker because:
 
 1. They run in Xwayland by default.
-2. They don't use the `syncobj` protocol by default.
+1. They don't use the `syncobj` protocol by default.
 
 To enable native Wayland support for most Electron apps, add this environment variable to your config:
 

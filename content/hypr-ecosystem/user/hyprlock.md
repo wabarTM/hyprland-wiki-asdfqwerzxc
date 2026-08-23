@@ -32,9 +32,9 @@ Configuration is done via a config file named `hyprlock.conf`.
 Hyprlock searches for it in the following locations, in order:
 
 1. `$XDG_CONFIG_HOME/hypr/hyprlock.conf`
-2. `$HOME/.config/hypr/hyprlock.conf`
-3. Each directory in `$XDG_CONFIG_DIRS` (e.g., `<dir>/hypr/hyprlock.conf`)
-4. `/etc/xdg/hypr/hyprlock.conf`
+1. `$HOME/.config/hypr/hyprlock.conf`
+1. Each directory in `$XDG_CONFIG_DIRS` (e.g., `<dir>/hypr/hyprlock.conf`)
+1. `/etc/xdg/hypr/hyprlock.conf`
 
 The first match is used.
 You can also specify an explicit path with `hyprlock --config <path>`.
@@ -45,7 +45,7 @@ Hyprlock uses the following types in addition to Hyprland's [data types](../../.
 
 | Type | Description |
 | --- | --- |
-| layoutxy | vec2 with an optional `%` suffix, allowing users to specify sizes as percentages of the output size. Floats (e.g., 10.5) are supported, but only have an effect when used with `%`. <br> Raw pixel values will just get rounded |
+| layoutxy | vec2 with an optional `%` suffix, allowing users to specify sizes as percentages of the output size. Floats (e.g., 10.5) are supported, but only have an effect when used with `%`. Raw pixel values will just get rounded |
 
 ### General
 
@@ -55,10 +55,10 @@ Variables in the `general` category:
 | --- | --- | --- | --- |
 | `hide_cursor` | Hides the cursor instead of making it visible | bool | `false` |
 | `ignore_empty_input` | Skips validation when no password is provided | bool | `false` |
-| `immediate_render` | Makes hyprlock immediately start to draw widgets. <br> Backgrounds will render `background:color` until their `background:path` resource is available | bool | `false` |
+| `immediate_render` | Makes hyprlock immediately start to draw widgets. Backgrounds will render `background:color` until their `background:path` resource is available | bool | `false` |
 | `text_trim` | Sets if the text should be trimmed, useful to avoid trailing newlines in commands' output | bool | `true` |
-| `fractional_scaling` | Whether to use fractional scaling. `0` - disabled <br> `1` - enabled <br> `2` - auto | int | `2` |
-| `screencopy_mode` | Selects screencopy mode: `0` - GPU-accelerated <br> `1` - CPU-based (slow) | int | `0` |
+| `fractional_scaling` | Whether to use fractional scaling. `0` - disabled, `1` - enabled, `2` - auto | int | `2` |
+| `screencopy_mode` | Selects screencopy mode: `0` - GPU-accelerated, `1` - CPU-based (slow) | int | `0` |
 | `fail_timeout` | Milliseconds until the ui resets after a failed auth attempt | int | `2000` |
 
 ### Authentication
@@ -130,7 +130,7 @@ The following keys and key-combinations describe hyprlock's default behavior:
 | `Ctrl + u` | Clear password buffer |
 | `Ctrl + Backspace` | Clear password buffer |
 
-The [`locked` flag](../../../configuring/core/binds/flags#bind-flags) `l` can be used to allow specific Hyprland keybinds to also work while hyprlock is active (e.g., brightness/volume/media control).
+The [`locked` flag](../../../configuring/core/binds/flags#bind-flags) can be used to allow specific Hyprland keybinds to also work while hyprlock is active (e.g., brightness/volume/media control).
 
 ## Widgets
 
@@ -145,7 +145,7 @@ widget_name {
 
 ### Monitor Selection
 
-`monitor` is available for all widgets and can be left empty for "all monitors".
+`monitor` is available for all widgets and can be left empty for "all monitors."
 
 It takes the same string that is used to reference monitors in the Hyprland configuration.
 So either use the portname (e.g., `eDP-1`) or the monitor description (e.g., `desc:Chimei Innolux Corporation 0x150C`).
@@ -156,8 +156,8 @@ See [Monitors](../../../configuring/core/monitors).
 
 The following variables in widget text options will be substituted.
 
-- `$USER` - username (e.g., linux-user)
-- `$DESC` - user description (e.g., Linux User)
+- `$USER` - username (e.g., `linux-user`)
+- `$DESC` - user description (e.g., `Linux User`)
 - `$TIME` - current time in 24-hour format (e.g., `13:37`)
 - `$TIME12` - current time in 12-hour format (e.g., `1:37 PM`)
 - `$LAYOUT` - current keyboard layout
@@ -224,16 +224,16 @@ If `path` is `screenshot`, a screenshot of your desktop at launch will be used.
 | `monitor` | Monitor to draw on | str | empty |
 | `path` | Image path, `screenshot` or empty to fill with `color` | str | empty |
 | `color` | Fallback background color | color | `rgba(17, 17, 17, 1.0)` |
-| `blur_passes` | The amount of passes to perform. <br> `0` disables blurring | int | `0` |
+| `blur_passes` | The amount of passes to perform. `0` disables blurring | int | `0` |
 | `blur_size` | Blur size (distance) | int | `7` |
 | `noise` | How much noise to apply | float | `0.0117` |
 | `contrast` | Contrast modulation for blur | float | `0.8916` |
 | `brightness` | Brightness modulation for blur | float | `0.8172` |
 | `vibrancy` | Increase saturation of blurred colors | float | `0.1696` |
 | `vibrancy_darkness` | How strong the effect of vibrancy is on dark areas | float | `0.05` |
-| `reload_time` | Seconds between reloading, `0` to reload with `SIGUSR2`. <br> Ignored if `path` is `screenshot` | int | `-1` |
+| `reload_time` | Seconds between reloading, `0` to reload with `SIGUSR2`. Ignored if `path` is `screenshot` | int | `-1` |
 | `reload_cmd` | Command to get new path. If empty, old path will be used | str | empty |
-| `crossfade_time` | Cross-fade time in seconds between old and new background on reload. <br> A negative value means no cross-fade | float | `-1.0` |
+| `crossfade_time` | Cross-fade time in seconds between old and new background on reload. A negative value means no cross-fade | float | `-1.0` |
 | `zindex` | z-index of the widget | int | `-1` |
 
 > [!NOTE]
@@ -397,8 +397,8 @@ input-field {
     inner_color = rgba(0, 0, 0, 0.0) # no fill
 
     outer_color = rgba(33ccffee) rgba(00ff99ee) 45deg
-    check_color=rgba(00ff99ee) rgba(ff6633ee) 120deg
-    fail_color=rgba(ff6633ee) rgba(ff0066ee) 40deg
+    check_color = rgba(00ff99ee) rgba(ff6633ee) 120deg
+    fail_color = rgba(ff6633ee) rgba(ff0066ee) 40deg
 
     font_color = rgb(143, 143, 143)
     fade_on_empty = false
@@ -441,17 +441,18 @@ text = cmd[update:1000] echo "<span foreground='##ff2222'>$(date)</span>"
 ```
 
 > [!NOTE]
-> - `update:` time is in ms.
+> - `update:` time is in milliseconds.
 > - label can be forcefully updated by specifying `update:<time>:1` or `update:<time>:true` and sending `SIGUSR2` to hyprlock, `<time>` can be `0` in this case.
 > - `$ATTEMPTS[<string>]` format can be used to show `<string>` when there are no failed attempts.
 >   You can use pango-markup here. `<string>` can be empty to hide.
 > - `$LAYOUT[<str0>,<str1>,...]` format is available to replace indexed layouts.
->   You can use settings from `hyprland.lua` (e.g., `$LAYOUT[en,ru,de]`)
->   Also, a single `!` character will hide layout (e.g., `$LAYOUT[!]` will hide default (0 indexed) and show others)
+>   You can use settings from `hyprland.lua` (e.g., `$LAYOUT[en,ru,de]`).
+>   Also, a single `!` character will hide layout (e.g., `$LAYOUT[!]` will hide default (0 indexed) and show others).
 > - `$TIME` and `$TIME12` will use timezone from the TZ environment variable.
 >   If it's not set, the system timezone will be used, falling back to UTC in case of errors.
 > - Variables seen above are parsed _before_ the command is run.
-> - **Do not** run commands that never exit. This will hang the `AsyncResourceGatherer` and you won't have a good time.
+> - **Do not** run commands that never exit.
+>   This will hang the `AsyncResourceGatherer` and you won't have a good time.
 
 {{% details title="Example label" closed="true" %}}
 
@@ -470,7 +471,6 @@ label {
 ```
 
 {{% /details %}}
-
 
 ## User Signals
 
