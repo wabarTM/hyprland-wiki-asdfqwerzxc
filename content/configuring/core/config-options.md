@@ -125,13 +125,14 @@ Path: `decoration`
 
 #### Opacity
 
-> [!IMPORTANT]
-> Opacity level over `1.0` is allowed, but any product over `1.0` will cause graphical glitches.
-
 Opacity is a **product** of all opacities.
 Use `" override"` after an opacity value to set it as an exact value rather than a multiplier.
 
 For example, setting `active_opacity` to `0.5` and `opacity` window rule to `0.5` results in a total of `0.25`.
+
+> [!IMPORTANT]
+> Opacity level over `1.0` is allowed, but any product over `1.0` will cause graphical glitches.
+
 
 {{% details title="Examples" closed="true" %}}
 
