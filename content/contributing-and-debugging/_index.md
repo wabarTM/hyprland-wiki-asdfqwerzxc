@@ -33,7 +33,7 @@ With that, you can build in debug, go to the debugging tab and hit `(gdb) Launch
 
 ### Building from CLI
 
-Run `make debug`.
+Run `make debug` and start a nested Hyprland session: `./build/Hyprland`.
 
 #### Incremental builds
 After you have successfully compiled Hyprland using `make debug`, you can make incremental builds.
