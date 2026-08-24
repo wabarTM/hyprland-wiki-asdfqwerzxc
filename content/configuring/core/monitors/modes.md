@@ -12,7 +12,7 @@ Some modes may be duplicated or may have a skewed refresh rate.
 
 ### Modes
 
-Predefined modes cannot be combined; only one can be selected.
+**Predefined modes cannot be combined**; only one can be selected.
 
 - `preferred` - use the display's preferred size and refresh rate.
 - `highres` - use the highest supported resolution.
