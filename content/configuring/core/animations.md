@@ -95,6 +95,44 @@ hl.curve( NAME, { type = "spring", mass = MASS, stiffness = STIFF, dampening = D
 
 The more "stiffness", the more speed, and the more "dampening", the less bounce.
 
+
+#### Dampening
+
+##### Critical Dampening
+
+If the spring is crirically dampened, it settles fast and doesn't overshoot (no bounce).
+
+Critical dampening occurs when $\zeta = 1$ where
+
+$$
+\zeta = \frac{c}{c_c} = \frac{c}{2\sqrt{k\,m}}, \quad
+\begin{cases}
+c   & \text{*damping coefficient} \\
+c_c & \text{critical damping coefficient} \\
+k   & \text{stiffness} \\
+m   & \text{mass}
+\end{cases}
+$$
+
+> *this is the dampening value you give to the curve.
+
+You probably want your dampening around `0.6` to `0.8` for it to feel responsive and smooth.
+
+##### Overdamped
+
+Occurs when $\zeta > 1$.
+
+Returns slowly, no oscillation (doesn't bounce).
+
+
+##### Underdamped
+
+
+Occurs when $\zeta < 1$.
+
+Oscillates (bounces), decays exponentially.
+
+
 ### Examples
 
 ```lua
