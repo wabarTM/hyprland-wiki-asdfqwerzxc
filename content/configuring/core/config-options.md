@@ -48,8 +48,8 @@ Options are described using tables:
 
 `Default` can be one of:
 - Value with respect to type
-- [[Empty]]
-- [[Auto]]
+- ``[[Empty]]``
+- ``[[Auto]]``
 
 `Limit` can be one of:
 - Value range
