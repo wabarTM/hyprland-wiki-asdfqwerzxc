@@ -44,7 +44,7 @@ The default transfer function assumed to be in use on an SDR display for sRGB co
 The default (`"default"`) follows `render:cm_sdr_eotf`.
 This can be changed to piecewise sRGB with `"srgb"`, or Gamma 2.2 with `"gamma22"`.
 
-It is recommended to set `bitdepth = 10` for better colorspace handling.
+If your monitor supports it, `bitdepth = 10` is recommended for better colorspace handling.
 
 ## 10 bit support
 
