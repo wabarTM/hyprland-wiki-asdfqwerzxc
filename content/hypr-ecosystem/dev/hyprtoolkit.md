@@ -8,7 +8,7 @@ It relies on modern C++ in the Hyprland style (with hyprutils, etc.).
 
 It's recommended you are familiar with C++ before developing an app with hyprtoolkit.
 
-For user documents, see [hyprtoolkit (user docs)](../user/hyprtoolkit)
+For user documentation, see the [hyprtoolkit user docs](../../user/hyprtoolkit).
 
 ## Getting Started
 
