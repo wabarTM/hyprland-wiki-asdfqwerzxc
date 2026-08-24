@@ -134,7 +134,7 @@ Create a `settings.json` file in `.vscode/` (if it doesn't exist, make it), then
 
 #### Error behavior
 
-Hyprland attempts as much as it can to make errors as non-destructive as possible.
+Hyprland attempts, as much as it can, to make errors as non-destructive as possible.
 However, some errors cannot be handled cleanly:
 - Fundamental Lua syntax errors will make Hyprland refuse to reload your config and pop an error.
 - Runtime Lua syntax errors will abort execution of the current Lua file and pop an error (e.g., calling a `nil`).
