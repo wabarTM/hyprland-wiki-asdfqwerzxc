@@ -34,14 +34,18 @@ With that, you can build in debug, go to the debugging tab and hit `(gdb) Launch
 Attach and profile in your preferred way.
 
 ### Incremental builds
-After you have successfully compiled Hyprland using `make debug`, you can make incremental builds. This means **building only files that you changed** after the initial full build.  To do so, run the following command (extracted from hyprland's `Makefile`):
-   ```bash
-   cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getconf NPROCESSORS_CONF`
-   ```
+
+After you have successfully compiled Hyprland using `make debug`, you can make incremental builds.
+This means **building only files that you changed** after the initial full build.
+To do so, run the following command (extracted from Hyprland's `Makefile`):
+
+```bash
+cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getconf NPROCESSORS_CONF`
+```
 
 ### Nix
 
-Check out [the nix contributing and debugging page](../../nix/contributing-and-debugging)
+Check out [the nix contributing and debugging page](../../nix/contributing-and-debugging).
 
 ## Development environment
 

@@ -14,7 +14,9 @@ A debug build is already provided through the hyprland flake: `hyprland.packages
 Most hyprwm apps also provide their own `-debug` versions.
 For those that don't, one can build the debug version from the CLI by using [overrideAttrs](../advanced/#using-nix-repl) with `cmakeBuildType = "Debug";` or `mesonBuildType = "debug";`, depending on the program.
 
-If you don't want to use the hyprland flake, you can build the nixpkgs derivation in debug mode, write the following code in the `package` attribute of the NixOS/Home Manager modules:
+If you don't want to use the Hyprland flake, you can build the Nixpkgs derivation in debug mode.
+To do so, use the following code in the `package` attribute of the NixOS/Home Manager modules:
+
 ```nix
 hyprland.override {
   debug = true;
@@ -61,9 +63,9 @@ You can build Hyprland using cmake instead of using `nix build`.
 The advantage is being able to do incremental builds (just building whatever little change you made instead of the entire repo).
 
 1. Clone the Hyprland repo including its submodules.
-2. Enter the directory and execute `nix develop` in your shell.
-3. Run `make debug` (check the Makefile for other options).
-4. For doing an incremental build (only building any small change you made after the first full build), run the following command (extracted from hyprland's `Makefile`):
+1. Enter the directory and execute `nix develop` in your shell.
+1. Run `make debug` (check the Makefile for other options).
+1. For doing an incremental build (only building any small change you made after the first full build), run the following command (extracted from Hyprland's `Makefile`):
    ```bash
    cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getconf NPROCESSORS_CONF`
    ```
