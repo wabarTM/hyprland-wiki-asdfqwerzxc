@@ -32,6 +32,8 @@ hl.config({ ["path.option"] = value })
 
 Multiple `hl.config()` invocations can be used to set options, since each call will only update what was passed into it.
 
+Beware that *if there are multiple instances of the same config option being set*, the latest line will always shadow all previous lines!
+
 This also means you can update options at runtime, without adding them to your configuration file, using [`hyprctl eval 'hl.config(...)'`](../advanced-configuration/using-hyprctl#eval).
 In this case, they will return to their default values the next time you reload (or relaunch) Hyprland.
 
