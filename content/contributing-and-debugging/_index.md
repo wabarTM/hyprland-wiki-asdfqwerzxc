@@ -45,7 +45,7 @@ cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getcon
 
 ### Nix
 
-Check out [the nix contributing and debugging page](../../nix/contributing-and-debugging).
+Check out [the Nix contributing and debugging page](../nix/contributing-and-debugging).
 
 ## Development environment
 
