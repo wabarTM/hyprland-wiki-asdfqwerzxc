@@ -25,7 +25,8 @@ hl.env("GTK_THEME", "Nord")
 - `hl.env("HYPRLAND_NO_SD_VARS", "1")` - Disables management of variables in systemd and D-Bus activation environments.
 - `hl.env("HYPRLAND_CONFIG", "/path/to/hyprland.lua")` - Specifies where you want your Hyprland configuration.
 
-## [Aquamarine](../../../hypr-ecosystem/dev/aquamarine/) <!-- ref https://github.com/hyprwm/aquamarine/blob/main/docs/env.md -->
+## [Aquamarine](../../../hypr-ecosystem/dev/aquamarine/)
+<!-- NOTE: ref https://github.com/hyprwm/aquamarine/blob/main/docs/env.md -->
 
 - `hl.env("AQ_TRACE", "1")` - Enables trace logging (very verbose).
 - `hl.env("AQ_DRM_DEVICES", "...")` - Set an explicit list of DRM devices (GPUs) to use. It's a colon-separated list of paths, <br>the first will be used as the primary GPU<br>. Example: `/dev/dri/card1:/dev/dri/card0`.
