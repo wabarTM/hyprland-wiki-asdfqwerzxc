@@ -169,10 +169,10 @@ To use absolute ID, `~` is put between selector and ID (e.g., `m~3`)
 ### Direction
 
 A direction.
-- `l` - left
-- `r` - right
-- `u` - up
-- `d` - down
+- `l`, `left` - left
+- `r`, `right` - right
+- `u`, `up` - up
+- `d`, `down` - down
 
 ### Monitor
 
