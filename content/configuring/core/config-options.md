@@ -178,7 +178,7 @@ Path: `decoration.blur`
 
 ##### Blur variants
 
-Each blur variant is configured in its own path, e.g. `frost = { thing = 1 }`.
+Each blur variant is configured in its own path, e.g. `frost = { configOption = 1 }`.
 Some settings may be reused by different blur methods.
 
 Available variants:
