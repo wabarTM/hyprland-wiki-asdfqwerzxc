@@ -219,8 +219,8 @@ For example:
 hyprctl notify -1 10000 "rgb(ff1ea3)" "Hello everyone!"
 ```
 
-Icon of `-1` means "No icon."
-Color of `0` means "Default color for icon."
+Icon of `-1` means "No icon".
+Color of `0` means "Default color for icon".
 
 Icon list:
 

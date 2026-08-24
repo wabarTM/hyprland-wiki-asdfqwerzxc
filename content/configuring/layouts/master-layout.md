@@ -3,7 +3,7 @@ weight: 30
 title: Master layout
 ---
 
-The master layout makes one (or more) window(s) be the "master," taking (by default) the left part of the screen, and tiles the rest on the right.
+The master layout makes one (or more) window(s) be the "master", taking (by default) the left part of the screen, and tiles the rest on the right.
 You can change the orientation on a per-workspace basis if you want to use anything other than the default left/right split.
 
 <video width="1024" height="566" autoplay muted loop>

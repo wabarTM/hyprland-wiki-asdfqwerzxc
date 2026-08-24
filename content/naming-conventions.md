@@ -85,7 +85,7 @@ To learn more about supported regex constructs, [refer to this cheatsheet](https
 If you want to _negate_ a RegEx, as in pass only when the RegEx _fails_, you can prefix it with `negative:` (e.g., `"negative:kitty"`)
 
 > [!TIP]
-> Lua's literal-string `[[]]` syntax may be helpful to avoid "backslash hell."
+> Lua's literal-string `[[]]` syntax may be helpful to avoid "backslash hell".
 > For example, you might write `[[\b\w*apple\b]]` instead of `"\\b\\w*apple\\b"`.
 
 ### Window selector

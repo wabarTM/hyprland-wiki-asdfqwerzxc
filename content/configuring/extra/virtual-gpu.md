@@ -63,7 +63,7 @@ Hyprland requires by default that your graphics card has **at least one display 
 
 However, for all vendors, vGPUs are render-only cards and have no emulated output on Linux.
 That is because they are targeting VDI infrastructures, 3D rendering, encoding and compute use cases that are all remote.
-This is also suggested by their prefix "3D controller," instead of "VGA compatible controller."
+This is also suggested by their prefix "3D controller", instead of "VGA compatible controller".
 
 **To allow Hyprland to run** on a graphics card **with no output, you must enable the** `AQ_NO_KMS_REQUIREMENT` environment flag when running Hyprland:
 

@@ -145,7 +145,7 @@ widget_name {
 
 ### Monitor Selection
 
-`monitor` is available for all widgets and can be left empty for "all monitors."
+`monitor` is available for all widgets and can be left empty for "all monitors".
 
 It takes the same string that is used to reference monitors in the Hyprland configuration.
 So either use the portname (e.g., `eDP-1`) or the monitor description (e.g., `desc:Chimei Innolux Corporation 0x150C`).

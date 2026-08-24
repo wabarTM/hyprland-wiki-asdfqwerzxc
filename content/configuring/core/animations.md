@@ -93,7 +93,7 @@ It's generally recommended to keep mass at 1, and adjust stiffness and dampening
 hl.curve( NAME, { type = "spring", mass = MASS, stiffness = STIFF, dampening = DAMP })
 ```
 
-The more "stiffness," the more speed, and the more "dampening," the less bounce.
+The more "stiffness", the more speed, and the more "dampening", the less bounce.
 
 ### Examples
 

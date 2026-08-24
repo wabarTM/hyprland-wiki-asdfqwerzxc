@@ -28,7 +28,8 @@ In addition:
 - Code blocks should use 4 spaces, rather than tabs or some other indentation scheme.
 - Warnings must go to the top of the section.
 - All abbreviations must be capitalized.
-- Spelling should follow standard United States English conventions.
+- Spelling must follow standard United States English conventions.
+- Trailing punctuation must be placed outside of any quotation marks.
 
 When adding a new dispatcher, position arguments in a way, that answers the following questions:
 - What is addressed?
