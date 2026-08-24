@@ -8,7 +8,7 @@ title: Submaps
 
 Keybind submaps allow you to activate a separate set of keybinds.
 
-For example, if you want to enter a "`resize` mode" that allows you to resize windows with the arrow keys, you can do it like this:
+For example, if you want to enter a "resize mode" that allows you to resize windows with the arrow keys, you can do it like this:
 
 ```lua
 -- Switch to a submap called `resize`.
