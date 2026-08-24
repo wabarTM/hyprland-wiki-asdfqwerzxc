@@ -54,7 +54,7 @@ Please make sure you know what you are doing before copy-pasting environment var
 
 ## GTK
 
-- `GTK_THEME` - Set a GTK theme manually, for those who want to avoid appearance tools such as lxappearance or nwg-look.
+- `hl.env("GTK_THEME", "yourVeryPrettyTheme")` - Set a GTK theme manually, for those who want to avoid appearance tools such as lxappearance or nwg-look.
 
 ## NVIDIA-specific
 
