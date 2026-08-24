@@ -19,7 +19,11 @@ Please make a vouch request over [here](https://github.com/hyprwm/.github/discus
 
 See [manual build](../getting-started/installation#manual-build) for deps.
 
-### Recommended, CMake
+### Clone the repository
+
+You have to clone it including submodules: `git clone --recurse-submodules https://github.com/hyprwm/Hyprland.git`
+
+### Building using VSCode
 
 Install the VSCode C/C++ and CMake Tools extensions and use that.
 
@@ -27,14 +31,11 @@ The Hyprland repo contains a [launch.json](https://github.com/hyprwm/Hyprland/bl
 
 With that, you can build in debug, go to the debugging tab and hit `(gdb) Launch`.
 
-### Custom, CLI
+### Building from CLI
 
-`make debug`
+Run `make debug`.
 
-Attach and profile in your preferred way.
-
-### Incremental builds
-
+#### Incremental builds
 After you have successfully compiled Hyprland using `make debug`, you can make incremental builds.
 This means **building only files that you changed** after the initial full build.
 To do so, run the following command (extracted from Hyprland's `Makefile`):
