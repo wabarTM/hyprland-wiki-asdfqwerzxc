@@ -1,5 +1,5 @@
 ---
-weight: 20
+weight: 150
 title: hyprcursor
 ---
 

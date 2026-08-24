@@ -1,5 +1,5 @@
 ---
-weight: 70
+weight: 30
 title: hyprgraphics
 ---
 

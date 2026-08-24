@@ -1,12 +1,14 @@
 ---
-weight: 10
-title: Development
+weight: 60
+title: hyprtoolkit (developer docs)
 ---
 
 Hyprtoolkit is a pure C++ toolkit.
 It relies on modern C++ in the Hyprland style (with hyprutils, etc.).
 
 It's recommended you are familiar with C++ before developing an app with hyprtoolkit.
+
+For user documents, see [hyprtoolkit (user docs)](../user/hyprtoolkit)
 
 ## Getting Started
 

@@ -117,7 +117,7 @@ Be aware that they will not prevent changing TTYs using `Ctrl-Alt-F1`--`F7`.
 
 ### How do I change my mouse cursor?
 
-See [hyprcursor](../hypr-ecosystem/dev/hyprcursor).
+See [hyprcursor](../hypr-ecosystem/user/hyprcursor).
 
 1. Set the GTK cursor using [nwg-look](https://github.com/nwg-piotr/nwg-look).
 1. Add `hyprctl setcursor [THEME] [SIZE]` to your autoexecs in your config and restart Hyprland.

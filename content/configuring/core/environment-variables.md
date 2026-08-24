@@ -25,19 +25,22 @@ hl.env("GTK_THEME", "Nord")
 - `hl.env("HYPRLAND_NO_SD_VARS", "1")` - Disables management of variables in systemd and D-Bus activation environments.
 - `hl.env("HYPRLAND_CONFIG", "/path/to/hyprland.lua")` - Specifies where you want your Hyprland configuration.
 
-## Aquamarine <!-- ref https://github.com/hyprwm/aquamarine/blob/main/docs/env.md -->
+## [Aquamarine](../../../hypr-ecosystem/dev/aquamarine/) <!-- ref https://github.com/hyprwm/aquamarine/blob/main/docs/env.md -->
 
-- `hl.env("AQ_TRACE", "1")` - Enables more verbose logging.
-- `hl.env("AQ_DRM_DEVICES", "...")` - Set an explicit list of DRM devices (GPUs) to use. It's a colon-separated list of paths, with the first being the primary, e.g. `/dev/dri/card1:/dev/dri/card0`.
+- `hl.env("AQ_TRACE", "1")` - Enables trace logging (very verbose).
+- `hl.env("AQ_DRM_DEVICES", "...")` - Set an explicit list of DRM devices (GPUs) to use. It's a colon-separated list of paths, <br>the first will be used as the primary GPU<br>. Example: `/dev/dri/card1:/dev/dri/card0`.
 - `hl.env("AQ_FORCE_LINEAR_BLIT", "0")` - Disables forcing linear explicit modifiers on Multi-GPU buffers to potentially workaround NVIDIA issues.
-- `hl.env("AQ_MGPU_NO_EXPLICIT", "1")` - Disables explicit syncing on mgpu buffers.
+- `hl.env("AQ_MGPU_NO_EXPLICIT", "1")` - Disables passing of explicit fences for multi-GPU scanouts.
 - `hl.env("AQ_NO_MODIFIERS", "1")` - Disables modifiers for DRM buffers.
 - `hl.env("AQ_NO_KMS_REQUIREMENT", "1")` - Disable KMS requirement for starting on headless GPUs.
+- `hl.env("AQ_NO_ATOMIC", "1")` - **(HEAVILY NOT RECOMMENDED)** Disable atomic modesetting.
 
 ## Cursor
 
-- `XCURSOR_THEME` - Set your cursor theme. The theme needs to be installed and readable by your user.
-- `XCURSOR_SIZE` - Set cursor size. See [here](../../../faq) for why you might want this variable set.
+- `hl.env("XCURSOR_THEME", "MyCursorTheme")` - Set your cursor theme. The theme needs to be installed and readable by your user.
+- `hl.env("XCURSOR_SIZE", "24")` - Set cursor size. See [here](../../../faq) for why you might want this variable set.
+- `hl.env("HYPRCURSOR_THEME", "MyHyprcursorTheme")` - Check [the hyprcursor page](../../../hypr-ecosystem/user/hyprcursor) for information about hyprcursor.
+- `hl.env("HYPRCURSOR_SIZE", "24")`
 
 ## Qt
 
@@ -53,7 +56,7 @@ hl.env("GTK_THEME", "Nord")
 
 [Go to Nvidia page.](../../../nvidia/#environment-variables)
 
-## GUI Toolkits
+## GUI toolkits' backend
 
 - `hl.env("GDK_BACKEND", "wayland,x11,*")` - GTK: Use Wayland if available; if not, try X11 and  then any other GDK backend.
 - `hl.env("QT_QPA_PLATFORM", "wayland;xcb")` - Qt: Use Wayland if available, fall back to X11 if not.
