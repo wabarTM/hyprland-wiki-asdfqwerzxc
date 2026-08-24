@@ -102,7 +102,7 @@ The more "stiffness", the more speed, and the more "dampening", the less bounce.
 
 If the spring is crirically dampened, it settles fast and doesn't overshoot (no bounce).
 
-Critical dampening occurs when $\zeta = 1$ where
+Critical dampening occurs when $\zeta = 1$, where
 
 $$
 \zeta = \frac{c}{c_c} = \frac{c}{2\sqrt{k\,m}}, \quad
