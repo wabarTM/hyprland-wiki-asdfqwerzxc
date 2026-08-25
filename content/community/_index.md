@@ -1,6 +1,6 @@
 ---
 weight: 130
-title: Connect
+title: Community
 ---
 
 These are the links to official Hyprland-related spaces or profiles:
