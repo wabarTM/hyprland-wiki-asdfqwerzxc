@@ -194,6 +194,7 @@ Available variants:
 
 ###### Acrylic
 
+Used by: `acrylic`  
 Path: `decoration.blur.acrylic`
 
 | Name | Description | Type | Default | Limits |
@@ -206,6 +207,7 @@ Path: `decoration.blur.acrylic`
 
 ###### Aurora
 
+Used by: `aurora`  
 Path: `decoration.blur.aurora`
 
 | Name | Description | Type | Default | Limits |
@@ -217,6 +219,7 @@ Path: `decoration.blur.aurora`
 
 ###### Drops
 
+Used by: `drops`  
 Path: `decoration.blur.drops`
 
 | Name | Description | Type | Default | Limits |
@@ -225,6 +228,7 @@ Path: `decoration.blur.drops`
 
 ###### Fluid jar
 
+Used by: `fluid_jar`  
 Path: `decoration.blur.fluid_jar`
 
 | Name | Description | Type | Default | Limits |
@@ -239,6 +243,7 @@ Path: `decoration.blur.fluid_jar`
 
 ###### Glass
 
+Used by: `aurora`, `drops`, `heat_shimmer`, `prism`  
 Path: `decoration.blur.glass`
 
 | Name | Description | Type | Default | Limits |
@@ -249,6 +254,7 @@ Path: `decoration.blur.glass`
 
 ###### Haze
 
+Used by: `haze`  
 Path: `decoration.blur.haze`
 
 | Name | Description | Type | Default | Limits |
@@ -258,6 +264,7 @@ Path: `decoration.blur.haze`
 
 ###### Heat shimmer
 
+Used by: `heat_shimmer`  
 Path: `decoration.blur.heat_shimmer`
 
 | Name | Description | Type | Default | Limits |
@@ -266,6 +273,7 @@ Path: `decoration.blur.heat_shimmer`
 
 ###### Ripple
 
+Used by: `ripple`  
 Path: `decoration.blur.ripple`
 
 | Name | Description | Type | Default | Limits |
@@ -277,6 +285,7 @@ Path: `decoration.blur.ripple`
 
 ###### Water
 
+Used by: `water`  
 Path: `decoration.blur.water`
 
 | Name | Description | Type | Default | Limits |

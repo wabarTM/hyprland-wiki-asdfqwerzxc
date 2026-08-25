@@ -90,7 +90,7 @@ A spring curve is one commonly found on Apple's systems, and is defined by mass,
 It's generally recommended to keep mass at 1, and adjust stiffness and damping alone.
 
 ```lua
-hl.curve( NAME, { type = "spring", mass = MASS, stiffness = STIFF, damping = DAMP })
+hl.curve(NAME, { type = "spring", mass = float, stiffness = float, damping = float })
 ```
 
 The more "stiffness", the more speed, and the more "damping", the less bounce.
