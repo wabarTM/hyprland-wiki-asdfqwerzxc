@@ -36,24 +36,6 @@ These line breaks are ignored when content is rendered, but help reduce diff siz
 
 See [this article](https://writingslowly.com/2025/01/13/semantic-line-breaks-are-a.html) and the [Semantic Line Breaks specification](https://sembr.org) for details that aren't in comic panel form.
 
-## TODO list
-
-[ ] write how to structure new parameters and what styling to follow
-
-[ ] add {filename="hyprland.lua"} to codeblocks
-
-[ ] put examples in
-{{% details title="title" closed="true" %}}
-
-code  
-lorem ipsum
-
-{{% /details %}}
-
-[x] rewrite Nix part of the wiki. too much noise. Hjem.
-
-[x] figure out tags in per-device binds. they link to devices and devices links to per-device binds. no info about them in old wiki /shrug
-
 ## Local development
 
 To see your local changes, make sure to have `go` and `hugo` installed.
