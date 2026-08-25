@@ -9,6 +9,8 @@ To use it in the cloned repo, simply run `nix develop`.
 
 ## Build in debug mode
 
+### Using nix build
+
 A debug build is already provided through the hyprland flake: `hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-debug`.
 
 Most hyprwm apps also provide their own `-debug` versions.
@@ -22,6 +24,15 @@ hyprland.override {
   debug = true;
 };
 ```
+
+### Using CMake
+
+You can build Hyprland using cmake instead of using `nix build`.
+The advantage is being able to do incremental builds (just building whatever little change you made instead of the entire repo).
+
+1. Clone the Hyprland repo including its submodules.
+1. Enter the directory and execute `nix develop` in your shell.
+1. Run `make debug` (check the Makefile for other options).
 
 ## Bisecting an issue
 
@@ -56,12 +67,3 @@ coredumpctl debug <PID> # using the PID found in the previous step
 ```
 
 The rest of the process is the same as [here](../../crashes-and-bugs#obtaining-a-debug-stacktrace), from step 3 onwards.
-
-## Manual building using cmake
-
-You can build Hyprland using cmake instead of using `nix build`.
-The advantage is being able to do incremental builds (just building whatever little change you made instead of the entire repo).
-
-1. Clone the Hyprland repo including its submodules.
-1. Enter the directory and execute `nix develop` in your shell.
-1. Run `make debug` (check the Makefile for other options).
