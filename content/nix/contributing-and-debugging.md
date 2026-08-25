@@ -9,7 +9,7 @@ To use it in the cloned repo, simply run `nix develop`.
 
 ## Build in debug mode
 
-### Calling `nix build`
+### Through `nix build`
 
 A debug build is already provided through the hyprland flake: `hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-debug`.
 
@@ -25,9 +25,9 @@ hyprland.override {
 };
 ```
 
-### Calling `cmake`
+### Through `cmake`
 
-You can build Hyprland by manually calling `CMake` instead of executing it through `nix build`.
+You can build Hyprland by directly calling `cmake` instead of through `nix build`.
 The advantage is being able to do incremental builds (just building whatever little change you made instead of the entire repo).
 
 1. Clone the Hyprland repo including its submodules.
