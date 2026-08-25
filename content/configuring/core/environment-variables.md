@@ -17,7 +17,8 @@ hl.env("GTK_THEME", "Nord")
 > Please avoid putting Wayland-specific environment variables in `/etc/environment`.
 > On traditional distros, doing so will cause all sessions (including Xorg ones) to pick them up, likely breaking them.
 
-Please make sure you know what you are doing before copy-pasting environment variables listed here. Some of them are for debugging, others may cause system instability if not used correctly.
+Please make sure you know what you are doing before copy-pasting environment variables listed here.
+Some of them are for debugging, others may cause system instability if not used correctly.
 
 ## Hyprland Environment Variables
 
@@ -31,7 +32,7 @@ Please make sure you know what you are doing before copy-pasting environment var
 <!-- NOTE: ref https://github.com/hyprwm/aquamarine/blob/main/docs/env.md -->
 
 - `hl.env("AQ_TRACE", "1")` - Enables trace logging (very verbose).
-- `hl.env("AQ_DRM_DEVICES", "...")` - Set an explicit list of DRM devices (GPUs) to use. It's a colon-separated list of paths, <br>the first will be used as the primary GPU<br>. Example: `/dev/dri/card1:/dev/dri/card0`.
+- `hl.env("AQ_DRM_DEVICES", "...")` - Set an explicit list of DRM devices (GPUs) to use. It's a colon-separated list of paths, the first will be used as the primary GPU. Example: `/dev/dri/card1:/dev/dri/card0`.
 - `hl.env("AQ_FORCE_LINEAR_BLIT", "0")` - Disables forcing linear explicit modifiers on Multi-GPU buffers to potentially workaround NVIDIA issues.
 - `hl.env("AQ_MGPU_NO_EXPLICIT", "1")` - Disables passing of explicit fences for multi-GPU scanouts.
 - `hl.env("AQ_NO_MODIFIERS", "1")` - Disables modifiers for DRM buffers.
