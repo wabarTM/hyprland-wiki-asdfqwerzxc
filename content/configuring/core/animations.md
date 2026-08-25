@@ -107,7 +107,7 @@ Critical damping occurs when $\zeta = 1$, where
 $$
 \zeta = \frac{c}{c_c} = \frac{c}{2\sqrt{k\,m}}, \quad
 \begin{cases}
-c   & \text{*damping coefficient} \\
+c   & \text{damping coefficient*} \\
 c_c & \text{critical damping coefficient} \\
 k   & \text{stiffness} \\
 m   & \text{mass}
@@ -130,7 +130,9 @@ Returns slowly, no oscillation (doesn't bounce).
 
 Occurs when $\zeta < 1$.
 
-Oscillates (bounces), decays exponentially.
+Oscillates (bounces), decays* exponentially.
+
+> *The amplitude of the bounces shrinks exponentially over time
 
 
 ### Examples
