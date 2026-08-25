@@ -21,7 +21,7 @@ See [manual build](../getting-started/installation#manual-build) for deps.
 
 ### Clone the repository
 
-You have to clone it including submodules: `git clone --recurse-submodules https://github.com/hyprwm/Hyprland.git`
+Submodules must be included when cloning the repo: `git clone --recurse-submodules https://github.com/hyprwm/Hyprland.git`
 
 ### Recommended, CMake
 

@@ -54,13 +54,13 @@ Report an issue on GitHub or on the Discord server.
 > Systemd-only.
 
 1. Build Hyprland in debug (`make debug`).
-2. Start Hyprland and get it to crash.
-3. In a TTY or terminal, do `coredumpctl debug Hyprland`.
+1. Start Hyprland and get it to crash.
+1. In a TTY or terminal, do `coredumpctl debug Hyprland`.
    - If GDB asks you for symbols, say `y`.
    - If it asks about paging, say `c`.
-4. Once you get to `(gdb)`, start file logging with `set logging enabled`.
+1. Once you get to `(gdb)`, start file logging with `set logging enabled`.
    - For a specific file, use `set logging file output.log`.
-5. Run `bt -full`, then `exit` once finished, and attach the output.
+1. Run `bt -full`, then `exit` once finished, and attach the output.
 
 ## Obtaining a trace log
 

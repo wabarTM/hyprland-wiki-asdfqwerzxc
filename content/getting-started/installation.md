@@ -408,19 +408,16 @@ See [Crashes and Bugs](../../crashes-and-bugs).
 
 ## Custom installation (debug build, etc.)
 
-1. cd into the Hyprland repo.
-2. for debug build:
-
-```bash
-make debug
-sudo make install
-```
-
-3. Any other config: (replace `<PRESET>` with your preset: `release`, `debug`)
-
-```bash
-make <PRESET> && sudo cp ./build/Hyprland /usr/bin && sudo cp ./example/hyprland.desktop /usr/share/wayland-sessions
-```
+1. `cd` into the Hyprland repo
+1. For debug build:
+   ```bash
+   make debug
+   sudo make install
+   ```
+1. Any other config: (replace `<PRESET>` with your preset: `release`, `debug`)
+   ```bash
+   make <PRESET> && sudo cp ./build/Hyprland /usr/bin && sudo cp ./example/hyprland.desktop /usr/share/wayland-sessions
+   ```
 
 ## Custom Build flags
 

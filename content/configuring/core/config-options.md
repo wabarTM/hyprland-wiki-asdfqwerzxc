@@ -133,7 +133,6 @@ For example, setting `active_opacity` to `0.5` and `opacity` window rule to `0.5
 > [!IMPORTANT]
 > Opacity level over `1.0` is allowed, but any product over `1.0` will cause graphical glitches.
 
-
 {{% details title="Examples" closed="true" %}}
 
 ```lua
@@ -169,7 +168,6 @@ Path: `decoration.blur`
 | vibrancy | Increase saturation of blurred colors | float | `0.1696` | [0.0 - 1.0] |
 | vibrancy_darkness | How strong the effect of `vibrancy` is on dark areas | float | `0.0` | [0.0 - 1.0] |
 | xray | If enabled, floating windows will ignore tiled windows in their blur. Will reduce overhead on floating blur significantly. Disabled if `new_optimizations = false` | bool | `false` | |
-
 
 > [!NOTE]
 > `blur.size` and `blur.passes` have to be at least 1 to apply blur.
@@ -620,7 +618,6 @@ Path: `misc`
 | swallow_regex | The _class_ regex to be used for windows that should be swallowed (usually, a terminal) | string | \[\[Empty\]\] | |
 | vrr | Controls the VRR (Adaptive Sync) of your monitors. 0 - off, 1 - on, 2 - fullscreen only, 3 - fullscreen with `video` or `game` content type | int | `0` | [0 - 3] |
 
-
 Path: `misc.col`
 
 | Name | Description | Type | Default | Limits |
@@ -701,7 +698,6 @@ Path: `render`
 | use_shader_blur_blend | Use experimental blurred bg blending (glitched on rotated screens). Set to `true` if blur is missing with fp16 or `keep_unmodified_copy` | bool | `false` | |
 | xp_mode | Disables back buffer and bottom layer rendering | bool | `false` | |
 
-
 `cm_auto_hdr` requires the `--target-colorspace-hint-mode=source` mpv option to work with mpv versions greater than v0.40.0.
 
 ### Cursor
@@ -733,7 +729,6 @@ Path: `cursor`
 | zoom_disable_aa | Disable antialiasing when zooming, which means things will be pixelated instead of blurry | bool | `false` | |
 | zoom_factor | The factor to zoom by around the cursor. Like a magnifying glass. Minimum 1.0 (meaning no zoom) | float | `1.0` | [1 - 10] |
 | zoom_rigid | Whether the zoom should follow the cursor rigidly (cursor is always centered if it can be) or loosely | bool | `false` | |
-
 
 ### Ecosystem
 

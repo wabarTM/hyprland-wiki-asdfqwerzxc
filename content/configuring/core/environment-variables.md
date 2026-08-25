@@ -19,7 +19,6 @@ hl.env("GTK_THEME", "Nord")
 
 Please make sure you know what you are doing before copy-pasting environment variables listed here. Some of them are for debugging, others may cause system instability if not used correctly.
 
-
 ## Hyprland Environment Variables
 
 - `hl.env("HYPRLAND_TRACE", "1")` - Enables more verbose logging.

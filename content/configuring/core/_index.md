@@ -10,7 +10,7 @@ title: Core
 The config is located in `$XDG_CONFIG_HOME/hypr/hyprland.lua`.
 In most cases, that maps to `~/.config/hypr/hyprland.lua`.
 
-You can pass arguments while starting hyprland (`start-hyprland`), but you must pass your arguments after `--`.
+You can pass arguments while starting Hyprland (`start-hyprland`), but you must pass your arguments after `--`.
 For instance, to use `--config` (or `-c`) to make Hyprland load a non-default config, you might use `start-hyprland -- --config ~/myRices/medium_rare/hyprland.lua`.
 
 If no configuration exists, Hyprland will create an [example config](https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua).

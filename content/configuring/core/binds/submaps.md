@@ -3,7 +3,6 @@ weight: 40
 title: Submaps
 ---
 
-
 ## Submaps
 
 Keybind submaps allow you to activate a separate set of keybinds.

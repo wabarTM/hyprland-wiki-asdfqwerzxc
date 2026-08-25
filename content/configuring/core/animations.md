@@ -95,12 +95,11 @@ hl.curve( NAME, { type = "spring", mass = MASS, stiffness = STIFF, damping = DAM
 
 The more "stiffness", the more speed, and the more "damping", the less bounce.
 
-
 #### Damping
 
 ##### Critical Damping
 
-If the spring is crirically dampened, it settles fast and doesn't overshoot (no bounce).
+If the spring is critically damped, it settles fast and doesn't overshoot (no bounce).
 
 Critical damping occurs when $\zeta = 1$, where
 
@@ -114,7 +113,7 @@ m   & \text{mass}
 \end{cases}
 $$
 
-> *this is the damping value you give to the curve.
+> \* This is the damping value you give to the curve.
 
 You probably want your damping around `0.6` to `0.8` for it to feel responsive and smooth.
 
@@ -124,16 +123,13 @@ Occurs when $\zeta > 1$.
 
 Returns slowly, no oscillation (doesn't bounce).
 
-
 ##### Underdamped
-
 
 Occurs when $\zeta < 1$.
 
 Oscillates (bounces), decays* exponentially.
 
-> *The amplitude of the bounces shrinks exponentially over time
-
+> \* The amplitude of the bounces shrinks exponentially over time.
 
 ### Examples
 

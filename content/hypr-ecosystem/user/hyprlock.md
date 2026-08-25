@@ -317,7 +317,6 @@ Draws a shape.
 | `valign` | Vertical alignment | str | `center` |
 | `zindex` | z-index of the widget | int | `0` |
 
-
 {{% details title="Example shape" closed="true" %}}
 
 ```ini

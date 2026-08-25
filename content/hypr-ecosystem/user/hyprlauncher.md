@@ -32,7 +32,6 @@ Config categories and their values:
 | -- | -- | -- | -- |
 | `grab_focus` | Whether to force a full keyboard focus grab. | bool | `true` |
 
-
 #### Cache
 
 | Option | Description | Type | Default |

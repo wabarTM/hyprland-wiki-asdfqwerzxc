@@ -189,7 +189,6 @@ hl.bind("SUPER + F1", function ()
 end)
 ```
 
-
 ### Per workspace layouts
 
 You can use workspace rules to set per-workspace layouts:
