@@ -39,7 +39,7 @@ Some of them are for debugging, others may cause system instability if not used 
 - `hl.env("AQ_NO_KMS_REQUIREMENT", "1")` - Disable KMS requirement for starting on headless GPUs.
 - `hl.env("AQ_NO_ATOMIC", "1")` - **(HEAVILY NOT RECOMMENDED)** Disable atomic modesetting.
 
-## Cursor
+## Mouse cursor
 
 - `hl.env("XCURSOR_THEME", "MyCursorTheme")` - Set your cursor theme. The theme needs to be installed and readable by your user.
 - `hl.env("XCURSOR_SIZE", "24")` - Set cursor size. See [here](../../../faq) for why you might want this variable set.
