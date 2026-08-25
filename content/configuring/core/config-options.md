@@ -176,32 +176,25 @@ Path: `decoration.blur`
 
 ##### Blur variants
 
-Each blur variant is configured in its own path, e.g. `frost = { configOption = 1 }`.
-Some settings may be reused by different blur methods.
+Some options may be reused by different blur methods.
 
 Available variants:
-
+<!-- SORT: kawase on first position because it is default -->
 - `kawase` - default
-- `frost` - cracked ice
-- `ripple` - ripple on click
-- `drops` - rain on a window pane
-- `water` - ripple done with a heightmap
-- `fluid_jar` - 2D fluid simulation
-- `prism` - triangular refraction mask
-- `heat_shimmer` - a small shimmer with aberration
 - `acrylic` - similar to liquid glass
 - `aurora` - aurora-like light streaks
+- `drops` - rain on a window pane
+- `fluid_jar` - 2D fluid simulation
+- `frost` - cracked ice
 - `haze` - a different diffused effect
+- `heat_shimmer` - a small shimmer with aberration
+- `prism` - triangular refraction mask
+- `ripple` - ripple on click
+- `water` - ripple done with a heightmap
 
-###### glass
+###### Acrylic
 
-| Name | Description | Type | Default | Limits |
-| --- | --- | --- | --- | --- |
-| refraction | Maximum refraction displacement for glass blur types in pixels | float | `20.0` | [0.0 - 20.0] |
-| roughness | Strength of the glass relief shading | float | `1.0` | [0.0 - 1.0] |
-| size | Pattern size for glass blur types in pixels | float | `40.0` | [4.0 - 512.0] |
-
-###### acrylic
+Path: `decoration.blur.acrylic`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
@@ -211,19 +204,9 @@ Available variants:
 | refraction | Maximum acrylic lens displacement in pixels | float | `24.0` | [0.0 - 48.0] |
 | tint | Acrylic tint color. Alpha channel controls optical absorption | color | `0x14EEF5FF` | |
 
-###### drops
+###### Aurora
 
-| Name | Description | Type | Default | Limits |
-| --- | --- | --- | --- | --- |
-| speed | Animation speed. 0 disables the animation | float | `3.0` | [0.0 - 10.0] |
-
-###### heat_shimmer
-
-| Name | Description | Type | Default | Limits |
-| --- | --- | --- | --- | --- |
-| speed | Animation speed. 0 disables the animation| float | `1.0` | [0.0 - 10.0] |
-
-###### aurora
+Path: `decoration.blur.aurora`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
@@ -232,33 +215,17 @@ Available variants:
 | intensity | Strength of the aurora color contribution | float | `0.35` | [0.0 - 1.0] |
 | speed | Animation speed. 0 freezes the animation | float | `1.0` | [0.0 - 10.0] |
 
-###### haze
+###### Drops
+
+Path: `decoration.blur.drops`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| intensity | Strength of the haze pearlescent sheen | float | `0.35` | [0.0 - 1.0] |
-| iridescence | Strength of the haze pearlescent color shift | float | `0.7` | [0.0 - 1.0] |
+| speed | Animation speed. 0 disables the animation | float | `3.0` | [0.0 - 10.0] |
 
-###### ripple
+###### Fluid jar
 
-| Name | Description | Type | Default | Limits |
-| --- | --- | --- | --- | --- |
-| duration | Duration in seconds | float | `0.45` | [0.05 - 5.0] |
-| radius | Maximum radius in pixels | float | `400.0` | [1.0 - 1000.0] |
-| strength | Maximum refraction displacement in pixels | float | `30.0` | [0.0 - 32.0] |
-| width | Width of waves in pixels | float | `32.0` | [1.0 - 200.0] |
-
-###### water
-
-| Name | Description | Type | Default | Limits |
-| --- | --- | --- | --- | --- |
-| damping | Decay damping | float | `0.95` | [0.0 - 1.0] |
-| duration | Maximum duration in seconds | float | `12.0` | [0.5 - 60.0] |
-| radius | Pointer radius in pixels | float | `20.0` | [1.0 - 1000.0] |
-| speed | Propagation speed | float | `0.76` | [0.0 - 10.0] |
-| strength | Maximum refraction displacement and injection strength in pixels | float | `32.0` | [0.0 - 32.0] |
-
-###### fluid_jar
+Path: `decoration.blur.fluid_jar`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
@@ -269,6 +236,56 @@ Available variants:
 | precision | Fluid simulation precision multiplier. 2x is a good compromise. 4x is expensive. 8x is extreme and unnecessary | float | `2.0` | [0.5 - 8.0] |
 | speed | Animation speed | float | `3.7` | [0.0 - 10.0] |
 | turbulence | Interior fluid turbulence multiplier | float | `1.2` | [0.0 - 5.0] |
+
+###### Glass
+
+Path: `decoration.blur.glass`
+
+| Name | Description | Type | Default | Limits |
+| --- | --- | --- | --- | --- |
+| refraction | Maximum refraction displacement for glass blur types in pixels | float | `20.0` | [0.0 - 20.0] |
+| roughness | Strength of the glass relief shading | float | `1.0` | [0.0 - 1.0] |
+| size | Pattern size for glass blur types in pixels | float | `40.0` | [4.0 - 512.0] |
+
+###### Haze
+
+Path: `decoration.blur.haze`
+
+| Name | Description | Type | Default | Limits |
+| --- | --- | --- | --- | --- |
+| intensity | Strength of the haze pearlescent sheen | float | `0.35` | [0.0 - 1.0] |
+| iridescence | Strength of the haze pearlescent color shift | float | `0.7` | [0.0 - 1.0] |
+
+###### Heat shimmer
+
+Path: `decoration.blur.heat_shimmer`
+
+| Name | Description | Type | Default | Limits |
+| --- | --- | --- | --- | --- |
+| speed | Animation speed. 0 disables the animation| float | `1.0` | [0.0 - 10.0] |
+
+###### Ripple
+
+Path: `decoration.blur.ripple`
+
+| Name | Description | Type | Default | Limits |
+| --- | --- | --- | --- | --- |
+| duration | Duration in seconds | float | `0.45` | [0.05 - 5.0] |
+| radius | Maximum radius in pixels | float | `400.0` | [1.0 - 1000.0] |
+| strength | Maximum refraction displacement in pixels | float | `30.0` | [0.0 - 32.0] |
+| width | Width of waves in pixels | float | `32.0` | [1.0 - 200.0] |
+
+###### Water
+
+Path: `decoration.blur.water`
+
+| Name | Description | Type | Default | Limits |
+| --- | --- | --- | --- | --- |
+| damping | Decay damping | float | `0.95` | [0.0 - 1.0] |
+| duration | Maximum duration in seconds | float | `12.0` | [0.5 - 60.0] |
+| radius | Pointer radius in pixels | float | `20.0` | [1.0 - 1000.0] |
+| speed | Propagation speed | float | `0.76` | [0.0 - 10.0] |
+| strength | Maximum refraction displacement and injection strength in pixels | float | `32.0` | [0.0 - 32.0] |
 
 #### Shadow
 
