@@ -30,7 +30,7 @@ enable = true
 
 [markup.goldmark.extensions.passthrough.delimiters]
 block  = [['$$', '$$']]
-inline = [['\(', '\)']]
+inline = [['$', '$']]
 
 [markup.highlight]
 noClasses = false
