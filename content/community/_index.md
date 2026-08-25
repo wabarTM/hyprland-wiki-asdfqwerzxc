@@ -7,8 +7,8 @@ These are the links to official Hyprland-related spaces or profiles:
 
 ## Spaces
 
-Official forum: [forum.hypr.land](https://forum.hypr.land/)  
 Discord: [discord.gg/hQ9XvMUjjr](https://discord.gg/hQ9XvMUjjr)  
+Official forum: [forum.hypr.land](https://forum.hypr.land/)  
 Matrix: `#hyprland:matrix.vaxry.net`
 
 ## Profiles
