@@ -65,7 +65,3 @@ The advantage is being able to do incremental builds (just building whatever lit
 1. Clone the Hyprland repo including its submodules.
 1. Enter the directory and execute `nix develop` in your shell.
 1. Run `make debug` (check the Makefile for other options).
-1. For doing an incremental build (only building any small change you made after the first full build), run the following command (extracted from Hyprland's `Makefile`):
-   ```bash
-   cmake --build ./build --config Debug --target all -j`nproc 2>/dev/null || getconf NPROCESSORS_CONF`
-   ```
