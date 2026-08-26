@@ -86,7 +86,7 @@ If you want maximum performance, consider turning off the blur and animations.
 
 Try changing the mode in your config.
 If your preferred one doesn't work, try a lower one.
-A good way to list all modes is to get `wlr-randr` and do a `wlr-randr --dryrun`.
+To see the list of reported modes from your monitor, run `hyprctl monitors`.
 
 ### My monitor has flickering brightness when I turn on VRR
 
