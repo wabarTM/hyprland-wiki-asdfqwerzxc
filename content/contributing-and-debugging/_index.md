@@ -23,7 +23,7 @@ See [manual build](../getting-started/installation#manual-build) for deps.
 
 Submodules must be included when cloning the repo: `git clone --recurse-submodules https://github.com/hyprwm/Hyprland.git`
 
-### CMake
+### Building
 
 #### VSCode
 
