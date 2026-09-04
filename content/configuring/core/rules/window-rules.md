@@ -161,10 +161,10 @@ The `group` effect takes a string with space-separated options:
 - `"barred"` - Do not automatically group into the focused unlocked group.
 - `"deny"` - Do not allow the window to be toggled as or added to a group.
 - `"invade"` - Force open window in the locked group.
-- `"lock"` \[`"always"`\] - Lock the group. Combine with `"set"` or `"new"`.
+- `"lock"` [`"always"`] - Lock the group. Combine with `"set"` or `"new"`.
 - `"new"` - Shorthand for `"barred set"`.
-- `"override"` \[other options\] - Override other `group` rules.
-- `"set"` \[`"always"`\] - Open window as a group.
+- `"override"` [other options] - Override other `group` rules.
+- `"set"` [`"always"`] - Open window as a group.
 - `"unset"` - Clear all `group` rules.
 
 > [!NOTE]

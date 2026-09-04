@@ -121,7 +121,7 @@ Category: `decoration`
 | inactive_opacity | Opacity of inactive windows | float | `1.0` | [0.0 - 1.0] |
 | rounding | Rounded corners' radius (in layout px) | int | `0` | [0 - 100] |
 | rounding_power | Adjusts the curve used for rounding corners, larger is smoother, 1.0 is a triangular corner, 2.0 is a circle, 4.0 is a squircle | float | `2.0` | [1.0 - 10.0] |
-| screen_shader | A path to a custom shader to be applied at the end of rendering. See `examples/screenShader.frag` for an example | string | \[\[Empty\]\] | |
+| screen_shader | A path to a custom shader to be applied at the end of rendering. See `examples/screenShader.frag` for an example | string | [[Empty]] | |
 
 #### Opacity
 
@@ -304,7 +304,7 @@ Category: `decoration.shadow`
 | --- | --- | --- | --- | --- |
 | enabled | Enable drop shadows on windows | bool | `true` | |
 | color | Active window shadow's color. Alpha dictates the opacity | color/gradient | `0xee1a1a1a` | |
-| color_inactive | Inactive window shadow's color. If not set, will fall back to `color` | color/gradient | \[\[Empty\]\] | |
+| color_inactive | Inactive window shadow's color. If not set, will fall back to `color` | color/gradient | [[Empty]] | |
 | offset | Shadow's rendering offset | vec2 | `{0, 0}` | |
 | range | Shadow range (size) in pixels | int | `4` | [0 - 100] |
 | render_power | In what power to render the falloff. More power, the faster the falloff | int | `3` | [1 - 4] |
@@ -319,7 +319,7 @@ Category: `decoration.glow`
 | --- | --- | --- | --- | --- |
 | enabled | Enable inner glow on windows | bool | `false` | |
 | color | Active window glow's color. Alpha dictates opacity | color | `0xee1a1a1a` | |
-| color_inactive | Inactive window glow's color. If not set, will fall back to `color` | color | \[\[Empty\]\] | |
+| color_inactive | Inactive window glow's color. If not set, will fall back to `color` | color | [[Empty]] | |
 | range | Glow range (size) in pixels | int | `10` | [0 - 100] |
 | render_power | In what power to render the falloff. More power, the faster the falloff | int | `3` | [1 - 4] |
 
@@ -364,7 +364,7 @@ Category: `input`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| accel_profile | Sets the cursor acceleration profile. See the note [below](#accel-profile). Leave empty to use `libinput`'s default mode for your input device. [libinput#pointer-acceleration](https://wayland.freedesktop.org/libinput/doc/latest/pointer-acceleration.html#pointer-acceleration). Options: `"adaptive"`/`"flat"`/`"custom"`| string | \[\[Empty\]\] | |
+| accel_profile | Sets the cursor acceleration profile. See the note [below](#accel-profile). Leave empty to use `libinput`'s default mode for your input device. [libinput#pointer-acceleration](https://wayland.freedesktop.org/libinput/doc/latest/pointer-acceleration.html#pointer-acceleration). Options: `"adaptive"`/`"flat"`/`"custom"`| string | [[Empty]] | |
 | emulate_discrete_scroll | Emulates discrete scrolling from high resolution scrolling events. `0` disables it, `1` enables handling of non-standard events only, and `2` force enables all scroll wheel events to be handled | int | `1` | [0 - 2] |
 | float_switch_override_focus | If `1`/`2` focus will change to the window under the cursor when changing from tiled-to-floating and vice versa. If `2`, focus will also follow mouse on float-to-float switches. `0` means disabled | int | `1` | [0 - 2] |
 | focus_on_close | Controls the window focus behavior when a window is closed. When set to `0`, focus will shift to the next window candidate. When set to `1`, focus will shift to the window under the cursor. When set to `2`, focus will shift to the most recently used/active window | int | `0` | [0 - 2] |
@@ -372,12 +372,12 @@ Category: `input`
 | follow_mouse_shrink | Shrinks the inactive window hitboxes used for focus detection by the specified number of pixels. This creates a dead zone in gaps between windows where moving the cursor will not change focus. Works only with `follow_mouse` set to `1` | int | `0` | [0 - 300] |
 | follow_mouse_threshold | The smallest distance in logical pixels the mouse needs to travel for the window under it to get focused. Works only with `follow_mouse` set to`1` | float | `0.0` | |
 | force_no_accel | Force no cursor acceleration. This bypasses most of your pointer settings to get as raw of a signal as possible. **Enabling this is not recommended due to potential cursor desynchronization.** | bool | `false` | |
-| kb_file | If you prefer, you can use a path to your custom .xkb file | string | \[\[Empty\]\] | |
+| kb_file | If you prefer, you can use a path to your custom .xkb file | string | [[Empty]] | |
 | kb_layout | Appropriate XKB keymap parameter | string | `"us"` | |
-| kb_model | Appropriate XKB keymap parameter. See the note [below](#xkb-keymap-params) | string | \[\[Empty\]\] | |
-| kb_options | Appropriate XKB keymap parameter | string | \[\[Empty\]\] | |
-| kb_rules | Appropriate XKB keymap parameter | string | \[\[Empty\]\] | |
-| kb_variant | Appropriate XKB keymap parameter | string | \[\[Empty\]\] | |
+| kb_model | Appropriate XKB keymap parameter. See the note [below](#xkb-keymap-params) | string | [[Empty]] | |
+| kb_options | Appropriate XKB keymap parameter | string | [[Empty]] | |
+| kb_rules | Appropriate XKB keymap parameter | string | [[Empty]] | |
+| kb_variant | Appropriate XKB keymap parameter | string | [[Empty]] | |
 | left_handed | Switches RMB and LMB | bool | `false` | |
 | mouse_refocus | If enabled, mouse focus will switch to the hovered window when the pointer crosses a window boundary. Works only with `follow_mouse` set to `1` | bool | `true` | |
 | natural_scroll | Inverts scrolling direction. When enabled, scrolling moves content directly, rather than manipulating a scrollbar | bool | `false` | |
@@ -389,8 +389,8 @@ Category: `input`
 | rotation | Sets the rotation of a device in degrees clockwise off the logical neutral position | int | `0` | [0 - 359] |
 | scroll_button | Sets the scroll button. Check `wev` for the ID. `0` means default | int | `0` | [0 - 300] |
 | scroll_button_lock | If the scroll button lock is enabled, the button does not need to be held down. Pressing and releasing the button toggles the button lock, which logically holds the button down or releases it. While the button is logically held down, motion events are converted to scroll events | bool | `false` | |
-| scroll_points | Sets the scroll acceleration profile, when `accel_profile` is set to `"custom"`. Has to be in the form `"<step> <points>"`. Leave empty to have a flat scroll curve | string | \[\[Empty\]\] | |
-| scroll_method | Sets the scroll method. Additional info: [libinput#scrolling](https://wayland.freedesktop.org/libinput/doc/latest/scrolling.html). Options: `"2fg"`/`"edge"`/`"on_button_down"`/`"no_scroll"` (2fg - 2 fingers) | string | \[\[Empty\]\] | |
+| scroll_points | Sets the scroll acceleration profile, when `accel_profile` is set to `"custom"`. Has to be in the form `"<step> <points>"`. Leave empty to have a flat scroll curve | string | [[Empty]] | |
+| scroll_method | Sets the scroll method. Additional info: [libinput#scrolling](https://wayland.freedesktop.org/libinput/doc/latest/scrolling.html). Options: `"2fg"`/`"edge"`/`"on_button_down"`/`"no_scroll"` (2fg - 2 fingers) | string | [[Empty]] | |
 | scroll_factor | Multiplier added to scroll movement for external mice. Note that there is a separate setting for [touchpad scroll_factor](#touchpad)  | float | `1.0` | [0 - 100] |
 | sensitivity | Sets the mouse input sensitivity. Additional info: [libinput#pointer-acceleration](https://wayland.freedesktop.org/libinput/doc/latest/pointer-acceleration.html#pointer-acceleration) | float | `0.0` | [-1.0 - 1.0] |
 | special_fallthrough | if enabled, having only floating windows in the special workspace will not block focusing windows in the regular workspace | bool | `false` | |
@@ -441,7 +441,7 @@ Category: `input.touchpad`
 | natural_scroll | Inverts scrolling direction. When enabled, scrolling moves content directly, rather than manipulating a scrollbar | bool | `false` | |
 | scroll_factor | Multiplier applied to the amount of scroll movement | float | `1.0` | [0.0 - 100] |
 | tap_and_drag | Sets the tap and drag mode for the touchpad | bool | `true` | |
-| tap_button_map | Sets the tap button mapping for touchpad button emulation. When empty, defaults to `"lrm"`. L - Left, M - Middle, R - Right | string | \[\[Empty\]\] | "lrm"/"lmr" |
+| tap_button_map | Sets the tap button mapping for touchpad button emulation. When empty, defaults to `"lrm"`. L - Left, M - Middle, R - Right | string | [[Empty]] | "lrm"/"lmr" |
 | tap_to_click | Tapping on the touchpad with 1, 2, or 3 fingers will send LMB, RMB, and MMB respectively | bool | `true` | |
 
 #### Touchdevice
@@ -451,7 +451,7 @@ Category: `input.touchdevice`
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
 | enabled | Whether input is enabled for touch devices | bool | `true` | |
-| output | The monitor to bind touch devices. The default is auto-detection. To stop auto-detection, use an empty string | string | \[\[Auto\]\] | |
+| output | The monitor to bind touch devices. The default is auto-detection. To stop auto-detection, use an empty string | string | [[Auto]] | |
 | transform | Transform the input from touchdevices. The possible transformations are the same as [those of the monitors](../monitors/positioning#rotation) | int | `0` | [0 - 6] |
 
 #### Virtualkeyboard
@@ -469,7 +469,7 @@ Category: `input.tablet`
 
 | Name | Description | Type | Default | Limits |
 | --- | --- | --- | --- | --- |
-| output | The monitor to bind tablets. Can be `"current"` or a monitor name. Leave empty to map across all monitors | string | \[\[Empty\]\] | |
+| output | The monitor to bind tablets. Can be `"current"` or a monitor name. Leave empty to map across all monitors | string | [[Empty]] | |
 | transform | Transform the input from tablets. The possible transformations are the same as [those of the monitors](../monitors/positioning#rotation) | int | `0` | [0 - 6] |
 | absolute_region_position | Whether to treat the `region_position` as an absolute position in monitor layout. Only applies when `output` is empty | bool | `false` | |
 | active_area_position | Position of the active area in mm | vec2 | `{0, 0}` | |
@@ -556,7 +556,7 @@ Category: `group.groupbar`
 | enabled | Enables groupbars | bool | `true` | |
 | blur | Applies blur to the groupbar indicators and gradients | bool | `false` | |
 | disable_when_only | Disable groupbar if it contains a single window | bool | `false` | |
-| font_family | Font used to display groupbar titles, use `misc.font_family` if not specified | string | \[\[Empty\]\] | |
+| font_family | Font used to display groupbar titles, use `misc.font_family` if not specified | string | [[Empty]] | |
 | font_size | Font size of groupbar title | int | `8` | [2 - 64] |
 | font_weight_active | Font weight of active groupbar title | font_weight | `"normal"` | |
 | font_weight_inactive | Font weight of inactive groupbar title | font_weight | `"normal"` | |
@@ -579,9 +579,9 @@ Category: `group.groupbar`
 | scrolling | Whether scrolling in the groupbar changes group active window | bool | `true` | |
 | stacked | Render the groupbar as a vertical stack | bool | `false` | |
 | text_color | Color for window titles in the groupbar | color | `0xffffffff` | |
-| text_color_inactive | Color for inactive windows' titles in the groupbar, if unset, defaults to text_color | color | \[\[Empty\]\] | |
-| text_color_locked_active | Color for the active window's title in a locked group, if unset, defaults to text_color | color | \[\[Empty\]\ | |
-| text_color_locked_inactive | Color for inactive windows' titles in locked groups, if unset, defaults to text_color_inactive | color | \[\[Empty\]\ | |
+| text_color_inactive | Color for inactive windows' titles in the groupbar, if unset, defaults to text_color | color | [[Empty]] | |
+| text_color_locked_active | Color for the active window's title in a locked group, if unset, defaults to text_color | color | [[Empty]\ | |
+| text_color_locked_inactive | Color for inactive windows' titles in locked groups, if unset, defaults to text_color_inactive | color | [[Empty]\ | |
 | text_offset | Adjust vertical position for titles | int | `0` | [-20 - 20] |
 | text_padding | Set horizontal padding for titles | int | `0` | [0 - 22] |
 
@@ -639,9 +639,9 @@ Category: `misc`
 | session_lock_blur | Enables blur for lock screen. `session_lock_xray` must be enabled | bool | `false` | |
 | session_lock_xray | If true, keep rendering workspaces below your lock screen | bool | `false` | |
 | size_limits_tiled | Whether to apply min_size and max_size rules to tiled windows | bool | `false` | |
-| splash_font_family | Changes the font used to render the splash text, selected from system fonts (requires a monitor reload to take effect) | string | \[\[Empty\]\] | |
-| swallow_exception_regex | The _title_ regex to be used for windows that should _not_ be swallowed by the windows specified in swallow_regex, e.g. `wev`. The regex is matched against the parent, e.g. Kitty, window's title on the assumption that it changes to whatever process it's running | string | \[\[Empty\]\] | |
-| swallow_regex | The _class_ regex to be used for windows that should be swallowed (usually, a terminal) | string | \[\[Empty\]\] | |
+| splash_font_family | Changes the font used to render the splash text, selected from system fonts (requires a monitor reload to take effect) | string | [[Empty]] | |
+| swallow_exception_regex | The _title_ regex to be used for windows that should _not_ be swallowed by the windows specified in swallow_regex, e.g. `wev`. The regex is matched against the parent, e.g. Kitty, window's title on the assumption that it changes to whatever process it's running | string | [[Empty]] | |
+| swallow_regex | The _class_ regex to be used for windows that should be swallowed (usually, a terminal) | string | [[Empty]] | |
 | vrr | Controls the VRR (Adaptive Sync) of your monitors. 0 - off, 1 - on, 2 - fullscreen only, 3 - fullscreen with `video` or `game` content type | int | `0` | [0 - 3] |
 
 Category: `misc.col`
