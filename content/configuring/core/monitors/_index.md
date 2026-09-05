@@ -48,7 +48,7 @@ To list all available monitors (active and inactive), use:
 hyprctl monitors all
 ```
 
-<!-- TODO: example output with descriptions that describe what means what: -->
+<!-- TODO: Describe reasons in "...BlockedBy" -->
 
 {{% details title="Example output" closed="true" %}}
 
