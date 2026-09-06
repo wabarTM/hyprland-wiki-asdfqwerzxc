@@ -5,7 +5,7 @@ title: Gestures
 
 ## General
 
-Hyprland supports 1:1 gestures for the trackpad for some operations.
+Hyprland supports 1:1 trackpad gestures for some operations.
 The basic syntax looks like this:
 
 ```lua
@@ -25,36 +25,51 @@ hl.gesture({ fingers = 3, direction = "up", mods = "SUPER", scale = 1.5, action 
 hl.gesture({ fingers = 3, direction = "left", scale = 1.5, action = "float" })
 ```
 
+### Fields
+
+<!-- SORT: fingers, direction, action first because they're required -->
+| Field | Type | Description |
+| --- | --- | --- |
+| fingers | integer | Number of fingers (2–9) |
+| direction | string | [Gesture direction](#directions) |
+| action | string | [Action to perform](#actions) |
+| disable_inhibit | boolean | If true, allows the gesture to bypass shortcut inhibitors |
+| mods | string | Optional modifier mask, e.g. `"SUPER"` or `"ALT SHIFT"` |
+| scale | float | Optional gesture delta multiplier |
+
+Some gestures might have their own additional fields, which are described in the [Actions](#actions) table.
+
 ### Directions
 
 The following directions are supported:
 
 | direction | Description |
 | --- | --- |
-| swipe | any swipe |
 | horizontal | horizontal swipe |
-| vertical | vertical swipe |
 | left, right, up, down | swipe directions |
 | pinch | any pinch |
 | pinchin, pinchout | directional pinch |
+| swipe | any swipe |
+| vertical | vertical swipe |
 
 ### Actions
 
 Specifying `unset` as the action will unset a specific gesture that was previously set.
 Please note it needs to exactly match everything from the original gesture including direction, mods, fingers and scale.
 
+<!-- SORT: Lua functions are at the top because they're fancy -->
 | action | Description | Additional arguments |
 | --- | --- | --- |
-| _lua function_ | Executes a named Lua function or Lua lambda function. See below. | none |
-| workspace | Workspace swipe gesture, for switching workspaces. | none |
-| move | Moves the active window. | none |
-| resize | Resizes the active window. | none |
-| special | Toggles a special workspace. | `workspace_name`, self-explanatory |
-| close | Closes the active window. | none |
-| fullscreen | Fullscreens the active window. | `mode` can be `"maximize"` to do maximize instead of fullscreen |
-| float | Floats the active window. | `mode` can be `"float"` or `"tile"` to force a direction of floating |
-| cursor_zoom | Zooms into the cursor. | `zoom_level` for a zoom factor, `mode` of `"mult"` to use a multiplier or `"live"` to update continuously during the pinch |
+| _lua function_ | Executes a named Lua function or Lua lambda function. See below | none |
+| close | Closes the active window | none |
+| cursor_zoom | Zooms into the cursor | `zoom_level` for a zoom factor, `mode` of `"mult"` to use a multiplier or `"live"` to update continuously during the pinch |
+| float | Floats the active window | `mode` can be `"float"` or `"tile"` to force a direction of floating |
+| fullscreen | Fullscreens the active window | `mode` can be `"maximize"` to do maximize instead of fullscreen |
+| move | Moves the active window | none |
+| resize | Resizes the active window | none |
 | scroll_move | Scrolls the tape, if the current layout is scrolling | none |
+| special | Toggles a special workspace | `workspace_name`, self-explanatory |
+| workspace | Workspace swipe gesture, for switching workspaces | none |
 
 #### cursor_zoom
 
@@ -90,7 +105,7 @@ hl.gesture({
 An example with a named function:
 
 ```lua
-local swipe = function()
+local function swipe()
   hl.notification.create({ text = "I just swiped on my trackpad!", timeout = 5000, icon = "ok" })
 end
 
@@ -109,21 +124,21 @@ The `start` and `update` methods are passed a table with the following fields:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| type | string | Either `swipe` or `pinch` |
-| time_ms | integer | The timestamp at which the even occurred, measured from when the system was booted |
-| fingers | integer | Number of fingers (2–9) |
 | delta.x | float | Horizontal motion relative to the last update. Right motion is positive, left is negative |
 | delta.y | float | Vertical motion relative to the last update. Downwards motion is positive, upwards is negative |
-| scale | float | The change in size of the finger arrangement, relative to the start of the gesture. Spread is positive, pinch is negative. `Nil` if the gesture type is not `pinch` |
+| fingers | integer | Number of fingers (2–9) |
 | rotation | float | The change in angle of the finger arrangement, relative to the last update. Clockwise is positive, counterclockwise is negative. `Nil` if the gesture type is not `pinch` |
+| scale | float | The change in size of the finger arrangement, relative to the start of the gesture. Spread is positive, pinch is negative. `Nil` if the gesture type is not `pinch` |
+| time_ms | integer | The timestamp at which the even occurred, measured from when the system was booted |
+| type | string | Either `swipe` or `pinch` |
 
 The `finish` method is passed a table with the following fields:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| type | string | Either `swipe` or `pinch` |
-| time_ms | integer | The timestamp at which the even occurred, measured from when the system was booted |
 | cancelled | boolean | True if the gesture was ended abnormally by the backend. False otherwise |
+| time_ms | integer | The timestamp at which the even occurred, measured from when the system was booted |
+| type | string | Either `swipe` or `pinch` |
 
 For example:
 
@@ -161,19 +176,6 @@ hl.gesture({
   }
 })
 ```
-
-### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| fingers | integer | Number of fingers (2–9) |
-| direction | string | Gesture direction (see above) |
-| action | string | Action to perform (see above) |
-| mods | string | Optional modifier mask, e.g. `"SUPER"` or `"ALT SHIFT"` |
-| scale | float | Optional gesture delta multiplier |
-| disable_inhibit | boolean | If true, allows the gesture to bypass shortcut inhibitors |
-
-Some gestures might have their own additional fields, which are described in the [Actions](#actions) table.
 
 ### Examples
 
