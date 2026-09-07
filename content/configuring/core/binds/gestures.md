@@ -41,7 +41,7 @@ Some gestures might have their own additional fields, which are described in the
 ### Directions
 
 The following directions are supported:
-<!-- SORT: grouped by: swipe, direction, pinch. directions are sorted by, i guess, vibe? idk, ping me if you dont like that sorintg -->
+<!-- SORT: Grouped by: swipe, direction, pinch. Directions are sorted by, I guess, vibe? -->
 | Direction | Description |
 | --- | --- |
 | swipe | Any swipe |
@@ -49,8 +49,8 @@ The following directions are supported:
 | vertical | Bertical swipe |
 | left | Swipe to the left |
 | right | Swipe to the right |
-| up | Swipe up |
-| down | Swipe down |
+| up | Swipe upward |
+| down | Swipe downward |
 | pinch | Any pinch |
 | pinchin | Directional pinch outwards |
 | pinchout | Directional pinch outwards |
@@ -87,7 +87,7 @@ hl.gesture({ fingers = 2, direction = "pinch", action = "cursor_zoom", zoom_leve
 `cursor_zoom` toggles by default.
 `mult` multiplies the current zoom value.
 `live` adjusts the zoom continuously to the pinch scale and keeps the zoom anchored to the cursor position at the start of the gesture.
-The numeric argument is unused in `live` mode, so `1` is a placeholder.
+The numeric argument is unused in `live` mode, so `1` is a reasonable placeholder.
 
 #### Lua functions
 
