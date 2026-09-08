@@ -47,13 +47,13 @@ The following directions are supported:
 | swipe | Any swipe |
 | horizontal | Horizontal swipe |
 | vertical | Vertical swipe |
-| left | Swipe to the left |
-| right | Swipe to the right |
-| up | Swipe upward |
-| down | Swipe downward |
+| left | Leftward swipe |
+| right | Rightward swipe |
+| up | Upward swipe |
+| down | Downward swipe |
 | pinch | Any pinch |
-| pinchin | Directional pinch outwards |
-| pinchout | Directional pinch outwards |
+| pinchin | Inward pinch |
+| pinchout | Outward pinch |
 
 ### Actions
 
