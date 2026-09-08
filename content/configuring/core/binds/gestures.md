@@ -46,7 +46,7 @@ The following directions are supported:
 | --- | --- |
 | swipe | Any swipe |
 | horizontal | Horizontal swipe |
-| vertical | Bertical swipe |
+| vertical | Vertical swipe |
 | left | Swipe to the left |
 | right | Swipe to the right |
 | up | Swipe upward |
