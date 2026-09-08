@@ -302,7 +302,7 @@ end, { description = "Switch focus between tiled and floating windows" })
 ## Vim-like keymaps
 
 Hyprland has so many features that you might run out of keys on your keyboard if you want to bind them all.
-Rest assured, you can utilize submaps to create keymaps if you want more, and they're also easier to press than a single bind with many modidiers.
+Rest assured, you can utilize submaps to create keymaps if you want more, and they're also easier to press than a single bind with many modifiers.
 
 Here's an example of managing window groups this way:
 
