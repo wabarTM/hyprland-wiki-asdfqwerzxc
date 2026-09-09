@@ -222,7 +222,7 @@ hl.dsp.window.set_prop({ prop = "no_anim", value = "1" })
 hl.dsp.window.set_prop({ prop = "no_anim", value = "1", window = "class:abc" })
 ```
 
-Some props are set according to applied window-rule values:
+Some props are read-only, and take their values ether from window rules, or if no rules match, fall back to other relevant (writable) props according to window state:
 - `border_color`: set from `active_border_color`, `inactive_border_color`
 - `opacity`: set from `opacity`, `opacity_inactive`, `opacity_fullscreen`, `opacity_override`, `opacity_inactive_override`, `opacity_fullscreen_override`
 

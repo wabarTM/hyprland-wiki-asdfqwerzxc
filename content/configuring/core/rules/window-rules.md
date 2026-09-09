@@ -175,29 +175,29 @@ The `group` effect takes a string with space-separated options:
 
 ### `border_color` window rule
 
-The `border_color` rule can receive a solid color or gradient, which defaults to the active border color:
-
+The `border_color` rule accepts a single color or a gradient:
 
 ```lua
--- Single solid color:
+-- Single color
 border_color = "rgb(FF0000)"
-
--- Lua table (gradient):
+-- Gradient
 border_color = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 }
 ```
 
-The `border_color` rule can also be used in conjunction with the `focus` prop in order to independently set the active or inactive border color of a window. For example:
+The `border_color` rule can also be used in conjunction with the `focus` prop in order to independently set the active or inactive border color of a window.
+For example:
 
 ```lua
--- Set firefox's inactive border color to a gradient from magenta to cyan
+-- Set Firefox's inactive border color to a gradient from magenta to cyan
 hl.window_rule(
-  match = { focus = false, class = "firefox" },
-  border_color = { colors = { "rgba(ffff00ee)", "rgba(00ffffee)" }, angle = 33 }
+    match = { class = "firefox", focus = false },
+    border_color = { colors = { "rgba(ffff00ee)", "rgba(00ffffee)" }, angle = 33 }
 )
 ```
 
 > [!TIP]
-> Combine two rules, one with `focus = true` and another with `focus = false` to set the active and inactive border colors of all matching windows.
+> Combine two rules, one with `focus = true` and another with `focus = false`, to set the active and inactive border colors of specific windows
+> (similarly to how `general.col.active_border` and `general.col.inactive_border` affect windows normally).
 
 ### Tags
 
