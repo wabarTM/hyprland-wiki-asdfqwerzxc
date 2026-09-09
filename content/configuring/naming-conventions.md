@@ -110,20 +110,14 @@ If no window is provided, the active window is used.
 
 ### Workspaces
 
-> [!WARNING]
-> Numerical workspaces (e.g., `1`, `2`, `13371337`) are allowed **ONLY** between 1 and 2147483647, inclusive.
-> Neither `0` nor negative numbers are allowed.
+Workspaces can be referenced by:
 
-Workspaces can  by:
-
-- Workspace object
-- Workspace ID
-- [Workspace selectors](#workspace-selectors)
-- [Workspace search](#workspace-search)
-
-- Name: E.g., `name:Web`, `name:Anime`, `name:Better anime`
+- Name: E.g., `1`, `42`, `Web`, `Anime`, `Better anime`
 - Previous workspace: `previous`, or `previous_per_monitor`
 - Special Workspace: `special` or `special:name` for named special workspaces.
+- Workspace object
+- [Workspace selectors](#workspace-selectors)
+- [Workspace query](#workspace-query)
 
 > [!NOTE]
 > In contexts where only special workspaces are accepted (e.g., the argument to `hl.dsp.toggle_special()`), do not include the `special:` workspace prefix.
@@ -163,25 +157,15 @@ No spaces are allowed inside props themselves.
 
 #### Workspace query
 
-A workspace query has two modes, either it's an exact query:
-- `1` - By number
-- `previous` - Previous workspace
-- `special:name` - Special workspaces (aka. scratchpads)
-- `name` - Named workspace, e.g. `documents`.
-
-These are very explicit and self-describing.
-
-The second mode is a parametric query, where it turns into a search:
-
-A workspace search is performed by suffixing a search selector with a signed offset, `+n` or `-n`, for a match relative to the active workspace.
+A workspace query is performed by suffixing a query selector with a signed offset, `+n` or `-n`, for a match relative to the active workspace.
 To use an absolute, 1-indexed ID instead, `~` is put between selector and ID (e.g., `m~3` is the third workspace on the current monitor).
 
 | Selector | Description | Limits |
 | --- | --- | --- |
-| e | Existing workspaces on all monitors | Wraps around if range exceeds amount of worksapces in the direction |
-| m | Existing workspaces on current monitor | Wraps around if range exceeds amount of worksapces in the direction |
-| r | Workspaces on current monitor, including empty/nonexistent ones | [1 - ...] |
-| empty | Search for first empty workspace. Suffix with `m` to only search on monitor, and/or `n` to find the _next_ available empty workspace (e.g., `emptynm`) | Undefined behavior if it lands past last available workspace, i.e. 2147483647 |
+| e | Look on all monitors | Wraps around if range exceeds amount of worksapces in the direction |
+| m | Look on current monitor | Wraps around if range exceeds amount of worksapces in the direction |
+| r | Look on current monitor, including empty/nonexistent workspaces | [1 - ...] |
+| empty | Look for first empty workspace. Suffix with `m` to only look on current monitor, and/or `n` to find the _next_ available empty workspace (e.g., `emptynm`) | Wraps around if it lands past the last numerical workspace, 2147483647 |
 
 > [!WARNING]
 > For search selectors that accept an ID, a sign or `~` is required.
