@@ -62,4 +62,5 @@ Use workspace rules to set per-workspace layouts:
 
 ```lua
 hl.workspace_rule({ workspace = "2", layout = "scrolling" })
+hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 ```
