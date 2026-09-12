@@ -293,6 +293,9 @@ sudo eopkg install hyprland
 ---
 <!-- NOTE: this ^^^ line is here to visually separate contents of tabs; it is thin, but it is there -->
 
+> [!NOTE]
+> If you plan to use plugins, note that `hyprpm` may be packaged separately on some distros.
+
 ### Manual build
 
 #### Dependencies:
